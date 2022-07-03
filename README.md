@@ -1,2 +1,2 @@
 # PyDEA
-Data envelopment analysis for python
+Data Envelopment Analysis for Python

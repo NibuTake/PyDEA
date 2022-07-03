@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+src/PyDEA/__init__.py
+src/PyDEA/dea.py
+src/PyDEA/dea_old.py
+src/PyDEA.egg-info/PKG-INFO
+src/PyDEA.egg-info/SOURCES.txt
+src/PyDEA.egg-info/dependency_links.txt
+src/PyDEA.egg-info/not-zip-safe
+src/PyDEA.egg-info/requires.txt
+src/PyDEA.egg-info/top_level.txt
+src/PyDEA/model/__init__.py
+src/PyDEA/model/dea_model.py
+src/PyDEA/model/dmu.py
+src/PyDEA/model/metric.py
+src/PyDEA/model/solver.py
