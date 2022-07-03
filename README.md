@@ -1,2 +1,24 @@
 # PyDEA
-Data Envelopment Analysis for Python
+Data envelopment analysis (DEA) for Python user.
+
+now preparing...
+
+## Installation
+```
+
+```
+
+## Examples
+-
+-
+
+## Algorithms
+-
+-
+
+## Documentation
+-
+-
+
+## Cite
+-
