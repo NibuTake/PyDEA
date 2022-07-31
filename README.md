@@ -37,7 +37,7 @@ dea.result
 
 ## Documentation
 
-- [API references](https://nibutake.github.io/PyDEA/index.html)
+- [API references](https://nibutake.github.io/PyDEA/index.html?)
 - [Algorithms]()
 
 ## Communication
