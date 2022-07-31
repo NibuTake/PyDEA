@@ -9,10 +9,13 @@ pytest-cov = "*"
 pytest-runner = "*"
 numpy = "*"
 pulp = "*"
+pandas = "*"
 
 [dev-packages]
 pre-commit = "*"
 black = "*"
+sphinx = "*"
+sphinx-rtd-theme = "*"
 
 [requires]
 python_version = "3.9"

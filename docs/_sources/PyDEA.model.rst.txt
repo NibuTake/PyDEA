@@ -1,0 +1,45 @@
+PyDEA.model package
+===================
+
+Submodules
+----------
+
+PyDEA.model.dea\_model module
+-----------------------------
+
+.. automodule:: PyDEA.model.dea_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+PyDEA.model.dmu module
+----------------------
+
+.. automodule:: PyDEA.model.dmu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+PyDEA.model.metric module
+-------------------------
+
+.. automodule:: PyDEA.model.metric
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+PyDEA.model.solver module
+-------------------------
+
+.. automodule:: PyDEA.model.solver
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: PyDEA.model
+   :members:
+   :undoc-members:
+   :show-inheritance:

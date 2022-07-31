@@ -1,3 +1,4 @@
+LICENSE
 README.md
 setup.cfg
 setup.py
@@ -15,3 +16,5 @@ src/PyDEA/model/dea_model.py
 src/PyDEA/model/dmu.py
 src/PyDEA/model/metric.py
 src/PyDEA/model/solver.py
+src/PyDEA/sam/__init__.py
+src/PyDEA/sam/_base.py

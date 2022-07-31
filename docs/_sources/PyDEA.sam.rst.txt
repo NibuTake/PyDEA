@@ -1,0 +1,21 @@
+PyDEA.sam package
+=================
+
+Submodules
+----------
+
+PyDEA.sam.api module
+--------------------
+
+.. automodule:: PyDEA.sam.api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: PyDEA.sam
+   :members:
+   :undoc-members:
+   :show-inheritance:

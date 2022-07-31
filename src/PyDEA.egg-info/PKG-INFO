@@ -1,10 +1,8 @@
-Metadata-Version: 1.0
+Metadata-Version: 2.1
 Name: PyDEA
 Version: 1.1.0
 Summary: パッケージの説明
 Home-page: URL
 Author: Morinibu
-Author-email: UNKNOWN
 License: ライセンス
-Description: UNKNOWN
-Platform: UNKNOWN
+License-File: LICENSE

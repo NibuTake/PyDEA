@@ -1,3 +1,5 @@
+from typing import Literal
+
 import numpy as np
 
 from .dmu import DMU, DMUSet
@@ -6,7 +8,7 @@ from .solver import AttractivenessSolver, EnvelopeSolver
 
 
 class EnvelopeDEA:
-    def __init__(self, frontier: str, orient: str):
+    def __init__(self, frontier: Literal["CRS", "VRS"], orient: Literal["in", "out"]):
         self.frontier = frontier
         self.orient = orient
         self.DMUs = None
