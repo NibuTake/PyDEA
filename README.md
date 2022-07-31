@@ -1,5 +1,5 @@
 # PyDEA: A data envelopment analysis module
-<div align="center"><img src="./_docs_src/img/logo.png" width="700"/></div>
+<div align="center"><img src="./_docs_src/img/logo.png" height="150"/></div>
 
 [Install](#installation) | [Tutorial](#tutorial) | [Docs](#documentation) | [Communication](#communication)| [References](#references)
 
