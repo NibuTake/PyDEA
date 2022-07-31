@@ -16,6 +16,13 @@ pre-commit = "*"
 black = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
+jupyter = "*"
+nbsphinx = "*"
+commonmark = "*"
+recommonmark = "*"
+sphinx-gallery = "*"
+pillow = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.9"

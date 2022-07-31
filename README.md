@@ -1,4 +1,6 @@
 # PyDEA: A data envelopment analysis module
+<div align="center"><img src="./_docs_src/img/logo.png" width="700"/></div>
+
 [Install](#installation) | [Tutorial](#tutorial) | [Docs](#documentation) | [Communication](#communication)| [References](#references)
 
 PyDEA is a data envelopment analysis for Python user. Our main motivation is to encourage more people to apply DEA effectively and contribute to the development of this field.
@@ -27,9 +29,9 @@ pip install .
 
 ```python
 import numpy as np
-from PyDEA.frontier_model import DataEnvelopmentAnalysis
+from PyDEA.frontier_model import EnvelopeDEA
 
-dea = DataEnvelopmentAnalysis()
+dea = EnvelopeDEA(frontier="CRS", orient="in")
 
 dea.fit(inputs, outputs)
 dea.result
