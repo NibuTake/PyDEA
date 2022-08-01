@@ -2,12 +2,12 @@ LICENSE
 README.md
 setup.cfg
 setup.py
-src/PyFrontier.egg-info/PKG-INFO
-src/PyFrontier.egg-info/SOURCES.txt
-src/PyFrontier.egg-info/dependency_links.txt
-src/PyFrontier.egg-info/not-zip-safe
-src/PyFrontier.egg-info/top_level.txt
 src/Pyfrontier/__init__.py
+src/Pyfrontier.egg-info/PKG-INFO
+src/Pyfrontier.egg-info/SOURCES.txt
+src/Pyfrontier.egg-info/dependency_links.txt
+src/Pyfrontier.egg-info/not-zip-safe
+src/Pyfrontier.egg-info/top_level.txt
 src/Pyfrontier/domain/__init__.py
 src/Pyfrontier/domain/dmu.py
 src/Pyfrontier/domain/metrics.py

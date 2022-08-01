@@ -3,7 +3,7 @@
 
 [Install](#installation) | [Tutorial](#tutorial) | [Docs](#documentation) | [Communication](#communication)| [References](#references)
 
-PyFrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to apply DEA effectively and contribute to the development of this field.
+Pyfrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to apply DEA effectively and contribute to the development of this field.
 
 This covers the following functions.
 
@@ -29,7 +29,7 @@ pip install .
 
 ```python
 import numpy as np
-from PyFrontier.frontier_model import EnvelopeDEA
+from Pyfrontier.frontier_model import EnvelopeDEA
 
 dea = EnvelopeDEA(frontier="CRS", orient="in")
 
@@ -53,4 +53,5 @@ dea.result
 ```
 sphinx-apidoc -f -o ./_docs_src ./src
 sphinx-build ./_docs_src ./docs
+touch .nojekyll .docs
 ```

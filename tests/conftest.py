@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append("./PyFrontier")
+sys.path.append("./Pyfrontier")
 
 import pandas as pd
 import pytest

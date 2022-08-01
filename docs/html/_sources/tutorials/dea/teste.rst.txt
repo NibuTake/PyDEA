@@ -64,12 +64,13 @@ This is another section header
 In the built documentation, it will be rendered as rST after the code above!
 This is also another code block.
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-29
+.. GENERATED FROM PYTHON SOURCE LINES 28-30
 
 .. code-block:: default
 
 
-    print('my variable plus 2 is {}'.format(myvariable + 2))
+    print("my variable plus 2 is {}".format(myvariable + 2))
+
 
 
 
@@ -85,7 +86,7 @@ This is also another code block.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.003 seconds)
+   **Total running time of the script:** ( 0 minutes  0.005 seconds)
 
 
 .. _sphx_glr_download_tutorials_dea_teste.py:

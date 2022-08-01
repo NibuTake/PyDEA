@@ -9,7 +9,7 @@ def _requires_from_file(filename):
 
 
 setup(
-    name="PyFrontier",
+    name="Pyfrontier",
     version="1.1.0",
     license="ライセンス",
     description="パッケージの説明",

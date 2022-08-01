@@ -6,6 +6,7 @@ Tutorial
 How to apply PyDEA.
 
 
+
 .. raw:: html
 
     <div class="sphx-glr-thumbnails">
