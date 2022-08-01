@@ -4,4 +4,4 @@ src
 .. toctree::
    :maxdepth: 4
 
-   PyDEA
+   Pyfrontier

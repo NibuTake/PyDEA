@@ -1,9 +1,9 @@
-# PyDEA: A data envelopment analysis module
+# PyFrontier: A data envelopment analysis module
 <div align="center"><img src="./_docs_src/img/logo.png" height="200"/></div>
 
 [Install](#installation) | [Tutorial](#tutorial) | [Docs](#documentation) | [Communication](#communication)| [References](#references)
 
-PyDEA is a data envelopment analysis for Python user. Our main motivation is to encourage more people to apply DEA effectively and contribute to the development of this field.
+PyFrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to apply DEA effectively and contribute to the development of this field.
 
 This covers the following functions.
 
@@ -29,7 +29,7 @@ pip install .
 
 ```python
 import numpy as np
-from PyDEA.frontier_model import EnvelopeDEA
+from PyFrontier.frontier_model import EnvelopeDEA
 
 dea = EnvelopeDEA(frontier="CRS", orient="in")
 

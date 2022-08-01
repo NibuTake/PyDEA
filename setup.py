@@ -9,7 +9,7 @@ def _requires_from_file(filename):
 
 
 setup(
-    name="PyDEA",
+    name="PyFrontier",
     version="1.1.0",
     license="ライセンス",
     description="パッケージの説明",

@@ -10,6 +10,7 @@ pytest-runner = "*"
 numpy = "*"
 pulp = "*"
 pandas = "*"
+pyfrontier = {path = "."}
 
 [dev-packages]
 pre-commit = "*"

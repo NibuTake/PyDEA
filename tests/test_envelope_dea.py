@@ -1,4 +1,4 @@
-from PyDEA.frontier_model import EnvelopeDEA
+from Pyfrontier.frontier_model import EnvelopeDEA
 
 
 def test_can_calculate_envelope(sample_data):

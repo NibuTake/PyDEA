@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0cbb0848daad266fed8f3bdf4b7e36a9736a32036b25cb1de99a2e34ba1ff836"
+            "sha256": "7533e696c8f8056e1aef4c163ca488b047ae1283052d63cbd85e8105072b1590"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -167,6 +167,10 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "version": "==1.11.0"
+        },
+        "pyfrontier": {
+            "path": ".",
+            "version": "==1.1.0"
         },
         "pyparsing": {
             "hashes": [
@@ -1348,11 +1352,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:0d33c374d41c7863419fc8f6c10bfe25b7b498aa34164d135c622e52580c6b16",
-                "sha256:c04b44a57a6265fe34a4a444e965884716d34bae963119a76353434d6f18e450"
+                "sha256:273b6847ae61f7829c1affcdd9a32f67aa65233be508f4fbaab866c5faa4e408",
+                "sha256:d5340d16943a0f67057329db59b564e938bb3736c6e50ae16ea84d5e5d9ba6d0"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==63.2.0"
+            "version": "==63.3.0"
         },
         "six": {
             "hashes": [

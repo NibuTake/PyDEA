@@ -1,6 +1,6 @@
 import math
 
-from PyDEA.frontier_model import EnvelopeDEA, MultipleDEA
+from Pyfrontier.frontier_model import EnvelopeDEA, MultipleDEA
 
 
 def test_can_calculate_envelope_houses(house_data):

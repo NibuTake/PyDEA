@@ -14,7 +14,7 @@ from recommonmark.parser import CommonMarkParser
 sys.path.insert(0, os.path.abspath("../"))
 
 
-project = "pydea"
+project = "pyfrontier"
 copyright = "2022, contributors"
 author = "Contributors"
 release = "1.0.0"
