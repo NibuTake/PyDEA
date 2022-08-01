@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7533e696c8f8056e1aef4c163ca488b047ae1283052d63cbd85e8105072b1590"
+            "sha256": "2947ae78bb0b95276e8ce16fe53aa96579bad7a9663a8c28bf3a41946bfbcd07"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -169,8 +169,8 @@
             "version": "==1.11.0"
         },
         "pyfrontier": {
-            "path": ".",
-            "version": "==1.1.0"
+            "editable": true,
+            "path": "."
         },
         "pyparsing": {
             "hashes": [

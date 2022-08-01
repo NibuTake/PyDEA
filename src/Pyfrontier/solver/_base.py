@@ -1,7 +1,5 @@
 import abc
 
-import pulp
-
 
 class BaseSolver(object, metaclass=abc.ABCMeta):
     def __init__(self, orient: str, frontier: str, DMUs):
@@ -19,10 +17,6 @@ class BaseSolver(object, metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
     def apply(self) -> list:
-        pass
-
-    @abc.abstractmethod
-    def _init_problem(self) -> pulp.LpProblem:
         pass
 
     @abc.abstractmethod

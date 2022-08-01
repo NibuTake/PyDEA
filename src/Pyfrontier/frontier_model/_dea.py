@@ -21,7 +21,13 @@ class EnvelopeDEA(BaseDataEnvelopmentAnalysis):
         self.DMUs = None
         self.result: List[Dict[str, Any]] = []
 
-    def fit(self, inputs: np.ndarray, outputs: np.ndarray, index=np.nan):
+    def fit(
+        self,
+        inputs: np.ndarray,
+        outputs: np.ndarray,
+        index=np.nan,
+        uncontrollable_index: list[int] = [],
+    ):
         """AI is creating summary for fit
 
         Args:
@@ -31,9 +37,12 @@ class EnvelopeDEA(BaseDataEnvelopmentAnalysis):
         """
         # Define data.
         self.DMUs = DMUSet(inputs, outputs, index)
+        self._uncontrollable_index = uncontrollable_index
 
         # call solver.
-        solver = EnvelopeSolver(self.orient, self.frontier, self.DMUs)
+        solver = EnvelopeSolver(
+            self.orient, self.frontier, self.DMUs, uncontrollable_index
+        )
         self.result = solver.apply()
 
     @property

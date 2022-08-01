@@ -14,11 +14,17 @@ class EnvelopeSolver(BaseSolver):
         DMUs ([type]): [description]
     """
 
-    def __init__(self, orient: str, frontier: str, DMUs):
+    def __init__(
+        self,
+        orient: str,
+        frontier: str,
+        DMUs: DMUSet,
+        uncontrollable_index: list[int] = [],
+    ):
         self.orient = orient
         self.DMUs = DMUs
         self.frontier = frontier
-        self.u_c_index = 100
+        self._uncontrollable_index = uncontrollable_index
 
     def apply(self) -> list:
         """AI is creating summary for fit"""
@@ -31,6 +37,24 @@ class EnvelopeSolver(BaseSolver):
         else:
             problem = pulp.LpProblem(self.orient, pulp.LpMaximize)
         return problem
+
+    def _input_orient_coef(self, i: int) -> tuple:
+        theta = pulp.LpVariable("theta", lowBound=0)
+        in_coef = theta
+        out_coef = 1
+
+        if i in self._uncontrollable_index:
+            in_coef = 1
+        return (in_coef, out_coef)
+
+    def _output_orient_coef(self, i: int) -> tuple:
+        theta = pulp.LpVariable("theta", lowBound=0)
+        in_coef = 1
+        out_coef = theta
+
+        if i in self._uncontrollable_index:
+            out_coef = 1
+        return (in_coef, out_coef)
 
     def _solve_problem(self, o: int) -> dict:
         """[summary]
@@ -57,18 +81,14 @@ class EnvelopeSolver(BaseSolver):
             in_coef = 1
             out_coef = theta
 
-        # Add restrictions.
+        # X
         for i in range(self.DMUs.m):
-            # Process uncontrollable variables.
-            # if i == self.u_c_index:
-            #     in_coef = 1
-            # else:
-            #     in_coef = theta
             problem += (
                 pulp.lpDot(lambda_N, self.DMUs.inputs[:, i])
                 <= in_coef * self.DMUs.inputs[o, i]
             )
 
+        # Y
         for i in range(self.DMUs.s):
             problem += (
                 pulp.lpDot(lambda_N, self.DMUs.outputs[:, i])
