@@ -4,7 +4,8 @@
    contain the root `toctree` directive.
 
 |logo|
-PyFrontier: A data envelopment analysis module
+
+Pyfrontier: A data envelopment analysis module
 =================================
 
 .. toctree::
@@ -21,6 +22,6 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-.. |logo| image:: ./images/logo.png
+.. |logo| image:: https://user-images.githubusercontent.com/20243727/182399996-91c90150-8cd8-4818-b55e-627586b7f19a.png
   :width: 800
   :alt: Pyfrontier
