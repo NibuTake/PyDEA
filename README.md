@@ -13,7 +13,7 @@ This covers the following functions.
 - Free disposal hull (FDH)
 - Hierarchical model
 
-Unfortunately we are still preparing this module until everyone can use it comfortably without any obstacles.
+Unfortunately we are still preparing this module until everyone can use it comfortably without any obstacles...
 
 ## Installation
 This is an interim response until we open it up to pypI. We apologize for any inconvenience.
