@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:00.003** total execution time for **tutorials_dea** files:
+**00:00.419** total execution time for **tutorials_dea** files:
 
 +-------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_dea_teste.py` (``teste.py``) | 00:00.003 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_dea_teste.py` (``teste.py``) | 00:00.419 | 0.0 MB |
 +-------------------------------------------------------+-----------+--------+

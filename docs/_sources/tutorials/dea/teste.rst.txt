@@ -32,7 +32,7 @@ The `#%%` signifies to Sphinx-Gallery that this text should be rendered as
 rST and if using one of the above IDE/plugin's, also signifies the start of a
 'code block'.
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-22
+.. GENERATED FROM PYTHON SOURCE LINES 15-34
 
 .. code-block:: default
 
@@ -40,11 +40,28 @@ rST and if using one of the above IDE/plugin's, also signifies the start of a
     # This line won't be rendered as rST because there's a space after the last block.
     myvariable = 2
     print("my variable is {}".format(myvariable))
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    x = np.linspace(0, 4*np.pi, 301)
+    y1 = np.sin(x)
+    y2 = np.cos(x)
+
+    plt.figure()
+    plt.plot(x, y1, label='sin')
+    plt.plot(x, y2, label='cos')
+    plt.legend()
+    plt.show()
     # This is the end of the 'code block' (if using an above IDE). All code within
     # this block can be easily executed all at once.
 
 
 
+
+.. image-sg:: /tutorials/dea/images/sphx_glr_teste_001.png
+   :alt: teste
+   :srcset: /tutorials/dea/images/sphx_glr_teste_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -56,7 +73,7 @@ rST and if using one of the above IDE/plugin's, also signifies the start of a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-28
+.. GENERATED FROM PYTHON SOURCE LINES 35-40
 
 This is another section header
 ------------------------------
@@ -64,7 +81,7 @@ This is another section header
 In the built documentation, it will be rendered as rST after the code above!
 This is also another code block.
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-30
+.. GENERATED FROM PYTHON SOURCE LINES 40-42
 
 .. code-block:: default
 
@@ -86,7 +103,7 @@ This is also another code block.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.003 seconds)
+   **Total running time of the script:** ( 0 minutes  0.419 seconds)
 
 
 .. _sphx_glr_download_tutorials_dea_teste.py:

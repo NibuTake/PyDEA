@@ -16,6 +16,19 @@ This example doesn't do much, it just makes a simple plot
 # This line won't be rendered as rST because there's a space after the last block.
 myvariable = 2
 print("my variable is {}".format(myvariable))
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 4 * np.pi, 301)
+y1 = np.sin(x)
+y2 = np.cos(x)
+
+plt.figure()
+plt.plot(x, y1, label="sin")
+plt.plot(x, y2, label="cos")
+plt.legend()
+plt.show()
 # This is the end of the 'code block' (if using an above IDE). All code within
 # this block can be easily executed all at once.
 

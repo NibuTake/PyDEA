@@ -33,8 +33,6 @@ class EnvelopResult:
 
         if np.sum(x_slack) + np.sum(y_slack) > 0:
             self.has_slack = True
+            self._is_efficient = False
         else:
             self.has_slack = False
-
-    def _set_dmu(self, input: np.ndarray, output: np.ndarray, id: int):
-        self.dmu = DMU(input, output, id)

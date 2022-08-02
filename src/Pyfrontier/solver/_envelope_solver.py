@@ -186,7 +186,7 @@ class SlackSolver(BaseSolver):
 
         return problem
 
-    def _solve_problem(self, o: int, theta: float):
+    def _solve_problem(self, o: int, theta: float) -> dict:
         # Define variables.
         sx = self._dict_to_list(
             pulp.LpVariable.dicts("sx", range(self.DMUs.m), lowBound=0)
@@ -211,15 +211,3 @@ class SlackSolver(BaseSolver):
         problem.solve(pulp.PULP_CBC_CMD(msg=1, gapRel=1e-10, options=["revised"]))
 
         return {"sx": [i.value() for i in sx], "sy": [r.value() for r in sy]}
-
-    def _add_slack_result_to_dea_result(self, dea_result: dict, slack_result: dict):
-        result = dea_result.copy()
-        result.update(slack_result)
-
-        if np.sum(result["sx"]) + np.sum(result["sy"]) > 0:
-            result.update({"is_slack": True})
-            result.update({"is_eff": False})
-        else:
-            result.update({"is_slack": False})
-
-        return result
