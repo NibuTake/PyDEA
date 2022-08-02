@@ -78,16 +78,36 @@
 <span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">DMU</span>
 
 
-<div class="viewcode-block" id="Result"><a class="viewcode-back" href="../../../Pyfrontier.domain.html#Pyfrontier.domain.result.Result">[docs]</a><span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Result</span><span class="p">:</span>
-    <span class="n">eff</span><span class="p">:</span> <span class="nb">float</span>
-    <span class="n">lambdas</span><span class="p">:</span> <span class="nb">list</span>
+<span class="c1"># @dataclass(frozen=True)</span>
+<div class="viewcode-block" id="EnvelopResult"><a class="viewcode-back" href="../../../Pyfrontier.domain.html#Pyfrontier.domain.result.EnvelopResult">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">EnvelopResult</span><span class="p">:</span>
+    <span class="n">score</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">weight</span><span class="p">:</span> <span class="nb">list</span>
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
-    <span class="n">sx</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
-    <span class="n">sy</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
-    <span class="n">is_slack</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="n">is_eff</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="n">dmu</span><span class="p">:</span> <span class="n">DMU</span> <span class="o">=</span> <span class="n">DMU</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">dmu</span><span class="p">:</span> <span class="n">DMU</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_is_efficient</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_is_efficient</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_efficient</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_efficient</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="EnvelopResult.add_slack"><a class="viewcode-back" href="../../../Pyfrontier.domain.html#Pyfrontier.domain.result.EnvelopResult.add_slack">[docs]</a>    <span class="k">def</span> <span class="nf">add_slack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_slack</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">y_slack</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x_slack</span> <span class="o">=</span> <span class="n">x_slack</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y_slack</span> <span class="o">=</span> <span class="n">y_slack</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x_slack</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y_slack</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">has_slack</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">has_slack</span> <span class="o">=</span> <span class="kc">False</span></div>
 
     <span class="k">def</span> <span class="nf">_set_dmu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">output</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dmu</span> <span class="o">=</span> <span class="n">DMU</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span></div>

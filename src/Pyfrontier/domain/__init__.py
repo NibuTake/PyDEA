@@ -1,4 +1,4 @@
 from Pyfrontier.domain.dmu import DMU, DMUSet
-from Pyfrontier.domain.result import Result
+from Pyfrontier.domain.result import EnvelopResult
 
-__all__ = ["DMU", "DMUSet", "Result"]
+__all__ = ["DMU", "DMUSet", "EnvelopResult"]

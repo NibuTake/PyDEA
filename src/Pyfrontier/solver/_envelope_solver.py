@@ -3,7 +3,7 @@ from typing import Union
 import numpy as np
 import pulp
 
-from Pyfrontier.domain import DMUSet, Result
+from Pyfrontier.domain import DMU, DMUSet, EnvelopResult
 from Pyfrontier.solver._base import BaseSolver
 
 
@@ -28,7 +28,7 @@ class EnvelopeSolver(BaseSolver):
         self.frontier = frontier
         self._uncontrollable_index = uncontrollable_index
 
-    def apply(self) -> list:
+    def apply(self) -> list[EnvelopResult]:
         """AI is creating summary for fit"""
         dmu_result_list = [self._solve_problem(j) for j in range(self.DMUs.N)]
         return dmu_result_list
@@ -93,7 +93,7 @@ class EnvelopeSolver(BaseSolver):
 
         return problem
 
-    def _solve_problem(self, o: int):
+    def _solve_problem(self, o: int) -> EnvelopResult:
         # Define variables.
         theta = pulp.LpVariable("theta", lowBound=0)
         lambda_N = self._dict_to_list(
@@ -114,19 +114,18 @@ class EnvelopeSolver(BaseSolver):
 
         # Solve problem.
         problem.solve()
-        eff = self._rounder(problem.objective.value())
-        lambda_list = [self._rounder(n.value()) for n in lambda_N]
-        output = {"eff": eff, "lambdas": lambda_list, "id": o}
 
-        res = self._verify_output(o, output)
-        return res
+        result = EnvelopResult(
+            score=self._rounder(problem.objective.value()),
+            weight=[self._rounder(n.value()) for n in lambda_N],
+            id=o,
+            dmu=DMU(self.DMUs.inputs[o], self.DMUs.outputs[o], self.DMUs.get_id(o)),
+        )
+        return self._optimize_slack(result, o)
 
-    def _verify_output(self, o: int, dmu_result: dict) -> Result:
+    def _optimize_slack(self, result: EnvelopResult, o: int) -> EnvelopResult:
         slack_solver = SlackSolver(self.orient, self.DMUs, self._uncontrollable_index)
-        res = slack_solver.apply(o, dmu_result)
-        result = Result(**res)
-        result._set_dmu(self.DMUs.inputs[o], self.DMUs.outputs[o], self.DMUs.get_id(o))
-        return result
+        return slack_solver.apply(o, result)
 
 
 class SlackSolver(BaseSolver):
@@ -135,14 +134,11 @@ class SlackSolver(BaseSolver):
         self.DMUs = DMUs
         self._uncontrollable_index = uncontrollable_index
 
-    def apply(self, o: int, dmu_result: dict) -> dict:
-        if dmu_result["eff"] == 1:
-            dmu_result["is_eff"] = True
-            slack_result = self._solve_problem(o, dmu_result["eff"])
-            dmu_result = self._add_slack_result_to_dea_result(dmu_result, slack_result)
-        else:
-            dmu_result["is_eff"] = False
-        return dmu_result
+    def apply(self, o: int, result: EnvelopResult) -> EnvelopResult:
+        if result.is_efficient:
+            slack_result = self._solve_problem(o, result.score)
+            result.add_slack(slack_result["sx"], slack_result["sy"])
+        return result
 
     def _redefine_theta(self, i: int, theta) -> tuple:
         if i in self._uncontrollable_index:

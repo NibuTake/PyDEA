@@ -2,12 +2,12 @@ from typing import Any, Dict, List, Literal
 
 import numpy as np
 
-from Pyfrontier.domain import DMUSet
+from Pyfrontier.domain import DMUSet, EnvelopResult
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import EnvelopeSolver, MultipleSolver
 
 
-class EnvelopeDEA(BaseDataEnvelopmentAnalysis):
+class EnvelopDEA(BaseDataEnvelopmentAnalysis):
     """AI is creating summary for __init__
 
     Args:
@@ -19,7 +19,7 @@ class EnvelopeDEA(BaseDataEnvelopmentAnalysis):
         self.frontier = frontier
         self.orient = orient
         self.DMUs = None
-        self.result: List[Dict[str, Any]] = []
+        self.result: List[EnvelopResult] = []
 
     def fit(
         self,

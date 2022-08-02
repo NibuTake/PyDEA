@@ -1,6 +1,6 @@
 import pulp
 
-from Pyfrontier.domain import DMUSet, Result
+from Pyfrontier.domain import DMUSet
 from Pyfrontier.solver._base import BaseSolver
 
 
@@ -91,5 +91,5 @@ class MultipleSolver(BaseSolver):
 
         return self._verify_output(o, output)
 
-    def _verify_output(self, o: int, dmu_result: dict) -> Result:
+    def _verify_output(self, o: int, dmu_result: dict) -> dict:
         return dmu_result

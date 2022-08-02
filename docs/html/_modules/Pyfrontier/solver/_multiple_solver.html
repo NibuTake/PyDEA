@@ -73,7 +73,7 @@
   <h1>Source code for Pyfrontier.solver._multiple_solver</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">pulp</span>
 
-<span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">DMUSet</span><span class="p">,</span> <span class="n">Result</span>
+<span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">DMUSet</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.solver._base</span> <span class="kn">import</span> <span class="n">BaseSolver</span>
 
 
@@ -164,7 +164,7 @@
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verify_output</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_verify_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dmu_result</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Result</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_verify_output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dmu_result</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">dmu_result</span></div>
 </pre></div>
 
