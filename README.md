@@ -1,6 +1,5 @@
 # Pyfrontier: A data envelopment analysis module
-<div align="center"><img src="https://github.com/NibuTake/PyDEA/blob/main/_docs_src/img/logo.png" height="200"/></div>
-
+<div align="center"><img src="./images/logo.png" height="200"/></div>
 [Install](#installation) | [Tutorial](#tutorial) | [Docs](#documentation) | [Communication](#communication)| [References](#references)
 
 Pyfrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to apply DEA effectively and contribute to the development of this field.

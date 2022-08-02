@@ -21,6 +21,6 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-.. |logo| image:: https://github.com/NibuTake/PyDEA/blob/main/_docs_src/img/logo.png
+.. |logo| image:: ./images/logo.png
   :width: 800
   :alt: Pyfrontier
