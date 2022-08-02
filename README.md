@@ -1,5 +1,5 @@
 # Pyfrontier: A data envelopment analysis module
-<div align="center"><img src="./_docs_src/img/logo.png" height="200"/></div>
+<div align="center"><img src="https://github.com/NibuTake/PyDEA/blob/main/_docs_src/img/logo.png" height="200"/></div>
 
 [Install](#installation) | [Tutorial](#tutorial) | [Docs](#documentation) | [Communication](#communication)| [References](#references)
 
