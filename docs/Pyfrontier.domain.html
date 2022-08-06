@@ -171,22 +171,38 @@
 <section id="module-Pyfrontier.domain.result">
 <span id="pyfrontier-domain-result-module"></span><h2>Pyfrontier.domain.result module<a class="headerlink" href="#module-Pyfrontier.domain.result" title="Permalink to this heading"></a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.domain.result.</span></span><span class="sig-name descname"><span class="pre">EnvelopResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">Pyfrontier.domain.dmu.DMU</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#EnvelopResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult.add_slack">
-<span class="sig-name descname"><span class="pre">add_slack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#EnvelopResult.add_slack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult.add_slack" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult.dict">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dict</span></span><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult.dict" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.BaseResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.domain.result.</span></span><span class="sig-name descname"><span class="pre">BaseResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">Pyfrontier.domain.dmu.DMU</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#BaseResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.result.BaseResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.BaseResult.dmu">
+<span class="sig-name descname"><span class="pre">dmu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">DMU</span></a></em><a class="headerlink" href="#Pyfrontier.domain.result.BaseResult.dmu" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.BaseResult.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#Pyfrontier.domain.result.BaseResult.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.BaseResult.score">
+<span class="sig-name descname"><span class="pre">score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#Pyfrontier.domain.result.BaseResult.score" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.domain.result.</span></span><span class="sig-name descname"><span class="pre">EnvelopResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">Pyfrontier.domain.dmu.DMU</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#EnvelopResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Pyfrontier.domain.result.BaseResult" title="Pyfrontier.domain.result.BaseResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseResult</span></code></a></p>
+<dl class="py attribute">
 <dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult.dmu">
 <span class="sig-name descname"><span class="pre">dmu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">DMU</span></a></em><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult.dmu" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult.has_slack">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_slack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult.has_slack" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -206,7 +222,58 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult.weight">
-<span class="sig-name descname"><span class="pre">weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span></em><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult.weight" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult.weight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult.x_slack">
+<span class="sig-name descname"><span class="pre">x_slack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult.x_slack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.EnvelopResult.y_slack">
+<span class="sig-name descname"><span class="pre">y_slack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.result.EnvelopResult.y_slack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.MultipleResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.domain.result.</span></span><span class="sig-name descname"><span class="pre">MultipleResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">Pyfrontier.domain.dmu.DMU</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#MultipleResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.result.MultipleResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Pyfrontier.domain.result.BaseResult" title="Pyfrontier.domain.result.BaseResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseResult</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.MultipleResult.bias">
+<span class="sig-name descname"><span class="pre">bias</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#Pyfrontier.domain.result.MultipleResult.bias" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.MultipleResult.dmu">
+<span class="sig-name descname"><span class="pre">dmu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">DMU</span></a></em><a class="headerlink" href="#Pyfrontier.domain.result.MultipleResult.dmu" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.MultipleResult.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#Pyfrontier.domain.result.MultipleResult.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.MultipleResult.is_efficient">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_efficient</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#Pyfrontier.domain.result.MultipleResult.is_efficient" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.MultipleResult.score">
+<span class="sig-name descname"><span class="pre">score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#Pyfrontier.domain.result.MultipleResult.score" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.MultipleResult.x_weight">
+<span class="sig-name descname"><span class="pre">x_weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.result.MultipleResult.x_weight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.result.MultipleResult.y_weight">
+<span class="sig-name descname"><span class="pre">y_weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.result.MultipleResult.y_weight" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -279,21 +346,16 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="Pyfrontier.domain.EnvelopResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.domain.</span></span><span class="sig-name descname"><span class="pre">EnvelopResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">Pyfrontier.domain.dmu.DMU</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#EnvelopResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Pyfrontier.domain.EnvelopResult.add_slack">
-<span class="sig-name descname"><span class="pre">add_slack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#EnvelopResult.add_slack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult.add_slack" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="Pyfrontier.domain.EnvelopResult.dict">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dict</span></span><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult.dict" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.domain.</span></span><span class="sig-name descname"><span class="pre">EnvelopResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">Pyfrontier.domain.dmu.DMU</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#EnvelopResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Pyfrontier.domain.result.BaseResult" title="Pyfrontier.domain.result.BaseResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseResult</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="Pyfrontier.domain.EnvelopResult.dmu">
 <span class="sig-name descname"><span class="pre">dmu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">DMU</span></a></em><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult.dmu" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Pyfrontier.domain.EnvelopResult.has_slack">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_slack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult.has_slack" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -313,7 +375,58 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="Pyfrontier.domain.EnvelopResult.weight">
-<span class="sig-name descname"><span class="pre">weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span></em><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult.weight" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult.weight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.EnvelopResult.x_slack">
+<span class="sig-name descname"><span class="pre">x_slack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult.x_slack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.EnvelopResult.y_slack">
+<span class="sig-name descname"><span class="pre">y_slack</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.EnvelopResult.y_slack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Pyfrontier.domain.MultipleResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.domain.</span></span><span class="sig-name descname"><span class="pre">MultipleResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">Pyfrontier.domain.dmu.DMU</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/domain/result.html#MultipleResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.domain.MultipleResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Pyfrontier.domain.result.BaseResult" title="Pyfrontier.domain.result.BaseResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseResult</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.MultipleResult.bias">
+<span class="sig-name descname"><span class="pre">bias</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#Pyfrontier.domain.MultipleResult.bias" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.MultipleResult.dmu">
+<span class="sig-name descname"><span class="pre">dmu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#Pyfrontier.domain.dmu.DMU" title="Pyfrontier.domain.dmu.DMU"><span class="pre">DMU</span></a></em><a class="headerlink" href="#Pyfrontier.domain.MultipleResult.dmu" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.MultipleResult.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#Pyfrontier.domain.MultipleResult.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="Pyfrontier.domain.MultipleResult.is_efficient">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_efficient</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#Pyfrontier.domain.MultipleResult.is_efficient" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.MultipleResult.score">
+<span class="sig-name descname"><span class="pre">score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#Pyfrontier.domain.MultipleResult.score" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.MultipleResult.x_weight">
+<span class="sig-name descname"><span class="pre">x_weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.MultipleResult.x_weight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Pyfrontier.domain.MultipleResult.y_weight">
+<span class="sig-name descname"><span class="pre">y_weight</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.domain.MultipleResult.y_weight" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

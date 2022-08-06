@@ -1,8 +1,8 @@
-from typing import Any, Dict, List, Literal
+from typing import List, Literal
 
 import numpy as np
 
-from Pyfrontier.domain import DMUSet, EnvelopResult
+from Pyfrontier.domain import DMUSet, EnvelopResult, MultipleResult
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import EnvelopeSolver, MultipleSolver
 
@@ -46,7 +46,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         self.result = solver.apply()
 
     @property
-    def results(self) -> List[Dict[str, Any]]:
+    def results(self) -> List[EnvelopResult]:
         """AI is creating summary for results
 
         Returns:
@@ -81,7 +81,7 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
         self.frontier = frontier
         self.orient = orient
         self.DMUs = None
-        self.result: List[Dict[str, Any]] = []
+        self.result: List[MultipleResult] = []
 
     def fit(self, inputs: np.ndarray, outputs: np.ndarray, index=np.nan):
         """AI is creating summary for fit
@@ -99,7 +99,7 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
         self.result = solver.apply()
 
     @property
-    def results(self) -> List[Dict[str, Any]]:
+    def results(self) -> List[MultipleResult]:
         """AI is creating summary for results
 
         Returns:

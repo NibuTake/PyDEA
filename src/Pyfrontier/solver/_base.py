@@ -27,5 +27,5 @@ class BaseSolver(object, metaclass=abc.ABCMeta):
         return [_dict[k] for k in _dict]
 
     def _rounder(self, v: float) -> float:
-        sign_figs = 8
-        return round(v, sign_figs)
+        self._sign_figs = 6
+        return round(v, self._sign_figs)

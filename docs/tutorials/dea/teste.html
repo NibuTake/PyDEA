@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>This is my example script &mdash; pyfrontier 1.0.0 documentation</title>
+  <title>Input oriented model &mdash; pyfrontier 1.0.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
@@ -24,7 +24,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="DEA Features" href="index.html" />
+    <link rel="prev" title="Output oriented model" href="output_crs.html" />
 </head>
 
 <body class="wy-body-for-nav">
@@ -48,7 +48,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorial</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#dea-features">DEA Features</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">DEA Features</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">This is my example script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vrs.html">VRS model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="output_crs.html">Output oriented model</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Input oriented model</a></li>
 </ul>
 </li>
 </ul>
@@ -73,7 +75,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">Tutorial</a> &raquo;</li>
           <li><a href="index.html">DEA Features</a> &raquo;</li>
-      <li>This is my example script</li>
+      <li>Input oriented model</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -111,49 +113,149 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-tutorials-dea-teste-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<section class="sphx-glr-example-title" id="this-is-my-example-script">
-<span id="sphx-glr-tutorials-dea-teste-py"></span><h1>This is my example script<a class="headerlink" href="#this-is-my-example-script" title="Permalink to this heading"></a></h1>
+<section class="sphx-glr-example-title" id="input-oriented-model">
+<span id="sphx-glr-tutorials-dea-teste-py"></span><h1>Input oriented model<a class="headerlink" href="#input-oriented-model" title="Permalink to this heading"></a></h1>
 <p>This example doesn’t do much, it just makes a simple plot</p>
-<section id="this-is-a-section-header">
-<h2>This is a section header<a class="headerlink" href="#this-is-a-section-header" title="Permalink to this heading"></a></h2>
-<p>This is the first section!
-The <cite>#%%</cite> signifies to Sphinx-Gallery that this text should be rendered as
-rST and if using one of the above IDE/plugin’s, also signifies the start of a
-‘code block’.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This line won&#39;t be rendered as rST because there&#39;s a space after the last block.</span>
-<span class="n">myvariable</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my variable is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">myvariable</span><span class="p">))</span>
+<section id="import-libraries">
+<h2>Import libraries.<a class="headerlink" href="#import-libraries" title="Permalink to this heading"></a></h2>
+<p>Sample supply chain data is generated.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">301</span><span class="p">)</span>
-<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">Pyfrontier.frontier_model</span> <span class="kn">import</span> <span class="n">EnvelopDEA</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;cos&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="c1"># This is the end of the &#39;code block&#39; (if using an above IDE). All code within</span>
-<span class="c1"># this block can be easily executed all at once.</span>
+<span class="n">supply_chain_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;day&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;profit&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">]}</span>
+<span class="p">)</span>
+<span class="n">supply_chain_df</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_teste_001.png" srcset="../../_images/sphx_glr_teste_001.png" alt="teste" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>my variable is 2
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>day</th>
+      <th>cost</th>
+      <th>profit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>5</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>2</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>1</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>1</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>4</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<br />
+<br /></section>
+<section id="fit-dea-model">
+<h2>Fit dea model.<a class="headerlink" href="#fit-dea-model" title="Permalink to this heading"></a></h2>
+<p>The necessity inputs are inputs and outputs. The result has below belongings.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dea</span> <span class="o">=</span> <span class="n">EnvelopDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
+<span class="n">dea</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">supply_chain_df</span><span class="p">[[</span><span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;cost&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
+    <span class="n">supply_chain_df</span><span class="p">[[</span><span class="s2">&quot;profit&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
+<span class="p">)</span>
+
+<span class="n">dea</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([1, 5]), output=array([15]), id=0), weight=[1.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0])
 </pre></div>
 </div>
 </section>
-<section id="this-is-another-section-header">
-<h2>This is another section header<a class="headerlink" href="#this-is-another-section-header" title="Permalink to this heading"></a></h2>
-<p>In the built documentation, it will be rendered as rST after the code above!
-This is also another code block.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my variable plus 2 is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">myvariable</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+<section id="visualize-the-result">
+<h2>Visualize the result.<a class="headerlink" href="#visualize-the-result" title="Permalink to this heading"></a></h2>
+<p>In the built documentation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eff_dmu</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">dmu</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">is_efficient</span><span class="p">]</span>
+<span class="n">ineff_dmu</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">dmu</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">is_efficient</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">weak_eff_dmu</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">dmu</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">has_slack</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">eff_dmu</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">eff_dmu</span><span class="p">],</span>
+    <span class="s2">&quot;-o&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;efficient dmu&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ineff_dmu</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ineff_dmu</span><span class="p">],</span>
+    <span class="s2">&quot;o&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;not-efficient dmu&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">weak_eff_dmu</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">weak_eff_dmu</span><span class="p">],</span>
+    <span class="s2">&quot;o&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;weak-efficient dmu&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>my variable plus 2 is 4
+<img src="../../_images/sphx_glr_teste_001.png" srcset="../../_images/sphx_glr_teste_001.png" alt="teste" class = "sphx-glr-single-img"/></section>
+<section id="about-slack">
+<h2>About slack<a class="headerlink" href="#about-slack" title="Permalink to this heading"></a></h2>
+<p>In the built documentation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="n">r</span><span class="o">.</span><span class="n">score</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">r</span><span class="o">.</span><span class="n">is_efficient</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">r</span><span class="o">.</span><span class="n">has_slack</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dea</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">x_slack</span><span class="p">,</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">y_slack</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.419 seconds)</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[1.0, 1.0, 1.0, 1.0, 0.5]
+[True, True, True, False, False]
+[False, False, False, True, False]
+[2.0, 0.0] [0.0]
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.261 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-dea-teste-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/28472a6b50015c3121e71a4cc51ee857/teste.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">teste.py</span></code></a></p>
@@ -170,7 +272,7 @@ This is also another code block.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="DEA Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="output_crs.html" class="btn btn-neutral float-left" title="Output oriented model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

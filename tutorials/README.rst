@@ -1,4 +1,4 @@
 Tutorial
 ==================
 
-How to apply PyDEA.
+How to apply Pyfrontier.

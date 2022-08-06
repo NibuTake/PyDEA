@@ -18,42 +18,169 @@
 .. _sphx_glr_tutorials_dea_teste.py:
 
 
-This is my example script
+Input oriented model
 =========================
 
 This example doesn't do much, it just makes a simple plot
 
-.. GENERATED FROM PYTHON SOURCE LINES 9-15
+.. GENERATED FROM PYTHON SOURCE LINES 9-12
 
-This is a section header
+Import libraries.
 ------------------------
-This is the first section!
-The `#%%` signifies to Sphinx-Gallery that this text should be rendered as
-rST and if using one of the above IDE/plugin's, also signifies the start of a
-'code block'.
+Sample supply chain data is generated.
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-34
+.. GENERATED FROM PYTHON SOURCE LINES 12-22
 
 .. code-block:: default
 
 
-    # This line won't be rendered as rST because there's a space after the last block.
-    myvariable = 2
-    print("my variable is {}".format(myvariable))
-
-    import numpy as np
     import matplotlib.pyplot as plt
-    x = np.linspace(0, 4*np.pi, 301)
-    y1 = np.sin(x)
-    y2 = np.cos(x)
+    import pandas as pd
+
+    from Pyfrontier.frontier_model import EnvelopDEA
+
+    supply_chain_df = pd.DataFrame(
+        {"day": [1, 2, 4, 6, 4], "cost": [5, 2, 1, 1, 4], "profit": [15, 15, 15, 15, 15]}
+    )
+    supply_chain_df
+
+
+
+
+
+.. raw:: html
+
+    <div class="output_subarea output_html rendered_html output_result">
+    <div>
+    <style scoped>
+        .dataframe tbody tr th:only-of-type {
+            vertical-align: middle;
+        }
+
+        .dataframe tbody tr th {
+            vertical-align: top;
+        }
+
+        .dataframe thead th {
+            text-align: right;
+        }
+    </style>
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>day</th>
+          <th>cost</th>
+          <th>profit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td>1</td>
+          <td>5</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>2</td>
+          <td>2</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>4</td>
+          <td>1</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>6</td>
+          <td>1</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>4</td>
+          <td>4</td>
+          <td>15</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+    <br />
+    <br />
+
+.. GENERATED FROM PYTHON SOURCE LINES 23-27
+
+Fit dea model.
+------------------------------
+
+The necessity inputs are inputs and outputs. The result has below belongings.
+
+.. GENERATED FROM PYTHON SOURCE LINES 27-34
+
+.. code-block:: default
+
+    dea = EnvelopDEA("CRS", "in")
+    dea.fit(
+        supply_chain_df[["day", "cost"]].to_numpy(),
+        supply_chain_df[["profit"]].to_numpy(),
+    )
+
+    dea.result[0]
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+
+    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([1, 5]), output=array([15]), id=0), weight=[1.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0])
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 35-39
+
+Visualize the result.
+------------------------------
+
+In the built documentation.
+
+.. GENERATED FROM PYTHON SOURCE LINES 39-67
+
+.. code-block:: default
+
+    eff_dmu = [r.dmu for r in dea.result if r.is_efficient]
+    ineff_dmu = [r.dmu for r in dea.result if r.is_efficient != 1]
+    weak_eff_dmu = [r.dmu for r in dea.result if r.has_slack]
 
     plt.figure()
-    plt.plot(x, y1, label='sin')
-    plt.plot(x, y2, label='cos')
+    plt.plot(
+        [d.input[0] for d in eff_dmu],
+        [d.input[1] for d in eff_dmu],
+        "-o",
+        label="efficient dmu",
+    )
+    plt.plot(
+        [d.input[0] for d in ineff_dmu],
+        [d.input[1] for d in ineff_dmu],
+        "o",
+        label="not-efficient dmu",
+    )
+    plt.plot(
+        [d.input[0] for d in weak_eff_dmu],
+        [d.input[1] for d in weak_eff_dmu],
+        "o",
+        label="weak-efficient dmu",
+    )
+    plt.plot([4, 6], [1, 1], linestyle="--", color="black")
     plt.legend()
     plt.show()
-    # This is the end of the 'code block' (if using an above IDE). All code within
-    # this block can be easily executed all at once.
+
 
 
 
@@ -64,29 +191,26 @@ rST and if using one of the above IDE/plugin's, also signifies the start of a
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    my variable is 2
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 68-72
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-40
-
-This is another section header
+About slack
 ------------------------------
 
-In the built documentation, it will be rendered as rST after the code above!
-This is also another code block.
+In the built documentation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-42
+.. GENERATED FROM PYTHON SOURCE LINES 72-78
 
 .. code-block:: default
 
 
-    print("my variable plus 2 is {}".format(myvariable + 2))
+    print([r.score for r in dea.result])
+    print([r.is_efficient for r in dea.result])
+    print([r.has_slack for r in dea.result])
+
+    print(dea.result[-2].x_slack, dea.result[-2].y_slack)
 
 
 
@@ -95,7 +219,10 @@ This is also another code block.
 
  .. code-block:: none
 
-    my variable plus 2 is 4
+    [1.0, 1.0, 1.0, 1.0, 0.5]
+    [True, True, True, False, False]
+    [False, False, False, True, False]
+    [2.0, 0.0] [0.0]
 
 
 
@@ -103,7 +230,7 @@ This is also another code block.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.419 seconds)
+   **Total running time of the script:** ( 0 minutes  0.261 seconds)
 
 
 .. _sphx_glr_download_tutorials_dea_teste.py:

@@ -1,38 +1,61 @@
+import abc
 from dataclasses import dataclass
+from typing import List
 
 import numpy as np
 
 from Pyfrontier.domain import DMU
 
 
-# @dataclass(frozen=True)
-@dataclass
-class EnvelopResult:
+@dataclass(frozen=True)
+class BaseResult(abc.ABC):
     score: float
-    weight: list
     id: int
     dmu: DMU
 
+
+@dataclass(frozen=True)
+class EnvelopResult(BaseResult):
+    score: float
+    id: int
+    dmu: DMU
+    weight: List[float]
+    x_slack: List[float]
+    y_slack: List[float]
+
     def __post_init__(self):
-        if self.score == 1:
-            self._is_efficient = True
-        else:
-            self._is_efficient = False
+        pass
 
     @property
     def is_efficient(self) -> bool:
-        return self._is_efficient
+        if self.score == 1:
+            return not self.has_slack
+        else:
+            return False
 
     @property
-    def dict(self):
+    def has_slack(self) -> bool:
+        if np.sum(self.x_slack) + np.sum(self.y_slack) > 0:
+            return True
+        else:
+            return False
+
+
+@dataclass(frozen=True)
+class MultipleResult(BaseResult):
+    score: float
+    id: int
+    dmu: DMU
+    x_weight: List[float]
+    y_weight: List[float]
+    bias: float
+
+    def __post_init__(self):
         pass
 
-    def add_slack(self, x_slack: list, y_slack: list):
-        self.x_slack = x_slack
-        self.y_slack = y_slack
-
-        if np.sum(x_slack) + np.sum(y_slack) > 0:
-            self.has_slack = True
-            self._is_efficient = False
+    @property
+    def is_efficient(self) -> bool:
+        if self.score == 1:
+            return True
         else:
-            self.has_slack = False
+            return False

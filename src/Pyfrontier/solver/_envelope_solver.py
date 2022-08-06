@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Tuple, Union
 
 import numpy as np
 import pulp
@@ -29,9 +29,7 @@ class EnvelopeSolver(BaseSolver):
         self._uncontrollable_index = uncontrollable_index
 
     def apply(self) -> list[EnvelopResult]:
-        """AI is creating summary for fit"""
-        dmu_result_list = [self._solve_problem(j) for j in range(self.DMUs.N)]
-        return dmu_result_list
+        return [self._solve_problem(j) for j in range(self.DMUs.N)]
 
     def _redefine_theta_i(
         self, i: int, theta: pulp.LpVariable
@@ -42,10 +40,7 @@ class EnvelopeSolver(BaseSolver):
             return theta
 
     def _define_input_orient_problem(
-        self,
-        o: int,
-        lambda_N: list,
-        theta: pulp.LpVariable,
+        self, o: int, lambda_N: list, theta: pulp.LpVariable
     ) -> pulp.LpProblem:
         problem = pulp.LpProblem(self.orient, pulp.LpMinimize)
         problem += theta
@@ -67,10 +62,7 @@ class EnvelopeSolver(BaseSolver):
         return problem
 
     def _define_output_orient_problem(
-        self,
-        o: int,
-        lambda_N: list,
-        theta: pulp.LpVariable,
+        self, o: int, lambda_N: list, theta: pulp.LpVariable
     ) -> pulp.LpProblem:
         problem = pulp.LpProblem(self.orient, pulp.LpMaximize)
         problem += theta
@@ -108,24 +100,26 @@ class EnvelopeSolver(BaseSolver):
         else:
             problem = self._define_output_orient_problem(o, lambda_N, theta)
 
-        # Add restriction.
         if self.frontier == "VRS":
             problem += np.sum(lambda_N) == 1
 
-        # Solve problem.
         problem.solve()
 
-        result = EnvelopResult(
+        score = self._rounder(problem.objective.value())
+        sx, sy = self._optimize_slack(score, o)
+
+        return EnvelopResult(
             score=self._rounder(problem.objective.value()),
             weight=[self._rounder(n.value()) for n in lambda_N],
             id=o,
+            x_slack=sx,
+            y_slack=sy,
             dmu=DMU(self.DMUs.inputs[o], self.DMUs.outputs[o], self.DMUs.get_id(o)),
         )
-        return self._optimize_slack(result, o)
 
-    def _optimize_slack(self, result: EnvelopResult, o: int) -> EnvelopResult:
+    def _optimize_slack(self, theta: float, o: int) -> Tuple[list, list]:
         slack_solver = SlackSolver(self.orient, self.DMUs, self._uncontrollable_index)
-        return slack_solver.apply(o, result)
+        return slack_solver.apply(o, theta)
 
 
 class SlackSolver(BaseSolver):
@@ -134,11 +128,9 @@ class SlackSolver(BaseSolver):
         self.DMUs = DMUs
         self._uncontrollable_index = uncontrollable_index
 
-    def apply(self, o: int, result: EnvelopResult) -> EnvelopResult:
-        if result.is_efficient:
-            slack_result = self._solve_problem(o, result.score)
-            result.add_slack(slack_result["sx"], slack_result["sy"])
-        return result
+    def apply(self, o: int, theta: float) -> Tuple[list, list]:
+        slack_result = self._solve_problem(o, theta)
+        return slack_result["sx"], slack_result["sy"]
 
     def _redefine_theta(self, i: int, theta) -> tuple:
         if i in self._uncontrollable_index:
@@ -203,11 +195,8 @@ class SlackSolver(BaseSolver):
             problem = self._define_input_orient_problem(o, sx, sy, lambda_N, theta)
         else:
             problem = self._define_output_orient_problem(o, sx, sy, lambda_N, theta)
-
-        # Add restrictions.
         problem += np.sum(lambda_N) == 1
 
-        # Solve.
         problem.solve(pulp.PULP_CBC_CMD(msg=1, gapRel=1e-10, options=["revised"]))
 
         return {"sx": [i.value() for i in sx], "sy": [r.value() for r in sy]}

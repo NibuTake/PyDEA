@@ -1,42 +1,77 @@
 """
-This is my example script
+Input oriented model
 =========================
 
 This example doesn't do much, it just makes a simple plot
 """
 
 # %%
-# This is a section header
+# Import libraries.
 # ------------------------
-# This is the first section!
-# The `#%%` signifies to Sphinx-Gallery that this text should be rendered as
-# rST and if using one of the above IDE/plugin's, also signifies the start of a
-# 'code block'.
-
-# This line won't be rendered as rST because there's a space after the last block.
-myvariable = 2
-print("my variable is {}".format(myvariable))
+# Sample supply chain data is generated.
 
 import matplotlib.pyplot as plt
-import numpy as np
+import pandas as pd
 
-x = np.linspace(0, 4 * np.pi, 301)
-y1 = np.sin(x)
-y2 = np.cos(x)
+from Pyfrontier.frontier_model import EnvelopDEA
 
-plt.figure()
-plt.plot(x, y1, label="sin")
-plt.plot(x, y2, label="cos")
-plt.legend()
-plt.show()
-# This is the end of the 'code block' (if using an above IDE). All code within
-# this block can be easily executed all at once.
-
+supply_chain_df = pd.DataFrame(
+    {"day": [1, 2, 4, 6, 4], "cost": [5, 2, 1, 1, 4], "profit": [15, 15, 15, 15, 15]}
+)
+supply_chain_df
 # %%
-# This is another section header
+# Fit dea model.
 # ------------------------------
 #
-# In the built documentation, it will be rendered as rST after the code above!
-# This is also another code block.
+# The necessity inputs are inputs and outputs. The result has below belongings.
+dea = EnvelopDEA("CRS", "in")
+dea.fit(
+    supply_chain_df[["day", "cost"]].to_numpy(),
+    supply_chain_df[["profit"]].to_numpy(),
+)
 
-print("my variable plus 2 is {}".format(myvariable + 2))
+dea.result[0]
+# %%
+# Visualize the result.
+# ------------------------------
+#
+# In the built documentation.
+eff_dmu = [r.dmu for r in dea.result if r.is_efficient]
+ineff_dmu = [r.dmu for r in dea.result if r.is_efficient != 1]
+weak_eff_dmu = [r.dmu for r in dea.result if r.has_slack]
+
+plt.figure()
+plt.plot(
+    [d.input[0] for d in eff_dmu],
+    [d.input[1] for d in eff_dmu],
+    "-o",
+    label="efficient dmu",
+)
+plt.plot(
+    [d.input[0] for d in ineff_dmu],
+    [d.input[1] for d in ineff_dmu],
+    "o",
+    label="not-efficient dmu",
+)
+plt.plot(
+    [d.input[0] for d in weak_eff_dmu],
+    [d.input[1] for d in weak_eff_dmu],
+    "o",
+    label="weak-efficient dmu",
+)
+plt.plot([4, 6], [1, 1], linestyle="--", color="black")
+plt.legend()
+plt.show()
+
+
+# %%
+# About slack
+# ------------------------------
+#
+# In the built documentation.
+
+print([r.score for r in dea.result])
+print([r.is_efficient for r in dea.result])
+print([r.has_slack for r in dea.result])
+
+print(dea.result[-2].x_slack, dea.result[-2].y_slack)
