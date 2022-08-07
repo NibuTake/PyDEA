@@ -1,4 +1,4 @@
-from typing import Tuple, Union
+from typing import List, Tuple, Union
 
 import numpy as np
 import pulp
@@ -22,11 +22,13 @@ class EnvelopeSolver(BaseSolver):
         frontier: str,
         DMUs: DMUSet,
         uncontrollable_index: list[int] = [],
+        is_super_efficiency: bool = False,
     ):
         self.orient = orient
         self.DMUs = DMUs
         self.frontier = frontier
         self._uncontrollable_index = uncontrollable_index
+        self._is_super_efficiency = is_super_efficiency
 
     def apply(self) -> list[EnvelopResult]:
         return [self._solve_problem(j) for j in range(self.DMUs.N)]
@@ -39,6 +41,12 @@ class EnvelopeSolver(BaseSolver):
         else:
             return theta
 
+    def _index_of_dmu(self, o: int) -> List[int]:
+        if self._is_super_efficiency:
+            return [i for i in range(self.DMUs.N) if i != o]
+        else:
+            return [i for i in range(self.DMUs.N)]
+
     def _define_input_orient_problem(
         self, o: int, lambda_N: list, theta: pulp.LpVariable
     ) -> pulp.LpProblem:
@@ -49,14 +57,14 @@ class EnvelopeSolver(BaseSolver):
         for i in range(self.DMUs.m):
             theta_i = self._redefine_theta_i(i, theta)
             problem += (
-                pulp.lpDot(lambda_N, self.DMUs.inputs[:, i])
+                pulp.lpDot(lambda_N, self.DMUs.inputs[self._index_of_dmu(o), i])
                 <= theta_i * self.DMUs.inputs[o, i]
             )
 
         # Y
         for i in range(self.DMUs.s):
             problem += (
-                pulp.lpDot(lambda_N, self.DMUs.outputs[:, i])
+                pulp.lpDot(lambda_N, self.DMUs.outputs[self._index_of_dmu(o), i])
                 >= 1 * self.DMUs.outputs[o, i]
             )
         return problem
@@ -71,15 +79,14 @@ class EnvelopeSolver(BaseSolver):
         for i in range(self.DMUs.m):
 
             problem += (
-                pulp.lpDot(lambda_N, self.DMUs.inputs[:, i])
+                pulp.lpDot(lambda_N, self.DMUs.inputs[self._index_of_dmu(o), i])
                 <= 1 * self.DMUs.inputs[o, i]
             )
-
         # Y
         for i in range(self.DMUs.s):
             theta_i = self._redefine_theta_i(i, theta)
             problem += (
-                pulp.lpDot(lambda_N, self.DMUs.outputs[:, i])
+                pulp.lpDot(lambda_N, self.DMUs.outputs[self._index_of_dmu(o), i])
                 >= theta_i * self.DMUs.outputs[o, i]
             )
 
@@ -90,7 +97,7 @@ class EnvelopeSolver(BaseSolver):
         theta = pulp.LpVariable("theta", lowBound=0)
         lambda_N = self._dict_to_list(
             pulp.LpVariable.dicts(
-                "Lambda", range(self.DMUs.N), lowBound=0, cat="Continuous"
+                "Lambda", self._index_of_dmu(o), lowBound=0, cat="Continuous"
             )
         )
 
@@ -118,7 +125,12 @@ class EnvelopeSolver(BaseSolver):
         )
 
     def _optimize_slack(self, theta: float, o: int) -> Tuple[list, list]:
-        slack_solver = SlackSolver(self.orient, self.DMUs, self._uncontrollable_index)
+        if self._is_super_efficiency:
+            return ([], [])
+        else:
+            slack_solver = SlackSolver(
+                self.orient, self.DMUs, self._uncontrollable_index
+            )
         return slack_solver.apply(o, theta)
 
 

@@ -2,7 +2,7 @@ from typing import List, Union
 
 import pulp
 
-from Pyfrontier.domain import DMUSet, MultipleResult
+from Pyfrontier.domain import AssuranceRegion, DMUSet, MultipleResult
 from Pyfrontier.domain.dmu import DMU
 from Pyfrontier.solver._base import BaseSolver
 
@@ -16,10 +16,18 @@ class MultipleSolver(BaseSolver):
         DMUs ([type]): [description]
     """
 
-    def __init__(self, orient: str, frontier: str, DMUs: DMUSet, bound: float = 0.0):
+    def __init__(
+        self,
+        orient: str,
+        frontier: str,
+        DMUs: DMUSet,
+        assurance_region: List[AssuranceRegion],
+        bound: float = 0.0,
+    ):
         self.orient = orient
         self.DMUs = DMUs
         self.frontier = frontier
+        self.assurance_region = assurance_region
         self.bound = bound
 
     def apply(self) -> List[MultipleResult]:
@@ -45,6 +53,7 @@ class MultipleSolver(BaseSolver):
                 <= 0
             )
         problem += pulp.lpDot(nu, self.DMUs.inputs[o, :]) == 1
+
         return problem
 
     def _define_output_oriented_problem(
@@ -78,6 +87,9 @@ class MultipleSolver(BaseSolver):
             problem = self._define_input_oriented_problem(bias, mu, nu, o)
         else:
             problem = self._define_output_oriented_problem(bias, mu, nu, o)
+
+        problem = self._apply_assurance_region(problem, mu, nu)
+
         problem.solve(pulp.PULP_CBC_CMD(msg=1, gapRel=1e-10, options=["revised"]))
 
         return MultipleResult(
@@ -88,6 +100,34 @@ class MultipleSolver(BaseSolver):
             y_weight=[self._rounder(r.value()) for r in mu],
             bias=self._derive_value_from_bias(bias),
         )
+
+    def _apply_assurance_region(
+        self,
+        problem: pulp.LpProblem,
+        mu: List[pulp.LpVariable],
+        nu: List[pulp.LpVariable],
+    ) -> pulp.LpProblem:
+        for region in self.assurance_region:
+            problem = self._add_an_assurance_region(problem, mu, nu, region)
+        return problem
+
+    def _add_an_assurance_region(
+        self,
+        problem: pulp.LpProblem,
+        mu: List[pulp.LpVariable],
+        nu: List[pulp.LpVariable],
+        region: AssuranceRegion,
+    ) -> pulp.LpProblem:
+        if region.type == "in":
+            eta = nu
+        else:
+            eta = mu
+
+        if region.operator == "<=":
+            problem += eta[region.index_a] <= region.coefficient * eta[region.index_b]
+        else:
+            problem += region.coefficient * eta[region.index_b] <= eta[region.index_a]
+        return problem
 
     def _derive_value_from_bias(self, bias: Union[pulp.LpVariable, int]) -> float:
         if isinstance(bias, int):

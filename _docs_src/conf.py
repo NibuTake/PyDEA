@@ -10,6 +10,7 @@ import os
 import sys
 
 from recommonmark.parser import CommonMarkParser
+from sphinx_gallery.sorting import FileNameSortKey
 
 sys.path.insert(0, os.path.abspath("../"))
 
@@ -42,8 +43,9 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 source_suffix = [".rst", ".md"]
 
 sphinx_gallery_conf = {
-    "examples_dirs": "../tutorials",  # path to your example scripts
+    "examples_dirs": "../tutorials/build",  # path to your example scripts
     "gallery_dirs": "tutorials",  # path to where to save gallery generated output
+    "within_subsection_order": FileNameSortKey,
     "filename_pattern": r"/*\.py",
     "first_notebook_cell": None,
 }

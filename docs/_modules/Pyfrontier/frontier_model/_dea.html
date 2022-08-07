@@ -75,7 +75,7 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">DMUSet</span><span class="p">,</span> <span class="n">EnvelopResult</span><span class="p">,</span> <span class="n">MultipleResult</span>
+<span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">AssuranceRegion</span><span class="p">,</span> <span class="n">DMUSet</span><span class="p">,</span> <span class="n">EnvelopResult</span><span class="p">,</span> <span class="n">MultipleResult</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.frontier_model._base</span> <span class="kn">import</span> <span class="n">BaseDataEnvelopmentAnalysis</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.solver</span> <span class="kn">import</span> <span class="n">EnvelopeSolver</span><span class="p">,</span> <span class="n">MultipleSolver</span>
 
@@ -88,9 +88,15 @@
 <span class="sd">        orient (Literal[&quot;in&quot;, &quot;out&quot;]): ...</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">],</span> <span class="n">orient</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">]):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">],</span>
+        <span class="n">orient</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">],</span>
+        <span class="n">super_efficiency</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span> <span class="o">=</span> <span class="n">frontier</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">orient</span> <span class="o">=</span> <span class="n">orient</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">super_efficiency</span> <span class="o">=</span> <span class="n">super_efficiency</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">EnvelopResult</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -114,7 +120,11 @@
 
         <span class="c1"># call solver.</span>
         <span class="n">solver</span> <span class="o">=</span> <span class="n">EnvelopeSolver</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">orient</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="p">,</span> <span class="n">uncontrollable_index</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">orient</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="p">,</span>
+            <span class="n">uncontrollable_index</span><span class="p">,</span>
+            <span class="n">is_super_efficiency</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">super_efficiency</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span></div>
 
@@ -155,6 +165,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">orient</span> <span class="o">=</span> <span class="n">orient</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MultipleResult</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_assurance_region</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AssuranceRegion</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
 <div class="viewcode-block" id="MultipleDEA.fit"><a class="viewcode-back" href="../../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.MultipleDEA.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">outputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;AI is creating summary for fit</span>
@@ -168,7 +179,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span> <span class="o">=</span> <span class="n">DMUSet</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
 
         <span class="c1"># call solver.</span>
-        <span class="n">solver</span> <span class="o">=</span> <span class="n">MultipleSolver</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">orient</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="p">)</span>
+        <span class="n">solver</span> <span class="o">=</span> <span class="n">MultipleSolver</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">orient</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_assurance_region</span>
+        <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span></div>
 
     <span class="nd">@property</span>
@@ -179,6 +192,29 @@
 <span class="sd">            List[Dict[str, Any]]: [description]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span>
+
+<div class="viewcode-block" id="MultipleDEA.add_assurance_region"><a class="viewcode-back" href="../../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.MultipleDEA.add_assurance_region">[docs]</a>    <span class="k">def</span> <span class="nf">add_assurance_region</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="nb">type</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">],</span>
+        <span class="n">index_a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">index_b</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">coefficient</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">operator</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;&lt;=&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;=&quot;</span><span class="p">],</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;AI is creating summary for add_assurance_region</span>
+<span class="sd">        - x_a/x_b =&lt; coefficient</span>
+<span class="sd">        - coefficient &lt;= x_a/x_b</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            type (Literal[): [description]</span>
+<span class="sd">            index_a (int): [description]</span>
+<span class="sd">            index_b (int): [description]</span>
+<span class="sd">            coefficient (float): [description]</span>
+<span class="sd">            operator (Literal[, optional): [description]. Defaults to &quot;, &quot;&gt;=&quot;].</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_assurance_region</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">AssuranceRegion</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">index_a</span><span class="p">,</span> <span class="n">index_b</span><span class="p">,</span> <span class="n">coefficient</span><span class="p">,</span> <span class="n">operator</span><span class="p">)</span>
+        <span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">_dmu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_eff</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">is_eff</span> <span class="ow">is</span> <span class="n">is_eff</span><span class="p">]</span>

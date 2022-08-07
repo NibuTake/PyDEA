@@ -4,6 +4,14 @@ Pyfrontier.domain package
 Submodules
 ----------
 
+Pyfrontier.domain.assurance\_region module
+------------------------------------------
+
+.. automodule:: Pyfrontier.domain.assurance_region
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Pyfrontier.domain.dmu module
 ----------------------------
 

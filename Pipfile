@@ -24,6 +24,7 @@ recommonmark = "*"
 sphinx-gallery = "*"
 pillow = "*"
 matplotlib = "*"
+bibtexparser = "*"
 
 [requires]
 python_version = "3.9"

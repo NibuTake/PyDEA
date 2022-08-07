@@ -17,10 +17,8 @@ How to apply Pyfrontier.
     </div>
 
 
-DEA Features
+Advanced usage
 ------------
-
-Showcases  `DEA Features <https://github.com/NibuTake/PyDEA#documentation>`_.
 
 
 
@@ -31,18 +29,35 @@ Showcases  `DEA Features <https://github.com/NibuTake/PyDEA#documentation>`_.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="ss">
+    </div>
 
-.. only:: html
 
-  .. image:: /tutorials/dea/images/thumb/sphx_glr_vrs_thumb.png
-    :alt: VRS model
+Basic use case
+------------
 
-  :ref:`sphx_glr_tutorials_dea_vrs.py`
+Showcases.
+
+
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">VRS model</div>
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example doesn&#x27;t do much, it just makes a simple plot">
+
+.. only:: html
+
+  .. image:: /tutorials/usecase/images/thumb/sphx_glr_01_input_crs_thumb.png
+    :alt: Input oriented model
+
+  :ref:`sphx_glr_tutorials_usecase_01_input_crs.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Input oriented model</div>
     </div>
 
 
@@ -52,10 +67,10 @@ Showcases  `DEA Features <https://github.com/NibuTake/PyDEA#documentation>`_.
 
 .. only:: html
 
-  .. image:: /tutorials/dea/images/thumb/sphx_glr_output_crs_thumb.png
+  .. image:: /tutorials/usecase/images/thumb/sphx_glr_02_output_crs_thumb.png
     :alt: Output oriented model
 
-  :ref:`sphx_glr_tutorials_dea_output_crs.py`
+  :ref:`sphx_glr_tutorials_usecase_02_output_crs.py`
 
 .. raw:: html
 
@@ -65,18 +80,69 @@ Showcases  `DEA Features <https://github.com/NibuTake/PyDEA#documentation>`_.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example doesn&#x27;t do much, it just makes a simple plot">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example. 乗数モデルにおいて、乗数やその比に不等式制約を課す、または乗数自体に上下限制約を貸す。 これによって乗数同士の重要性などを加味することができる。">
 
 .. only:: html
 
-  .. image:: /tutorials/dea/images/thumb/sphx_glr_teste_thumb.png
-    :alt: Input oriented model
+  .. image:: /tutorials/usecase/images/thumb/sphx_glr_assurance_region_thumb.png
+    :alt: Assurance region
 
-  :ref:`sphx_glr_tutorials_dea_teste.py`
+  :ref:`sphx_glr_tutorials_usecase_assurance_region.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Input oriented model</div>
+      <div class="sphx-glr-thumbnail-title">Assurance region</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="ss">
+
+.. only:: html
+
+  .. image:: /tutorials/usecase/images/thumb/sphx_glr_returns_to_scale_thumb.png
+    :alt: Returns to scale
+
+  :ref:`sphx_glr_tutorials_usecase_returns_to_scale.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Returns to scale</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
+
+.. only:: html
+
+  .. image:: /tutorials/usecase/images/thumb/sphx_glr_super_efficiency_thumb.png
+    :alt: Super efficiency
+
+  :ref:`sphx_glr_tutorials_usecase_super_efficiency.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Super efficiency</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
+
+.. only:: html
+
+  .. image:: /tutorials/usecase/images/thumb/sphx_glr_uncontrollable_factor_thumb.png
+    :alt: Uncontrollable factor
+
+  :ref:`sphx_glr_tutorials_usecase_uncontrollable_factor.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Uncontrollable factor</div>
     </div>
 
 
@@ -89,7 +155,8 @@ Showcases  `DEA Features <https://github.com/NibuTake/PyDEA#documentation>`_.
    :hidden:
    :includehidden:
 
-   /tutorials/dea/index.rst
+   /tutorials/advanced/index.rst
+   /tutorials/usecase/index.rst
 
 
 .. only:: html

@@ -2,7 +2,7 @@ from typing import List, Literal
 
 import numpy as np
 
-from Pyfrontier.domain import DMUSet, EnvelopResult, MultipleResult
+from Pyfrontier.domain import AssuranceRegion, DMUSet, EnvelopResult, MultipleResult
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import EnvelopeSolver, MultipleSolver
 
@@ -15,9 +15,15 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         orient (Literal["in", "out"]): ...
     """
 
-    def __init__(self, frontier: Literal["CRS", "VRS"], orient: Literal["in", "out"]):
+    def __init__(
+        self,
+        frontier: Literal["CRS", "VRS"],
+        orient: Literal["in", "out"],
+        super_efficiency: bool = False,
+    ):
         self.frontier = frontier
         self.orient = orient
+        self.super_efficiency = super_efficiency
         self.DMUs = None
         self.result: List[EnvelopResult] = []
 
@@ -41,7 +47,11 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
 
         # call solver.
         solver = EnvelopeSolver(
-            self.orient, self.frontier, self.DMUs, uncontrollable_index
+            self.orient,
+            self.frontier,
+            self.DMUs,
+            uncontrollable_index,
+            is_super_efficiency=self.super_efficiency,
         )
         self.result = solver.apply()
 
@@ -82,6 +92,7 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
         self.orient = orient
         self.DMUs = None
         self.result: List[MultipleResult] = []
+        self._assurance_region: List[AssuranceRegion] = []
 
     def fit(self, inputs: np.ndarray, outputs: np.ndarray, index=np.nan):
         """AI is creating summary for fit
@@ -95,7 +106,9 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
         self.DMUs = DMUSet(inputs, outputs, index)
 
         # call solver.
-        solver = MultipleSolver(self.orient, self.frontier, self.DMUs)
+        solver = MultipleSolver(
+            self.orient, self.frontier, self.DMUs, self._assurance_region
+        )
         self.result = solver.apply()
 
     @property
@@ -106,6 +119,29 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
             List[Dict[str, Any]]: [description]
         """
         return self.result
+
+    def add_assurance_region(
+        self,
+        type: Literal["in", "out"],
+        index_a: int,
+        index_b: int,
+        coefficient: float,
+        operator: Literal["<=", ">="],
+    ):
+        """AI is creating summary for add_assurance_region
+        - x_a/x_b =< coefficient
+        - coefficient <= x_a/x_b
+
+        Args:
+            type (Literal[): [description]
+            index_a (int): [description]
+            index_b (int): [description]
+            coefficient (float): [description]
+            operator (Literal[, optional): [description]. Defaults to ", ">="].
+        """
+        self._assurance_region.append(
+            AssuranceRegion(type, index_a, index_b, coefficient, operator)
+        )
 
     def _dmu(self, is_eff: bool = True):
         return [r for r in self.result if r.is_eff is is_eff]

@@ -75,7 +75,7 @@
 
 <span class="kn">import</span> <span class="nn">pulp</span>
 
-<span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">DMUSet</span><span class="p">,</span> <span class="n">MultipleResult</span>
+<span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">AssuranceRegion</span><span class="p">,</span> <span class="n">DMUSet</span><span class="p">,</span> <span class="n">MultipleResult</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.domain.dmu</span> <span class="kn">import</span> <span class="n">DMU</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.solver._base</span> <span class="kn">import</span> <span class="n">BaseSolver</span>
 
@@ -89,10 +89,18 @@
 <span class="sd">        DMUs ([type]): [description]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orient</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frontier</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">DMUs</span><span class="p">:</span> <span class="n">DMUSet</span><span class="p">,</span> <span class="n">bound</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">orient</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">frontier</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">DMUs</span><span class="p">:</span> <span class="n">DMUSet</span><span class="p">,</span>
+        <span class="n">assurance_region</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AssuranceRegion</span><span class="p">],</span>
+        <span class="n">bound</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">orient</span> <span class="o">=</span> <span class="n">orient</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span> <span class="o">=</span> <span class="n">DMUs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span> <span class="o">=</span> <span class="n">frontier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assurance_region</span> <span class="o">=</span> <span class="n">assurance_region</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bound</span> <span class="o">=</span> <span class="n">bound</span>
 
 <div class="viewcode-block" id="MultipleSolver.apply"><a class="viewcode-back" href="../../../Pyfrontier.solver.html#Pyfrontier.solver.MultipleSolver.apply">[docs]</a>    <span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">MultipleResult</span><span class="p">]:</span>
@@ -118,6 +126,7 @@
                 <span class="o">&lt;=</span> <span class="mi">0</span>
             <span class="p">)</span>
         <span class="n">problem</span> <span class="o">+=</span> <span class="n">pulp</span><span class="o">.</span><span class="n">lpDot</span><span class="p">(</span><span class="n">nu</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">o</span><span class="p">,</span> <span class="p">:])</span> <span class="o">==</span> <span class="mi">1</span>
+
         <span class="k">return</span> <span class="n">problem</span>
 
     <span class="k">def</span> <span class="nf">_define_output_oriented_problem</span><span class="p">(</span>
@@ -151,6 +160,9 @@
             <span class="n">problem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_define_input_oriented_problem</span><span class="p">(</span><span class="n">bias</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">problem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_define_output_oriented_problem</span><span class="p">(</span><span class="n">bias</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+
+        <span class="n">problem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apply_assurance_region</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">nu</span><span class="p">)</span>
+
         <span class="n">problem</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">pulp</span><span class="o">.</span><span class="n">PULP_CBC_CMD</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gapRel</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;revised&quot;</span><span class="p">]))</span>
 
         <span class="k">return</span> <span class="n">MultipleResult</span><span class="p">(</span>
@@ -159,15 +171,42 @@
             <span class="n">dmu</span><span class="o">=</span><span class="n">DMU</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">o</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="n">o</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="o">.</span><span class="n">get_id</span><span class="p">(</span><span class="n">o</span><span class="p">)),</span>
             <span class="n">x_weight</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_rounder</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">value</span><span class="p">())</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nu</span><span class="p">],</span>
             <span class="n">y_weight</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_rounder</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">value</span><span class="p">())</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">mu</span><span class="p">],</span>
-            <span class="n">bias</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_derive_value_from_bias</span><span class="p">(</span><span class="n">bias</span><span class="p">)</span>
+            <span class="n">bias</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_derive_value_from_bias</span><span class="p">(</span><span class="n">bias</span><span class="p">),</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_derive_value_from_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bias</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pulp</span><span class="o">.</span><span class="n">LpVariable</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span><span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_apply_assurance_region</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">problem</span><span class="p">:</span> <span class="n">pulp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">,</span>
+        <span class="n">mu</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">pulp</span><span class="o">.</span><span class="n">LpVariable</span><span class="p">],</span>
+        <span class="n">nu</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">pulp</span><span class="o">.</span><span class="n">LpVariable</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pulp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">assurance_region</span><span class="p">:</span>
+            <span class="n">problem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_an_assurance_region</span><span class="p">(</span><span class="n">problem</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">region</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">problem</span>
+
+    <span class="k">def</span> <span class="nf">_add_an_assurance_region</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">problem</span><span class="p">:</span> <span class="n">pulp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">,</span>
+        <span class="n">mu</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">pulp</span><span class="o">.</span><span class="n">LpVariable</span><span class="p">],</span>
+        <span class="n">nu</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">pulp</span><span class="o">.</span><span class="n">LpVariable</span><span class="p">],</span>
+        <span class="n">region</span><span class="p">:</span> <span class="n">AssuranceRegion</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pulp</span><span class="o">.</span><span class="n">LpProblem</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">region</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;in&quot;</span><span class="p">:</span>
+            <span class="n">eta</span> <span class="o">=</span> <span class="n">nu</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">eta</span> <span class="o">=</span> <span class="n">mu</span>
+
+        <span class="k">if</span> <span class="n">region</span><span class="o">.</span><span class="n">operator</span> <span class="o">==</span> <span class="s2">&quot;&lt;=&quot;</span><span class="p">:</span>
+            <span class="n">problem</span> <span class="o">+=</span> <span class="n">eta</span><span class="p">[</span><span class="n">region</span><span class="o">.</span><span class="n">index_a</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">region</span><span class="o">.</span><span class="n">coefficient</span> <span class="o">*</span> <span class="n">eta</span><span class="p">[</span><span class="n">region</span><span class="o">.</span><span class="n">index_b</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">problem</span> <span class="o">+=</span> <span class="n">region</span><span class="o">.</span><span class="n">coefficient</span> <span class="o">*</span> <span class="n">eta</span><span class="p">[</span><span class="n">region</span><span class="o">.</span><span class="n">index_b</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">eta</span><span class="p">[</span><span class="n">region</span><span class="o">.</span><span class="n">index_a</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">problem</span>
+
+    <span class="k">def</span> <span class="nf">_derive_value_from_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bias</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pulp</span><span class="o">.</span><span class="n">LpVariable</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bias</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mf">0.</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rounder</span><span class="p">(</span><span class="n">bias</span><span class="o">.</span><span class="n">value</span><span class="p">())</span></div>
-
 </pre></div>
 
            </div>

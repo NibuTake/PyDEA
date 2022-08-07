@@ -9,6 +9,7 @@ src/Pyfrontier.egg-info/dependency_links.txt
 src/Pyfrontier.egg-info/not-zip-safe
 src/Pyfrontier.egg-info/top_level.txt
 src/Pyfrontier/domain/__init__.py
+src/Pyfrontier/domain/assurance_region.py
 src/Pyfrontier/domain/dmu.py
 src/Pyfrontier/domain/metrics.py
 src/Pyfrontier/domain/result.py
