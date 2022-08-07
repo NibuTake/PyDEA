@@ -16,22 +16,6 @@ How to apply Pyfrontier.
 
     </div>
 
-
-Advanced usage
-------------
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbnails">
-
-
-.. raw:: html
-
-    </div>
-
-
 Basic use case
 ------------
 
@@ -97,6 +81,23 @@ Showcases.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
+
+.. only:: html
+
+  .. image:: /tutorials/usecase/images/thumb/sphx_glr_hierarchical_thumb.png
+    :alt: Context-dependent DEA
+
+  :ref:`sphx_glr_tutorials_usecase_hierarchical.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Context-dependent DEA</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="ss">
 
 .. only:: html
@@ -155,7 +156,6 @@ Showcases.
    :hidden:
    :includehidden:
 
-   /tutorials/advanced/index.rst
    /tutorials/usecase/index.rst
 
 

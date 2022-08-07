@@ -1,16 +1,10 @@
 import glob
+import re
 import shutil
 from pathlib import Path
 from typing import Dict, List
 
 import bibtexparser
-
-try:
-    shutil.rmtree("./tutorials/build")
-except:
-    pass
-
-shutil.copytree("./tutorials/src", "./tutorials/build")
 
 
 class BibStore:
@@ -40,25 +34,55 @@ class ReferenceMaker:
         declare_block += f'#       *{bib_dict["title"]}*, \n'
         declare_block += f'#     {bib_dict["journal"]}, \n'
         declare_block += f'#     {bib_dict["year"]}. \n'
-        declare_block += f'#     :numref:`{bib_dict["doi"]}`. \n'
+        declare_block += f"#     :numref:`{self._get_url(bib_dict)}`. \n"
         return declare_block
 
+    def _get_url(self, bib_dict: Dict[str, str]) -> str:
+        keys = list(set(["doi", "url"]) & set(bib_dict.keys()))
+        if len(keys) > 0:
+            return bib_dict[keys[0]]
+        else:
+            return "---"
 
-bib_database = BibStore()
-ref_maker = ReferenceMaker()
-files = glob.glob("./tutorials/build/**/*")
 
-for file in files:
-    print(file)
-    read_write_path = Path(file)
+class Replacer:
+    def __init__(self, content: str):
+        self._start = "# <bib>"
+        self._end = "</bib>"
+        reg = re.compile(rf"{self._start}.+{self._end}")
+        self.matched_IDs = reg.findall(content)
+        self._content = content
+        self.ref_maker = ReferenceMaker()
 
-    # 読み込み
-    content = read_write_path.read_text()
+    @property
+    def content(self) -> str:
+        print(self.matched_IDs)
 
-    # 置換
-    content = content.replace(
-        "# THOMPSON199093", ref_maker.value(bib_database.get("THOMPSON199093"))
-    )
+        for matched_ID in self.matched_IDs:
+            bib_item = bib_database.get(self._get_ID(matched_ID))
+            embed_content = self.ref_maker.value(bib_item)
+            self._content = self._content.replace(matched_ID, embed_content)
+        return self._content
 
-    # 書き出し
-    read_write_path.write_text(content)
+    def _get_ID(self, matched_ID: str):
+        return matched_ID[len(self._start) : -len(self._end)]
+
+
+if __name__ == "__main__":
+    try:
+        shutil.rmtree("./tutorials/build")
+    except:
+        pass
+
+    shutil.copytree("./tutorials/src", "./tutorials/build")
+
+    bib_database = BibStore()
+    files = glob.glob("./tutorials/build/**/*")
+
+    for file in files:
+        print(file)
+
+        read_write_path = Path(file)
+        content = read_write_path.read_text()
+        replacer = Replacer(content)
+        read_write_path.write_text(replacer.content)

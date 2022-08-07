@@ -81,4 +81,4 @@ plt.show()
 # ------------------------
 # .. seealso::
 #
-# THOMPSON199093
+# <bib>THOMPSON199093</bib>

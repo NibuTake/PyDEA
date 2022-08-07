@@ -64,20 +64,6 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         """
         return self.result
 
-    def _dmu(self, is_eff: bool = True):
-        return [r for r in self.result if r.is_eff is is_eff]
-
-    def _inputs(self, is_eff: bool):
-        ids = [r.id for r in self._dmu(is_eff)]
-        return self.DMUs.inputs[ids]
-
-    def _outputs(self, is_eff: bool):
-        ids = [r.id for r in self._dmu(is_eff)]
-        return self.DMUs.outputs[ids]
-
-    def _index(self, is_eff: bool):
-        return np.vstack([r.dmu.id for r in self._dmu(is_eff)])
-
 
 class MultipleDEA(BaseDataEnvelopmentAnalysis):
     """AI is creating summary for __init__

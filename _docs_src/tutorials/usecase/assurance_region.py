@@ -87,4 +87,4 @@ plt.show()
 #       *The role of multiplier bounds in efficiency analysis with application to Kansas farming*,
 #     Journal of Econometrics,
 #     1990.
-#     :numref:`https://doi.org/10.1016/0304-4076(90)90049-Y`.
+#     :numref:`https://www.sciencedirect.com/science/article/pii/030440769090049Y`.

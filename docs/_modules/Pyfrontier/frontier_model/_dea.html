@@ -135,21 +135,7 @@
 <span class="sd">        Returns:</span>
 <span class="sd">            List[Dict[str, Any]]: [description]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span>
-
-    <span class="k">def</span> <span class="nf">_dmu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_eff</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">is_eff</span> <span class="ow">is</span> <span class="n">is_eff</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">_inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_eff</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
-        <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dmu</span><span class="p">(</span><span class="n">is_eff</span><span class="p">)]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">ids</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">_outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_eff</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
-        <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dmu</span><span class="p">(</span><span class="n">is_eff</span><span class="p">)]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="n">ids</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_eff</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">r</span><span class="o">.</span><span class="n">dmu</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dmu</span><span class="p">(</span><span class="n">is_eff</span><span class="p">)])</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span></div>
 
 
 <div class="viewcode-block" id="MultipleDEA"><a class="viewcode-back" href="../../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.MultipleDEA">[docs]</a><span class="k">class</span> <span class="nc">MultipleDEA</span><span class="p">(</span><span class="n">BaseDataEnvelopmentAnalysis</span><span class="p">):</span>

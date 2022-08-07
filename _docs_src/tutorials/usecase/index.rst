@@ -2,8 +2,6 @@
 
 .. _sphx_glr_tutorials_usecase:
 
-.. _key_features:
-
 Basic use case
 ------------
 
@@ -69,6 +67,23 @@ Showcases.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
+
+.. only:: html
+
+  .. image:: /tutorials/usecase/images/thumb/sphx_glr_hierarchical_thumb.png
+    :alt: Context-dependent DEA
+
+  :ref:`sphx_glr_tutorials_usecase_hierarchical.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Context-dependent DEA</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="ss">
 
 .. only:: html
@@ -129,6 +144,7 @@ Showcases.
    /tutorials/usecase/01_input_crs
    /tutorials/usecase/02_output_crs
    /tutorials/usecase/assurance_region
+   /tutorials/usecase/hierarchical
    /tutorials/usecase/returns_to_scale
    /tutorials/usecase/super_efficiency
    /tutorials/usecase/uncontrollable_factor

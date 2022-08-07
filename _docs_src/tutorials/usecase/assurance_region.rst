@@ -223,12 +223,12 @@ References
       *The role of multiplier bounds in efficiency analysis with application to Kansas farming*,
     Journal of Econometrics,
     1990.
-    :numref:`https://doi.org/10.1016/0304-4076(90)90049-Y`.
+    :numref:`https://www.sciencedirect.com/science/article/pii/030440769090049Y`.
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.229 seconds)
+   **Total running time of the script:** ( 0 minutes  0.222 seconds)
 
 
 .. _sphx_glr_download_tutorials_usecase_assurance_region.py:
