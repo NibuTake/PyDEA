@@ -17,9 +17,6 @@ How to apply Pyfrontier.
     </div>
 
 Basic use case
-------------
-
-Showcases.
 
 
 
@@ -34,10 +31,10 @@ Showcases.
 
 .. only:: html
 
-  .. image:: /tutorials/usecase/images/thumb/sphx_glr_01_input_crs_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_01_input_crs_thumb.png
     :alt: Input oriented model
 
-  :ref:`sphx_glr_tutorials_usecase_01_input_crs.py`
+  :ref:`sphx_glr_tutorials_01_usecase_01_input_crs.py`
 
 .. raw:: html
 
@@ -51,10 +48,10 @@ Showcases.
 
 .. only:: html
 
-  .. image:: /tutorials/usecase/images/thumb/sphx_glr_02_output_crs_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_02_output_crs_thumb.png
     :alt: Output oriented model
 
-  :ref:`sphx_glr_tutorials_usecase_02_output_crs.py`
+  :ref:`sphx_glr_tutorials_01_usecase_02_output_crs.py`
 
 .. raw:: html
 
@@ -64,14 +61,31 @@ Showcases.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="ss">
+
+.. only:: html
+
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_04_additive_model_thumb.png
+    :alt: Additive model
+
+  :ref:`sphx_glr_tutorials_01_usecase_04_additive_model.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Additive model</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This example. 乗数モデルにおいて、乗数やその比に不等式制約を課す、または乗数自体に上下限制約を貸す。 これによって乗数同士の重要性などを加味することができる。">
 
 .. only:: html
 
-  .. image:: /tutorials/usecase/images/thumb/sphx_glr_assurance_region_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_assurance_region_thumb.png
     :alt: Assurance region
 
-  :ref:`sphx_glr_tutorials_usecase_assurance_region.py`
+  :ref:`sphx_glr_tutorials_01_usecase_assurance_region.py`
 
 .. raw:: html
 
@@ -85,10 +99,27 @@ Showcases.
 
 .. only:: html
 
-  .. image:: /tutorials/usecase/images/thumb/sphx_glr_hierarchical_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_cross_efficiency_thumb.png
+    :alt: Cross efficiency
+
+  :ref:`sphx_glr_tutorials_01_usecase_cross_efficiency.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Cross efficiency</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
+
+.. only:: html
+
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_hierarchical_thumb.png
     :alt: Context-dependent DEA
 
-  :ref:`sphx_glr_tutorials_usecase_hierarchical.py`
+  :ref:`sphx_glr_tutorials_01_usecase_hierarchical.py`
 
 .. raw:: html
 
@@ -102,10 +133,10 @@ Showcases.
 
 .. only:: html
 
-  .. image:: /tutorials/usecase/images/thumb/sphx_glr_returns_to_scale_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_returns_to_scale_thumb.png
     :alt: Returns to scale
 
-  :ref:`sphx_glr_tutorials_usecase_returns_to_scale.py`
+  :ref:`sphx_glr_tutorials_01_usecase_returns_to_scale.py`
 
 .. raw:: html
 
@@ -119,10 +150,10 @@ Showcases.
 
 .. only:: html
 
-  .. image:: /tutorials/usecase/images/thumb/sphx_glr_super_efficiency_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_super_efficiency_thumb.png
     :alt: Super efficiency
 
-  :ref:`sphx_glr_tutorials_usecase_super_efficiency.py`
+  :ref:`sphx_glr_tutorials_01_usecase_super_efficiency.py`
 
 .. raw:: html
 
@@ -136,14 +167,44 @@ Showcases.
 
 .. only:: html
 
-  .. image:: /tutorials/usecase/images/thumb/sphx_glr_uncontrollable_factor_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_uncontrollable_factor_thumb.png
     :alt: Uncontrollable factor
 
-  :ref:`sphx_glr_tutorials_usecase_uncontrollable_factor.py`
+  :ref:`sphx_glr_tutorials_01_usecase_uncontrollable_factor.py`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Uncontrollable factor</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+Advanced usage
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example doesn&#x27;t do much, it just makes a simple plot">
+
+.. only:: html
+
+  .. image:: /tutorials/02_advanced/images/thumb/sphx_glr__sample_thumb.png
+    :alt: Additive model
+
+  :ref:`sphx_glr_tutorials_02_advanced__sample.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Additive model</div>
     </div>
 
 
@@ -156,7 +217,8 @@ Showcases.
    :hidden:
    :includehidden:
 
-   /tutorials/usecase/index.rst
+   /tutorials/01_usecase/index.rst
+   /tutorials/02_advanced/index.rst
 
 
 .. only:: html

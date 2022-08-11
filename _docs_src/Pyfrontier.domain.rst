@@ -36,6 +36,14 @@ Pyfrontier.domain.result module
    :undoc-members:
    :show-inheritance:
 
+Pyfrontier.domain.slack\_weight module
+--------------------------------------
+
+.. automodule:: Pyfrontier.domain.slack_weight
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

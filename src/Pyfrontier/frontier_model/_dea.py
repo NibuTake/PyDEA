@@ -106,6 +106,25 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
         """
         return self.result
 
+    @property
+    def cross_efficiency(self) -> List[float]:
+        matrix = self._cross_efficiency_matrix()
+        return [self._get_cross_efficiency(i, matrix) for i in range(self.DMUs.N)]
+
+    def _cross_efficiency_matrix(self) -> np.ndarray:
+        cross_matrix_list = []
+        for r in self.result:
+            x_weights = np.vstack([r.x_weight for r in self.result])
+            y_weights = np.vstack([r.y_weight for r in self.result])
+            input = (r.dmu.input * x_weights).sum(axis=1)
+            output = (r.dmu.output * y_weights).sum(axis=1)
+            cross_matrix_list.append(output / input)
+
+        return np.vstack(cross_matrix_list)
+
+    def _get_cross_efficiency(self, i: int, cross_matrix: np.ndarray) -> float:
+        return np.delete(cross_matrix[i], i).mean()
+
     def add_assurance_region(
         self,
         type: Literal["in", "out"],

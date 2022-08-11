@@ -1,4 +1,0 @@
-Basic use case
-------------
-
-Showcases.

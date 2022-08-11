@@ -59,3 +59,19 @@ class MultipleResult(BaseResult):
             return True
         else:
             return False
+
+
+@dataclass(frozen=True)
+class AdditiveResult(BaseResult):
+    score: float
+    id: int
+    dmu: DMU
+    x_slack: List[float]
+    y_slack: List[float]
+
+    @property
+    def is_efficient(self) -> bool:
+        if np.sum(self.x_slack) + np.sum(self.y_slack) > 0:
+            return False
+        else:
+            return True
