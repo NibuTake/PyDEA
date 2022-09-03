@@ -24,6 +24,7 @@ def test_additive_solve():
         y_weight=y_weight,
     )
 
-    print([(r.x_slack, r.y_slack) for r in dea.result if r.is_efficient is False])
-
-    assert False
+    slack_result = [
+        (r.x_slack, r.y_slack) for r in dea.result if r.is_efficient is False
+    ]
+    assert slack_result == [([0.0, 2.0], [0.0])]

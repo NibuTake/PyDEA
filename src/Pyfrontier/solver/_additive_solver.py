@@ -1,4 +1,4 @@
-from typing import Literal, Optional
+from typing import List, Literal, Optional
 
 import numpy as np
 import pulp
@@ -20,7 +20,7 @@ class AdditiveSolver(BaseSolver):
         self.frontier = frontier
         self.DMUs = DMUs
 
-    def apply(self) -> list[AdditiveResult]:
+    def apply(self) -> List[AdditiveResult]:
         return [self._solve_problem(j) for j in range(self.DMUs.N)]
 
     def _define_problem(

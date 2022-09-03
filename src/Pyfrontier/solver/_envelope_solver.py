@@ -21,7 +21,7 @@ class EnvelopeSolver(BaseSolver):
         orient: str,
         frontier: str,
         DMUs: DMUSet,
-        uncontrollable_index: list[int] = [],
+        uncontrollable_index: List[int] = [],
         is_super_efficiency: bool = False,
     ):
         self.orient = orient
@@ -30,7 +30,7 @@ class EnvelopeSolver(BaseSolver):
         self._uncontrollable_index = uncontrollable_index
         self._is_super_efficiency = is_super_efficiency
 
-    def apply(self) -> list[EnvelopResult]:
+    def apply(self) -> List[EnvelopResult]:
         return [self._solve_problem(j) for j in range(self.DMUs.N)]
 
     def _redefine_theta_i(

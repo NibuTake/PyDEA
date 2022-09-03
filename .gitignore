@@ -2,3 +2,4 @@
 /_old/
 /.pytest_cache/
 /build/
+.eggs

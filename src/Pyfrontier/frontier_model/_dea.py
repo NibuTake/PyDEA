@@ -32,7 +32,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         inputs: np.ndarray,
         outputs: np.ndarray,
         index=np.nan,
-        uncontrollable_index: list[int] = [],
+        uncontrollable_index: List[int] = [],
     ):
         """AI is creating summary for fit
 

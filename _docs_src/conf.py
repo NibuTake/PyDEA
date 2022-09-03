@@ -12,13 +12,15 @@ import sys
 from recommonmark.parser import CommonMarkParser
 from sphinx_gallery.sorting import FileNameSortKey
 
+import Pyfrontier
+
 sys.path.insert(0, os.path.abspath("../"))
 
 
-project = "pyfrontier"
+project = "Pyfrontier"
 copyright = "2022, contributors"
 author = "Contributors"
-release = "1.0.0"
+release = Pyfrontier.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -35,6 +37,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
     "sphinx_gallery.gen_gallery",
+    "sphinx_autodoc_typehints",
     "nbsphinx",
 ]
 templates_path = ["_templates"]

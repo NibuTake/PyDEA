@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+pulp = "*"
+
+[dev-packages]
+pyfrontier = {editable = true, path = "../.."}
+pandas = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-runner = "*"
+
+[requires]
+python_version = "3.8"
