@@ -81,11 +81,12 @@
 
 
 <div class="viewcode-block" id="EnvelopDEA"><a class="viewcode-back" href="../../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.EnvelopDEA">[docs]</a><span class="k">class</span> <span class="nc">EnvelopDEA</span><span class="p">(</span><span class="n">BaseDataEnvelopmentAnalysis</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;AI is creating summary for __init__</span>
+    <span class="sd">&quot;&quot;&quot;This is a envelop dea model.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;]): ...</span>
-<span class="sd">        orient (Literal[&quot;in&quot;, &quot;out&quot;]): ...</span>
+<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;]): CRS means constant returns to scale. VRS means variable returns to scale.</span>
+<span class="sd">        orient (Literal[&quot;in&quot;, &quot;out&quot;]): Input or output oriented model.</span>
+<span class="sd">        super_efficiency (bool, optional): Whether to use super-efficiency. Defaults to False.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
@@ -104,15 +105,16 @@
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">inputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
         <span class="n">outputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
-        <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+        <span class="n">index</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
         <span class="n">uncontrollable_index</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
     <span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;AI is creating summary for fit</span>
+        <span class="sd">&quot;&quot;&quot;Fit envelop model.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            inputs (np.ndarray): [description]</span>
-<span class="sd">            outputs (np.ndarray): [description]</span>
-<span class="sd">            index ([type], optional): [description]. Defaults to np.nan.</span>
+<span class="sd">            inputs (np.ndarray): Inputs of DMUs.</span>
+<span class="sd">            outputs (np.ndarray): Outputs of DMUs.</span>
+<span class="sd">            index (np.ndarray, optional): This is ID to identify the DMU. The default is generated as a sequential number.</span>
+<span class="sd">            uncontrollable_index (List[int], optional): Specifies the index of the variable that will not be improved in DEA. In the case of input-oriented, this means how many columns of input or output are used in the case of output-oriented.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Define data.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span> <span class="o">=</span> <span class="n">DMUSet</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
@@ -130,20 +132,20 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">EnvelopResult</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;AI is creating summary for results</span>
+        <span class="sd">&quot;&quot;&quot;The return value is a list of objects.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            List[Dict[str, Any]]: [description]</span>
+<span class="sd">            List[EnvelopResult]: [description]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span></div>
 
 
 <div class="viewcode-block" id="MultipleDEA"><a class="viewcode-back" href="../../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.MultipleDEA">[docs]</a><span class="k">class</span> <span class="nc">MultipleDEA</span><span class="p">(</span><span class="n">BaseDataEnvelopmentAnalysis</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;AI is creating summary for __init__</span>
+    <span class="sd">&quot;&quot;&quot;This is a multiplier dea model.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;]): ...</span>
-<span class="sd">        orient (Literal[&quot;in&quot;, &quot;out&quot;]): ...</span>
+<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;]): CRS means constant returns to scale. VRS means variable returns to scale.</span>
+<span class="sd">        orient (Literal[&quot;in&quot;, &quot;out&quot;]): Input or output oriented model.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">],</span> <span class="n">orient</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">]):</span>
@@ -153,13 +155,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MultipleResult</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_assurance_region</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AssuranceRegion</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
-<div class="viewcode-block" id="MultipleDEA.fit"><a class="viewcode-back" href="../../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.MultipleDEA.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">outputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;AI is creating summary for fit</span>
+<div class="viewcode-block" id="MultipleDEA.fit"><a class="viewcode-back" href="../../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.MultipleDEA.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">outputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Fit multiplier model.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            inputs (np.ndarray): [description]</span>
-<span class="sd">            outputs (np.ndarray): [description]</span>
-<span class="sd">            index ([type], optional): [description]. Defaults to np.nan.</span>
+<span class="sd">            inputs (np.ndarray): Input of DMUs.</span>
+<span class="sd">            outputs (np.ndarray): Output of DMUs.</span>
+<span class="sd">            index (np.ndarray, optional): This is ID to identify the DMU. The default is generated as a sequential number.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Define data.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span> <span class="o">=</span> <span class="n">DMUSet</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
@@ -172,15 +174,20 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">MultipleResult</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;AI is creating summary for results</span>
+        <span class="sd">&quot;&quot;&quot;The return value is a list of objects.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            List[Dict[str, Any]]: [description]</span>
+<span class="sd">            List[MultipleResult]: []</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cross_efficiency</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;This kind of efficiency can rank DMUs with peer evaluation instead of a self-evaluation.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[float]: Each values are always less than 1</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">matrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cross_efficiency_matrix</span><span class="p">()</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_cross_efficiency</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">matrix</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="o">.</span><span class="n">N</span><span class="p">)]</span>
 
@@ -206,16 +213,16 @@
         <span class="n">coefficient</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
         <span class="n">operator</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;&lt;=&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;=&quot;</span><span class="p">],</span>
     <span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;AI is creating summary for add_assurance_region</span>
+        <span class="sd">&quot;&quot;&quot;Add additional constrains in the form of ratio multiplier bound.</span>
 <span class="sd">        - x_a/x_b =&lt; coefficient</span>
 <span class="sd">        - coefficient &lt;= x_a/x_b</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            type (Literal[): [description]</span>
+<span class="sd">            type (Literal[&quot;in&quot;, &quot;out&quot;]): This indicates whether constraints are imposed on inputs or outputs; it is not related to orient.</span>
 <span class="sd">            index_a (int): [description]</span>
 <span class="sd">            index_b (int): [description]</span>
 <span class="sd">            coefficient (float): [description]</span>
-<span class="sd">            operator (Literal[, optional): [description]. Defaults to &quot;, &quot;&gt;=&quot;].</span>
+<span class="sd">            operator (Literal[&quot;&lt;=&quot;, &quot;&gt;=&quot;], optional): [description]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_assurance_region</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="n">AssuranceRegion</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">index_a</span><span class="p">,</span> <span class="n">index_b</span><span class="p">,</span> <span class="n">coefficient</span><span class="p">,</span> <span class="n">operator</span><span class="p">)</span>

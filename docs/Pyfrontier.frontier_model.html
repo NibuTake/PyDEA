@@ -107,15 +107,33 @@
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.AdditiveDEA">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.frontier_model.</span></span><span class="sig-name descname"><span class="pre">AdditiveDEA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frontier</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/frontier_model/_additive_dea.html#AdditiveDEA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.frontier_model.AdditiveDEA" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDataEnvelopmentAnalysis</span></code></p>
+<p>This is a envelop dea model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>frontier</strong> (<em>Literal</em><em>[</em><em>&quot;CRS&quot;</em><em>, </em><em>&quot;VRS&quot;</em><em>]</em>) – CRS means constant returns to scale. VRS means variable returns to scale.</p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.AdditiveDEA.fit">
 <span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([],</span> <span class="pre">dtype=float64)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([],</span> <span class="pre">dtype=float64)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/frontier_model/_additive_dea.html#AdditiveDEA.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.frontier_model.AdditiveDEA.fit" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>AI is creating summary for fit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>np.ndarray</em>) – Inputs of DMUs.</p></li>
+<li><p><strong>outputs</strong> (<em>np.ndarray</em>) – Outputs of DMUs.</p></li>
+<li><p><strong>x_weight</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – [description]. Defaults to np.array([]).</p></li>
+<li><p><strong>y_weight</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – [description]. Defaults to np.array([]).</p></li>
+<li><p><strong>index</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – This is ID to identify the DMU. The default is generated as a sequential number.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.AdditiveDEA.result">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">result</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="Pyfrontier.domain.html#Pyfrontier.domain.result.AdditiveResult" title="Pyfrontier.domain.result.AdditiveResult"><span class="pre">AdditiveResult</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.frontier_model.AdditiveDEA.result" title="Permalink to this definition"></a></dt>
-<dd><p>AI is creating summary for result</p>
+<dd><p>The return value is a list of objects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>[description]</p>
@@ -132,27 +150,27 @@
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.EnvelopDEA">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.frontier_model.</span></span><span class="sig-name descname"><span class="pre">EnvelopDEA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frontier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">super_efficiency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/frontier_model/_dea.html#EnvelopDEA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.frontier_model.EnvelopDEA" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDataEnvelopmentAnalysis</span></code></p>
-<p>AI is creating summary for __init__</p>
+<p>This is a envelop dea model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>frontier</strong> (<em>Literal</em><em>[</em><em>&quot;CRS&quot;</em><em>, </em><em>&quot;VRS&quot;</em><em>]</em>) – <p>…</p>
-</p></li>
-<li><p><strong>orient</strong> (<em>Literal</em><em>[</em><em>&quot;in&quot;</em><em>, </em><em>&quot;out&quot;</em><em>]</em>) – <p>…</p>
-</p></li>
+<li><p><strong>frontier</strong> (<em>Literal</em><em>[</em><em>&quot;CRS&quot;</em><em>, </em><em>&quot;VRS&quot;</em><em>]</em>) – CRS means constant returns to scale. VRS means variable returns to scale.</p></li>
+<li><p><strong>orient</strong> (<em>Literal</em><em>[</em><em>&quot;in&quot;</em><em>, </em><em>&quot;out&quot;</em><em>]</em>) – Input or output oriented model.</p></li>
+<li><p><strong>super_efficiency</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to use super-efficiency. Defaults to False.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.EnvelopDEA.fit">
 <span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uncontrollable_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/frontier_model/_dea.html#EnvelopDEA.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.frontier_model.EnvelopDEA.fit" title="Permalink to this definition"></a></dt>
-<dd><p>AI is creating summary for fit</p>
+<dd><p>Fit envelop model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> (<em>np.ndarray</em>) – [description]</p></li>
-<li><p><strong>outputs</strong> (<em>np.ndarray</em>) – [description]</p></li>
-<li><p><strong>index</strong> (<em>[</em><em>type</em><em>]</em><em>, </em><em>optional</em>) – [description]. Defaults to np.nan.</p></li>
+<li><p><strong>inputs</strong> (<em>np.ndarray</em>) – Inputs of DMUs.</p></li>
+<li><p><strong>outputs</strong> (<em>np.ndarray</em>) – Outputs of DMUs.</p></li>
+<li><p><strong>index</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – This is ID to identify the DMU. The default is generated as a sequential number.</p></li>
+<li><p><strong>uncontrollable_index</strong> (<em>List</em><em>[</em><em>int</em><em>]</em><em>, </em><em>optional</em>) – Specifies the index of the variable that will not be improved in DEA. In the case of input-oriented, this means how many columns of input or output are used in the case of output-oriented.</p></li>
 </ul>
 </dd>
 </dl>
@@ -161,13 +179,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.EnvelopDEA.results">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="Pyfrontier.domain.html#Pyfrontier.domain.result.EnvelopResult" title="Pyfrontier.domain.result.EnvelopResult"><span class="pre">EnvelopResult</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.frontier_model.EnvelopDEA.results" title="Permalink to this definition"></a></dt>
-<dd><p>AI is creating summary for results</p>
+<dd><p>The return value is a list of objects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>[description]</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>List[Dict[str, Any]]</p>
+<dd class="field-even"><p>List[<a class="reference internal" href="Pyfrontier.domain.html#Pyfrontier.domain.result.EnvelopResult" title="Pyfrontier.domain.result.EnvelopResult">EnvelopResult</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -189,31 +207,29 @@
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.MultipleDEA">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Pyfrontier.frontier_model.</span></span><span class="sig-name descname"><span class="pre">MultipleDEA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frontier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orient</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/frontier_model/_dea.html#MultipleDEA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.frontier_model.MultipleDEA" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDataEnvelopmentAnalysis</span></code></p>
-<p>AI is creating summary for __init__</p>
+<p>This is a multiplier dea model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>frontier</strong> (<em>Literal</em><em>[</em><em>&quot;CRS&quot;</em><em>, </em><em>&quot;VRS&quot;</em><em>]</em>) – <p>…</p>
-</p></li>
-<li><p><strong>orient</strong> (<em>Literal</em><em>[</em><em>&quot;in&quot;</em><em>, </em><em>&quot;out&quot;</em><em>]</em>) – <p>…</p>
-</p></li>
+<li><p><strong>frontier</strong> (<em>Literal</em><em>[</em><em>&quot;CRS&quot;</em><em>, </em><em>&quot;VRS&quot;</em><em>]</em>) – CRS means constant returns to scale. VRS means variable returns to scale.</p></li>
+<li><p><strong>orient</strong> (<em>Literal</em><em>[</em><em>&quot;in&quot;</em><em>, </em><em>&quot;out&quot;</em><em>]</em>) – Input or output oriented model.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.MultipleDEA.add_assurance_region">
 <span class="sig-name descname"><span class="pre">add_assurance_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/frontier_model/_dea.html#MultipleDEA.add_assurance_region"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.frontier_model.MultipleDEA.add_assurance_region" title="Permalink to this definition"></a></dt>
-<dd><p>AI is creating summary for add_assurance_region
+<dd><p>Add additional constrains in the form of ratio multiplier bound.
 - x_a/x_b =&lt; coefficient
 - coefficient &lt;= x_a/x_b</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>type</strong> (<em>Literal</em><em>[</em>) – [description]</p></li>
+<li><p><strong>type</strong> (<em>Literal</em><em>[</em><em>&quot;in&quot;</em><em>, </em><em>&quot;out&quot;</em><em>]</em>) – This indicates whether constraints are imposed on inputs or outputs; it is not related to orient.</p></li>
 <li><p><strong>index_a</strong> (<em>int</em>) – [description]</p></li>
 <li><p><strong>index_b</strong> (<em>int</em>) – [description]</p></li>
 <li><p><strong>coefficient</strong> (<em>float</em>) – [description]</p></li>
-<li><p><strong>operator</strong> (<em>Literal</em><em>[</em><em>, </em><em>optional</em>) – [description]. Defaults to “, “&gt;=”].</p></li>
+<li><p><strong>operator</strong> (<em>Literal</em><em>[</em><em>&quot;&lt;=&quot;</em><em>, </em><em>&quot;&gt;=&quot;</em><em>]</em><em>, </em><em>optional</em>) – [description]</p></li>
 </ul>
 </dd>
 </dl>
@@ -222,9 +238,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.MultipleDEA.cross_efficiency">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cross_efficiency</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.frontier_model.MultipleDEA.cross_efficiency" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+<dd><p>This kind of efficiency can rank DMUs with peer evaluation instead of a self-evaluation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Each values are always less than 1</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[float]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -232,13 +252,13 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.MultipleDEA.fit">
 <span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Pyfrontier/frontier_model/_dea.html#MultipleDEA.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Pyfrontier.frontier_model.MultipleDEA.fit" title="Permalink to this definition"></a></dt>
-<dd><p>AI is creating summary for fit</p>
+<dd><p>Fit multiplier model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> (<em>np.ndarray</em>) – [description]</p></li>
-<li><p><strong>outputs</strong> (<em>np.ndarray</em>) – [description]</p></li>
-<li><p><strong>index</strong> (<em>[</em><em>type</em><em>]</em><em>, </em><em>optional</em>) – [description]. Defaults to np.nan.</p></li>
+<li><p><strong>inputs</strong> (<em>np.ndarray</em>) – Input of DMUs.</p></li>
+<li><p><strong>outputs</strong> (<em>np.ndarray</em>) – Output of DMUs.</p></li>
+<li><p><strong>index</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – This is ID to identify the DMU. The default is generated as a sequential number.</p></li>
 </ul>
 </dd>
 </dl>
@@ -247,13 +267,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="Pyfrontier.frontier_model.MultipleDEA.results">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">results</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="Pyfrontier.domain.html#Pyfrontier.domain.result.MultipleResult" title="Pyfrontier.domain.result.MultipleResult"><span class="pre">MultipleResult</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#Pyfrontier.frontier_model.MultipleDEA.results" title="Permalink to this definition"></a></dt>
-<dd><p>AI is creating summary for results</p>
+<dd><p>The return value is a list of objects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>[description]</p>
+<dd class="field-odd"><p>[]</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>List[Dict[str, Any]]</p>
+<dd class="field-even"><p>List[<a class="reference internal" href="Pyfrontier.domain.html#Pyfrontier.domain.result.MultipleResult" title="Pyfrontier.domain.result.MultipleResult">MultipleResult</a>]</p>
 </dd>
 </dl>
 </dd></dl>

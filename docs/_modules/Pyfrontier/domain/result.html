@@ -89,6 +89,15 @@
 
 <div class="viewcode-block" id="EnvelopResult"><a class="viewcode-back" href="../../../Pyfrontier.domain.html#Pyfrontier.domain.result.EnvelopResult">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">EnvelopResult</span><span class="p">(</span><span class="n">BaseResult</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    - score: efficiency</span>
+<span class="sd">    - id:</span>
+<span class="sd">    - dmu:</span>
+<span class="sd">    - weight:</span>
+<span class="sd">    - x_slack:</span>
+<span class="sd">    - y_slack:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">score</span><span class="p">:</span> <span class="nb">float</span>
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">dmu</span><span class="p">:</span> <span class="n">DMU</span>
@@ -116,6 +125,15 @@
 
 <div class="viewcode-block" id="MultipleResult"><a class="viewcode-back" href="../../../Pyfrontier.domain.html#Pyfrontier.domain.result.MultipleResult">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">MultipleResult</span><span class="p">(</span><span class="n">BaseResult</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    - score: efficiency</span>
+<span class="sd">    - id:</span>
+<span class="sd">    - dmu:</span>
+<span class="sd">    - x_weight:</span>
+<span class="sd">    - y_weight:</span>
+<span class="sd">    - bias:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">score</span><span class="p">:</span> <span class="nb">float</span>
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">dmu</span><span class="p">:</span> <span class="n">DMU</span>
@@ -136,6 +154,14 @@
 
 <div class="viewcode-block" id="AdditiveResult"><a class="viewcode-back" href="../../../Pyfrontier.domain.html#Pyfrontier.domain.result.AdditiveResult">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">AdditiveResult</span><span class="p">(</span><span class="n">BaseResult</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    - score: efficiency</span>
+<span class="sd">    - id:</span>
+<span class="sd">    - dmu:</span>
+<span class="sd">    - x_slack:</span>
+<span class="sd">    - y_slack:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">score</span><span class="p">:</span> <span class="nb">float</span>
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">dmu</span><span class="p">:</span> <span class="n">DMU</span>

@@ -81,6 +81,12 @@
 
 
 <div class="viewcode-block" id="AdditiveDEA"><a class="viewcode-back" href="../../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.AdditiveDEA">[docs]</a><span class="k">class</span> <span class="nc">AdditiveDEA</span><span class="p">(</span><span class="n">BaseDataEnvelopmentAnalysis</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This is a envelop dea model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;]): CRS means constant returns to scale. VRS means variable returns to scale.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">]):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span> <span class="o">=</span> <span class="n">frontier</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DMUSet</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -92,15 +98,24 @@
         <span class="n">outputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
         <span class="n">x_weight</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([]),</span>
         <span class="n">y_weight</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([]),</span>
-        <span class="n">index</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+        <span class="n">index</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
     <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;AI is creating summary for fit</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            inputs (np.ndarray): Inputs of DMUs.</span>
+<span class="sd">            outputs (np.ndarray): Outputs of DMUs.</span>
+<span class="sd">            x_weight (np.ndarray, optional): [description]. Defaults to np.array([]).</span>
+<span class="sd">            y_weight (np.ndarray, optional): [description]. Defaults to np.array([]).</span>
+<span class="sd">            index (np.ndarray, optional): This is ID to identify the DMU. The default is generated as a sequential number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span> <span class="o">=</span> <span class="n">DMUSet</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
         <span class="n">solver</span> <span class="o">=</span> <span class="n">AdditiveSolver</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frontier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="p">,</span> <span class="n">x_weight</span><span class="p">,</span> <span class="n">y_weight</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_result</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">result</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">AdditiveResult</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;AI is creating summary for result</span>
+        <span class="sd">&quot;&quot;&quot;The return value is a list of objects.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            List[AdditiveResult]: [description]</span>

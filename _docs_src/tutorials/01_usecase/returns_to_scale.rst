@@ -165,7 +165,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x122e3b4f0>]
+    [<matplotlib.lines.Line2D object at 0x11e070520>]
 
 
 
@@ -176,7 +176,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.138 seconds)
+   **Total running time of the script:** ( 0 minutes  0.149 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_returns_to_scale.py:
