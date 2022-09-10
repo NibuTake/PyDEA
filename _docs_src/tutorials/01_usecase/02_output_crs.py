@@ -2,11 +2,22 @@
 Output oriented model
 =========================
 
-ss
+The following DEA model is an output-oriented model where the outputs are maximizing and the inputs are kept at their current levels.
+
+.. math::
+    & \\theta^* = \min \\theta, subject \\ to \\\\
+    & \sum_{j=1}^{n} \lambda_j x_{i, j} \leq x_{i, o}, i=1,2, \dots, m; \\\\
+    & \sum_{j=1}^{n} \lambda_j y_{r, j} \geq \\theta y_{r, o}, r=1,2, \dots, s; \\\\
+    & \sum_{j=1}^{n} \lambda_j = 1 \\\\
+    & \lambda_j \geq 0, j=1,2, \dots, n.
+
+where :math:`DMU_o` represents one of the :math:`n` DMUs under evaluation,
+and :math:`x_{i, o}` and :math:`y_{i, o}` are the :math:`i` th input and :math:`r` th output
+for :math:`DMU_o`, respectively.
 """
 
 # %%
-# Import libraries.
+# Import modules and prepare data.
 # ------------------------
 # Average of rental properties in a given district.
 

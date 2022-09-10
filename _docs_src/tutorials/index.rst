@@ -3,8 +3,6 @@
 Tutorial
 ==================
 
-How to apply Pyfrontier.
-
 
 
 .. raw:: html
@@ -16,7 +14,7 @@ How to apply Pyfrontier.
 
     </div>
 
-Basic use case
+Basic usage
 
 
 
@@ -27,7 +25,7 @@ Basic use case
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example doesn&#x27;t do much, it just makes a simple plot">
+    <div class="sphx-glr-thumbcontainer" tooltip="The following DEA model is an input-oriented model where the inputs are minimized and the outpu...">
 
 .. only:: html
 
@@ -44,7 +42,7 @@ Basic use case
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="ss">
+    <div class="sphx-glr-thumbcontainer" tooltip="The following DEA model is an output-oriented model where the outputs are maximizing and the in...">
 
 .. only:: html
 
@@ -61,99 +59,14 @@ Basic use case
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="ss">
+    <div class="sphx-glr-thumbcontainer" tooltip="Preparing...">
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_04_additive_model_thumb.png
-    :alt: Additive model
-
-  :ref:`sphx_glr_tutorials_01_usecase_04_additive_model.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Additive model</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example. 乗数モデルにおいて、乗数やその比に不等式制約を課す、または乗数自体に上下限制約を貸す。 これによって乗数同士の重要性などを加味することができる。">
-
-.. only:: html
-
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_assurance_region_thumb.png
-    :alt: Assurance region
-
-  :ref:`sphx_glr_tutorials_01_usecase_assurance_region.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Assurance region</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
-
-.. only:: html
-
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_cross_efficiency_thumb.png
-    :alt: Cross efficiency
-
-  :ref:`sphx_glr_tutorials_01_usecase_cross_efficiency.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Cross efficiency</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
-
-.. only:: html
-
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_hierarchical_thumb.png
-    :alt: Context-dependent DEA
-
-  :ref:`sphx_glr_tutorials_01_usecase_hierarchical.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Context-dependent DEA</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="ss">
-
-.. only:: html
-
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_returns_to_scale_thumb.png
-    :alt: Returns to scale
-
-  :ref:`sphx_glr_tutorials_01_usecase_returns_to_scale.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Returns to scale</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
-
-.. only:: html
-
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_super_efficiency_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_03_super_efficiency_thumb.png
     :alt: Super efficiency
 
-  :ref:`sphx_glr_tutorials_01_usecase_super_efficiency.py`
+  :ref:`sphx_glr_tutorials_01_usecase_03_super_efficiency.py`
 
 .. raw:: html
 
@@ -163,18 +76,103 @@ Basic use case
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Preparing...">
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_uncontrollable_factor_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_04_cross_efficiency_thumb.png
+    :alt: Cross efficiency
+
+  :ref:`sphx_glr_tutorials_01_usecase_04_cross_efficiency.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Cross efficiency</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Preparing...">
+
+.. only:: html
+
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_05_assurance_region_thumb.png
+    :alt: Assurance region
+
+  :ref:`sphx_glr_tutorials_01_usecase_05_assurance_region.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Assurance region</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Preparing...">
+
+.. only:: html
+
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_06_additive_model_thumb.png
+    :alt: Additive model
+
+  :ref:`sphx_glr_tutorials_01_usecase_06_additive_model.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Additive model</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Preparing...">
+
+.. only:: html
+
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_07_uncontrollable_factor_thumb.png
     :alt: Uncontrollable factor
 
-  :ref:`sphx_glr_tutorials_01_usecase_uncontrollable_factor.py`
+  :ref:`sphx_glr_tutorials_01_usecase_07_uncontrollable_factor.py`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Uncontrollable factor</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Preparing...">
+
+.. only:: html
+
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_08_hierarchical_thumb.png
+    :alt: Context-dependent DEA
+
+  :ref:`sphx_glr_tutorials_01_usecase_08_hierarchical.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Context-dependent DEA</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Preparing...">
+
+.. only:: html
+
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_09_returns_to_scale_thumb.png
+    :alt: Returns to scale
+
+  :ref:`sphx_glr_tutorials_01_usecase_09_returns_to_scale.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Returns to scale</div>
     </div>
 
 
@@ -198,13 +196,13 @@ Advanced usage
 .. only:: html
 
   .. image:: /tutorials/02_advanced/images/thumb/sphx_glr__sample_thumb.png
-    :alt: Additive model
+    :alt: Ex. sample
 
   :ref:`sphx_glr_tutorials_02_advanced__sample.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Additive model</div>
+      <div class="sphx-glr-thumbnail-title">Ex. sample</div>
     </div>
 
 

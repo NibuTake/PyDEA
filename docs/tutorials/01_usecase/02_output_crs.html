@@ -21,10 +21,12 @@
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"bm": ["{\\boldsymbol{#1}}", 1]}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Additive model" href="04_additive_model.html" />
+    <link rel="next" title="Super efficiency" href="03_super_efficiency.html" />
     <link rel="prev" title="Input oriented model" href="01_input_crs.html" />
 </head>
 
@@ -49,20 +51,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorial</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_input_crs.html">Input oriented model</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Output oriented model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#import-libraries">Import libraries.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-modules-and-prepare-data">Import modules and prepare data.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fit-dea-model">Fit dea model.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#visualize-the-result">Visualize the result.</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#about-slack">About slack</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04_additive_model.html">Additive model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assurance_region.html">Assurance region</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cross_efficiency.html">Cross efficiency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hierarchical.html">Context-dependent DEA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="returns_to_scale.html">Returns to scale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="super_efficiency.html">Super efficiency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uncontrollable_factor.html">Uncontrollable factor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../02_advanced/_sample.html">Additive model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_super_efficiency.html">Super efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_cross_efficiency.html">Cross efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_assurance_region.html">Assurance region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_additive_model.html">Additive model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_uncontrollable_factor.html">Uncontrollable factor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_hierarchical.html">Context-dependent DEA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_returns_to_scale.html">Returns to scale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_advanced/_sample.html">Ex. sample</a></li>
 </ul>
 </li>
 </ul>
@@ -123,9 +125,18 @@ to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="output-oriented-model">
 <span id="sphx-glr-tutorials-01-usecase-02-output-crs-py"></span><h1>Output oriented model<a class="headerlink" href="#output-oriented-model" title="Permalink to this heading"></a></h1>
-<p>ss</p>
-<section id="import-libraries">
-<h2>Import libraries.<a class="headerlink" href="#import-libraries" title="Permalink to this heading"></a></h2>
+<p>The following DEA model is an output-oriented model where the outputs are maximizing and the inputs are kept at their current levels.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; \theta^* = \min \theta, subject \ to \\
+&amp; \sum_{j=1}^{n} \lambda_j x_{i, j} \leq x_{i, o}, i=1,2, \dots, m; \\
+&amp; \sum_{j=1}^{n} \lambda_j y_{r, j} \geq \theta y_{r, o}, r=1,2, \dots, s; \\
+&amp; \sum_{j=1}^{n} \lambda_j = 1 \\
+&amp; \lambda_j \geq 0, j=1,2, \dots, n.\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(DMU_o\)</span> represents one of the <span class="math notranslate nohighlight">\(n\)</span> DMUs under evaluation,
+and <span class="math notranslate nohighlight">\(x_{i, o}\)</span> and <span class="math notranslate nohighlight">\(y_{i, o}\)</span> are the <span class="math notranslate nohighlight">\(i\)</span> th input and <span class="math notranslate nohighlight">\(r\)</span> th output
+for <span class="math notranslate nohighlight">\(DMU_o\)</span>, respectively.</p>
+<section id="import-modules-and-prepare-data">
+<h2>Import modules and prepare data.<a class="headerlink" href="#import-modules-and-prepare-data" title="Permalink to this heading"></a></h2>
 <p>Average of rental properties in a given district.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -271,7 +282,7 @@ to download the full example code</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="01_input_crs.html" class="btn btn-neutral float-left" title="Input oriented model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="04_additive_model.html" class="btn btn-neutral float-right" title="Additive model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="03_super_efficiency.html" class="btn btn-neutral float-right" title="Super efficiency" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

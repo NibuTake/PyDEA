@@ -27,7 +27,7 @@ class AdditiveDEA(BaseDataEnvelopmentAnalysis):
         y_weight: np.ndarray = np.array([]),
         index: np.ndarray = np.nan,
     ):
-        """AI is creating summary for fit
+        """Fit additive model.
 
         Args:
             inputs (np.ndarray): Inputs of DMUs.

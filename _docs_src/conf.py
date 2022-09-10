@@ -60,6 +60,15 @@ source_parsers = {
     ".md": CommonMarkParser,
 }
 
+# setting of mathjax
+mathjax_config = {
+    "TeX": {
+        "Macros": {
+            "bm": ["{\\boldsymbol{#1}}", 1],
+        },
+    },
+}
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 

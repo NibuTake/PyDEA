@@ -2,11 +2,22 @@
 Input oriented model
 =========================
 
-This example doesn't do much, it just makes a simple plot
+The following DEA model is an input-oriented model where the inputs are minimized and the outputs are kept at their current levels.
+
+.. math::
+    & \\theta^* = \min \\theta, subject \\ to \\\\
+    & \sum_{j=1}^{n} \lambda_j x_{i, j} \leq \\theta x_{i, o}, i=1,2, \dots, m; \\\\
+    & \sum_{j=1}^{n} \lambda_j y_{r, j} \geq y_{r, o}, r=1,2, \dots, s; \\\\
+    & \sum_{j=1}^{n} \lambda_j = 1 \\\\
+    & \lambda_j \geq 0, j=1,2, \dots, n.
+
+where :math:`DMU_o` represents one of the :math:`n` DMUs under evaluation,
+and :math:`x_{i, o}` and :math:`y_{i, o}` are the :math:`i` th input and :math:`r` th output
+for :math:`DMU_o`, respectively.
 """
 
 # %%
-# Import libraries.
+# Import modules and prepare data.
 # ------------------------
 # Sample supply chain data is generated.
 
@@ -35,7 +46,7 @@ dea.result[0]
 # Visualize the result.
 # ------------------------------
 #
-# In the built documentation.
+# .
 eff_dmu = [r.dmu for r in dea.result if r.is_efficient]
 ineff_dmu = [r.dmu for r in dea.result if r.is_efficient != 1]
 weak_eff_dmu = [r.dmu for r in dea.result if r.has_slack]
@@ -68,7 +79,7 @@ plt.show()
 # About slack
 # ------------------------------
 #
-# In the built documentation.
+# .
 
 print([r.score for r in dea.result])
 print([r.is_efficient for r in dea.result])

@@ -21,15 +21,26 @@
 Output oriented model
 =========================
 
-ss
+The following DEA model is an output-oriented model where the outputs are maximizing and the inputs are kept at their current levels.
 
-.. GENERATED FROM PYTHON SOURCE LINES 9-12
+.. math::
+    & \theta^* = \min \theta, subject \ to \\
+    & \sum_{j=1}^{n} \lambda_j x_{i, j} \leq x_{i, o}, i=1,2, \dots, m; \\
+    & \sum_{j=1}^{n} \lambda_j y_{r, j} \geq \theta y_{r, o}, r=1,2, \dots, s; \\
+    & \sum_{j=1}^{n} \lambda_j = 1 \\
+    & \lambda_j \geq 0, j=1,2, \dots, n.
 
-Import libraries.
+where :math:`DMU_o` represents one of the :math:`n` DMUs under evaluation,
+and :math:`x_{i, o}` and :math:`y_{i, o}` are the :math:`i` th input and :math:`r` th output
+for :math:`DMU_o`, respectively.
+
+.. GENERATED FROM PYTHON SOURCE LINES 20-23
+
+Import modules and prepare data.
 ------------------------
 Average of rental properties in a given district.
 
-.. GENERATED FROM PYTHON SOURCE LINES 12-22
+.. GENERATED FROM PYTHON SOURCE LINES 23-33
 
 .. code-block:: default
 
@@ -106,14 +117,14 @@ Average of rental properties in a given district.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-27
+.. GENERATED FROM PYTHON SOURCE LINES 34-38
 
 Fit dea model.
 ------------------------------
 
 The necessity inputs are inputs and outputs. The result has below belongings.
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-34
+.. GENERATED FROM PYTHON SOURCE LINES 38-45
 
 .. code-block:: default
 
@@ -137,14 +148,14 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-39
+.. GENERATED FROM PYTHON SOURCE LINES 46-50
 
 Visualize the result.
 ------------------------------
 
 In the built documentation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-63
+.. GENERATED FROM PYTHON SOURCE LINES 50-74
 
 .. code-block:: default
 
@@ -184,14 +195,14 @@ In the built documentation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-68
+.. GENERATED FROM PYTHON SOURCE LINES 75-79
 
 About slack
 ------------------------------
 
 In the built documentation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-74
+.. GENERATED FROM PYTHON SOURCE LINES 79-85
 
 .. code-block:: default
 

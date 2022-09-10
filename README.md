@@ -5,7 +5,7 @@
 
 Pyfrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to apply DEA effectively and contribute to the development of this field.
 
-Unfortunately we are still preparing this module until everyone can use it comfortably without any obstacles...
+We will continue to improve, so please let us know if you have any problem.
 
 ## Installation
 This is an interim response until we open it up to pypI. We apologize for any inconvenience.

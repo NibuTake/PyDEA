@@ -18,7 +18,7 @@
 .. _sphx_glr_tutorials_02_advanced__sample.py:
 
 
-Additive model
+Ex. sample
 =========================
 
 This example doesn't do much, it just makes a simple plot
@@ -171,7 +171,7 @@ In the built documentation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.132 seconds)
+   **Total running time of the script:** ( 0 minutes  0.129 seconds)
 
 
 .. _sphx_glr_download_tutorials_02_advanced__sample.py:

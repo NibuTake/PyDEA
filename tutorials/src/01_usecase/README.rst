@@ -1,1 +1,1 @@
-Basic use case
+Basic usage
