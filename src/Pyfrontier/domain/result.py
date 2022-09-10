@@ -16,6 +16,15 @@ class BaseResult(abc.ABC):
 
 @dataclass(frozen=True)
 class EnvelopResult(BaseResult):
+    """
+    - score: efficiency
+    - id:
+    - dmu:
+    - weight:
+    - x_slack:
+    - y_slack:
+    """
+
     score: float
     id: int
     dmu: DMU
@@ -43,6 +52,15 @@ class EnvelopResult(BaseResult):
 
 @dataclass(frozen=True)
 class MultipleResult(BaseResult):
+    """
+    - score: efficiency
+    - id:
+    - dmu:
+    - x_weight:
+    - y_weight:
+    - bias:
+    """
+
     score: float
     id: int
     dmu: DMU
@@ -63,6 +81,14 @@ class MultipleResult(BaseResult):
 
 @dataclass(frozen=True)
 class AdditiveResult(BaseResult):
+    """
+    - score: efficiency
+    - id:
+    - dmu:
+    - x_slack:
+    - y_slack:
+    """
+
     score: float
     id: int
     dmu: DMU
