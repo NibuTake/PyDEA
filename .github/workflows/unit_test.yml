@@ -26,7 +26,6 @@ jobs:
 
       - name: run pytest
         run: |
-          cd python_version/3.9
           pipenv shell
           pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml
 
