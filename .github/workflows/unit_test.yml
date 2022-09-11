@@ -26,7 +26,9 @@ jobs:
 
       - name: run pytest
         run: |
-          pipenv run pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml
+          cd python_version/3.9
+          pipenv shell
+          pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml
 
       - name: upload coverage
         uses: codecov/codecov-action@v1
