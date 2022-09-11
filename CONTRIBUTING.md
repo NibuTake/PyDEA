@@ -29,9 +29,11 @@ If you make a pull request, please follow the guidelines below:
 
 ### Setup
 - fork repository
-- make virtual environment
+- activate virtual environment
+    - [pipenv](./python_version/dev/Pipfile)
 
 ```bash
+cd python_version/dev
 pipenv shell
 install pre-commit
 ```

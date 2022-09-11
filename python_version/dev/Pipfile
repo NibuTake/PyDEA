@@ -10,7 +10,7 @@ pytest-runner = "*"
 numpy = "*"
 pulp = "*"
 pandas = "*"
-pyfrontier = {editable = true, path = "."}
+pyfrontier = {editable = true, path = "../../."}
 
 [dev-packages]
 pre-commit = "*"
@@ -28,7 +28,6 @@ matplotlib = "*"
 bibtexparser = "*"
 twine = "*"
 wheel = "*"
-codecov = "*"
 
 [requires]
 python_version = "3.9"

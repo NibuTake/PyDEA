@@ -3,16 +3,13 @@
 
 [Install](#installation) | [Tutorial](https://nibutake.github.io/PyDEA/tutorials/index.html#) | [Docs](https://nibutake.github.io/PyDEA/index.html) | [Contribution](./CONTRIBUTING.md)
 
-Pyfrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to apply DEA effectively and contribute to the development of this field.
-
-We will continue to improve, so please let us know if you have any problem.
+Pyfrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to use DEA effectively and contribute to the development of DEA field.
 
 ## Installation
-This is an interim response until we open it up to pypI. We apologize for any inconvenience.
+This module is offered by PyPI.
 
 ```
-git clone https://github.com/NibuTake/PyDEA.git
-pip install .
+pip install Pyfrontier
 ```
 
 ## Tutorial
