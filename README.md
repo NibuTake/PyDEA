@@ -1,6 +1,11 @@
 # Pyfrontier: A data envelopment analysis module
 <div align="center"><img src="./images/logo.png" height="200"/></div>
 
+[![Python](https://img.shields.io/badge/Python-3.8%20%7C%203.9-blue)](https://codecov.io/gh/NibuTake/PyDEA)
+[![License](https://img.shields.io/github/license/NibuTake/PyDEA?color=blue)](LICENSE)
+[![codecov](https://codecov.io/gh/NibuTake/PyDEA/branch/main/graph/badge.svg?token=EL44JBAYOT)](https://codecov.io/gh/NibuTake/PyDEA)
+
+
 [Install](#installation) | [Tutorial](https://nibutake.github.io/PyDEA/tutorials/index.html#) | [Docs](https://nibutake.github.io/PyDEA/index.html) | [Contribution](./CONTRIBUTING.md)
 
 Pyfrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to use DEA effectively and contribute to the development of DEA field.
@@ -32,3 +37,5 @@ dea.result
 ## References
 We use [ref.bib](./tutorials/ref.bib) for tutorial.
 These are read by [bibtexparser](https://bibtexparser.readthedocs.io/en/master/) and automatically quoted and displayed at the specified location.
+
+pipenv run pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml

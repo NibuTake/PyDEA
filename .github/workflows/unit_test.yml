@@ -16,11 +16,17 @@ jobs:
 
       - name: install pipenv
         run: |
-          echo "mock"
+          python -m pip install --upgrade pip
+          python -m pip install pipenv
+
+      - name: install modules
+        run: |
+          cd python_version/3.9
+          pipenv sync --dev
 
       - name: run pytest
         run: |
-          echo "mock"
+          pipenv run pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml
 
       - name: upload coverage
         uses: codecov/codecov-action@v1
