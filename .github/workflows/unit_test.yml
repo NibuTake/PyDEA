@@ -16,11 +16,11 @@ jobs:
 
       - name: install pipenv
         run: |
-          eco "mock"
+          echo "mock"
 
       - name: run pytest
         run: |
-          eco "mock"
+          echo "mock"
 
       - name: upload coverage
         uses: codecov/codecov-action@v1
