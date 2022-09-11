@@ -171,7 +171,7 @@ In the built documentation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.129 seconds)
+   **Total running time of the script:** ( 0 minutes  0.145 seconds)
 
 
 .. _sphx_glr_download_tutorials_02_advanced__sample.py:

@@ -61,5 +61,3 @@ dea.result
 ## References
 We use [ref.bib](./tutorials/ref.bib) for tutorial.
 These are read by [bibtexparser](https://bibtexparser.readthedocs.io/en/master/) and automatically quoted and displayed at the specified location.
-
-pipenv run pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml

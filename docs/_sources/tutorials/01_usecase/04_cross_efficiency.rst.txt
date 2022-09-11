@@ -168,7 +168,7 @@ References
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.197 seconds)
+   **Total running time of the script:** ( 0 minutes  0.233 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_04_cross_efficiency.py:
