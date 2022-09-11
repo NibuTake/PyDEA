@@ -21,13 +21,11 @@ jobs:
 
       - name: install modules
         run: |
-          cd python_version/3.9
           pipenv sync --dev
 
       - name: run pytest
         run: |
-          pipenv shell
-          pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml
+          pipenv run pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml
 
       - name: upload coverage
         uses: codecov/codecov-action@v1
