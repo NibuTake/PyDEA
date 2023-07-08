@@ -11,6 +11,7 @@ pulp = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-runner = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.10"
