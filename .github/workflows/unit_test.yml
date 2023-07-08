@@ -25,6 +25,7 @@ jobs:
 
       - name: install modules
         run: |
+          cd python_version/3.10
           pipenv sync --dev
 
       - name: run pytest
