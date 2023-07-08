@@ -31,7 +31,7 @@ jobs:
 
       - name: run pytest
         run: |
-          pytest -v tests
+          python -m pytest -v tests
   test_in_python3_9:
     runs-on: ubuntu-latest
 
