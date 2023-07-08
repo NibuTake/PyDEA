@@ -29,6 +29,3 @@ bibtexparser = "*"
 twine = "*"
 wheel = "*"
 codecov = "*"
-
-[requires]
-python_version = "3.9"

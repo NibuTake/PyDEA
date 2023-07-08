@@ -28,6 +28,3 @@ matplotlib = "*"
 bibtexparser = "*"
 twine = "*"
 wheel = "*"
-
-[requires]
-python_version = "3.9"
