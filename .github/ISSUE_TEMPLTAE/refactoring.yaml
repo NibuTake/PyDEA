@@ -1,0 +1,11 @@
+name: ♻️ Refactoring
+description: Improve code quality.
+labels:
+  - refactoring
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: Please provide us ideas.
+    validations:
+      required: true
