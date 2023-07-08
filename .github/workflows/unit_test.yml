@@ -31,7 +31,7 @@ jobs:
 
       - name: run pytest
         run: |
-          pipenv run pytest -v tests/ --cov=src/Pyfrontier --cov-report=xml
+          pipenv run pytest -v tests
   test_in_python3_9:
     runs-on: ubuntu-latest
 
