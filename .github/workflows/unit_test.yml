@@ -26,7 +26,7 @@ jobs:
       - name: install modules
         run: |
           cd python_version/3.10
-          pipenv lock
+          pipenv lock --dev
           pipenv sync --dev
           cd ../../
 
@@ -51,7 +51,7 @@ jobs:
 
       - name: install modules
         run: |
-          pipenv lock
+          pipenv lock --dev
           pipenv sync --dev
 
       - name: run pytest
