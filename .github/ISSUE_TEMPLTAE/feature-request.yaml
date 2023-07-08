@@ -1,0 +1,21 @@
+name: ❇️ Feature request
+description: Suggest an idea.
+labels:
+  - feature-request
+body:
+  - type: dropdown
+    attributes:
+      label: Type
+      options:
+        - New
+        - Update
+  - type: textarea
+    attributes:
+      label: Description
+      description: Please provide us ideas.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Acceptance criteria
+      description: If you have obvious criteria, please write it down.
