@@ -27,6 +27,7 @@ jobs:
         run: |
           cd python_version/3.10
           pipenv sync --dev
+          cd ../../
 
       - name: run pytest
         run: |
