@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/Users/morinibu/.local/share/virtualenvs/PyDEA-FQJTlSJV/bin/python"
+  "python.pythonPath": "/Users/morinibu/.local/share/virtualenvs/PyDEA-FQJTlSJV/bin/python",
+  "cSpell.words": ["codecov", "numpy"]
 }
