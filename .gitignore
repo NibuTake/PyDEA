@@ -4,3 +4,4 @@
 /build/
 .eggs
 /dist/
+pipfile.lock

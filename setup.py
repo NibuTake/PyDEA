@@ -5,7 +5,6 @@ from setuptools import find_packages, setup
 
 # import Pyfrontier
 
-
 URL = "https://nibutake.github.io/PyDEA/index.html?"
 DOWNLOAD_URL = "https://github.com/NibuTake/PyDEA"
 
@@ -37,7 +36,7 @@ CLASSIFIERS = [
 setup(
     name="Pyfrontier",
     # version=Pyfrontier.__version__,
-    version="0.1.1",
+    version="1.0.0",
     license="MIT",
     description=DESCRIPTION,
     long_description=long_description,

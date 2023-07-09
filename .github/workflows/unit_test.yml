@@ -7,16 +7,20 @@ on:
       - feature/**
 
 jobs:
-  build:
+  test_in_python:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
 
-      - name: set up Python 3.9
-        uses: actions/setup-python@v2
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: set up Python${{ matrix.python-version }}
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: ${{ matrix.python-version }}
 
       - name: install pipenv
         run: |
@@ -25,7 +29,8 @@ jobs:
 
       - name: install modules
         run: |
-          pipenv sync --dev
+          pipenv lock
+          pipenv sync
 
       - name: run pytest
         run: |

@@ -1,11 +1,9 @@
 repos:
-  - repo: local
+  - repo: https://github.com/ambv/black
+    rev: stable
     hooks:
       - id: black
-        name: black
-        entry: black
-        language: python
-        types: [file, python]
+        language_version: python3
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.8.1
     hooks:
