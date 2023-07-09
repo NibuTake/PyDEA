@@ -4,15 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pytest = "*"
-pytest-cov = "*"
-pytest-runner = "*"
 numpy = "*"
 pulp = "*"
 pandas = "*"
-pyfrontier = {editable = true, path = "."}
+pytest = "*"
+pytest-cov = "*"
+pytest-runner = "*"
 
 [dev-packages]
+pyfrontier = {editable = true, path = "."}
 pre-commit = "*"
 black = "*"
 sphinx = "*"
