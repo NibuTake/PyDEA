@@ -7,12 +7,12 @@ name = "pypi"
 numpy = "*"
 pulp = "*"
 pandas = "*"
+pyfrontier = {editable = true, path = "."}
 pytest = "*"
 pytest-cov = "*"
 pytest-runner = "*"
 
 [dev-packages]
-pyfrontier = {editable = true, path = "."}
 pre-commit = "*"
 black = "*"
 sphinx = "*"
