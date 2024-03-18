@@ -2,6 +2,8 @@ from typing import List, Literal
 
 import numpy as np
 
+import multiprocessing
+
 from Pyfrontier.domain import AssuranceRegion, DMUSet, EnvelopResult, MultipleResult
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import EnvelopeSolver, MultipleSolver
@@ -14,6 +16,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         frontier (Literal["CRS", "VRS"]): CRS means constant returns to scale. VRS means variable returns to scale.
         orient (Literal["in", "out"]): Input or output oriented model.
         super_efficiency (bool, optional): Whether to use super-efficiency. Defaults to False.
+        n_jobs (int, optional): The number of parallel jobs to solve DMU programming.
     """
 
     def __init__(
@@ -21,12 +24,17 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         frontier: Literal["CRS", "VRS"],
         orient: Literal["in", "out"],
         super_efficiency: bool = False,
+        n_jobs: int = 1,
     ):
         self.frontier = frontier
         self.orient = orient
         self.super_efficiency = super_efficiency
         self.DMUs = None
         self.result: List[EnvelopResult] = []
+
+        if n_jobs < 1:
+            raise ValueError("The number of parallel jobs must >= 1.")
+        self.n_jobs = min(n_jobs, multiprocessing.cpu_count())
 
     def fit(
         self,
@@ -54,6 +62,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
             self.DMUs,
             uncontrollable_index,
             is_super_efficiency=self.super_efficiency,
+            n_jobs=self.n_jobs
         )
         self.result = solver.apply()
 

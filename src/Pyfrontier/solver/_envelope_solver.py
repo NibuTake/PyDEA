@@ -3,6 +3,8 @@ from typing import List, Tuple, Union
 import numpy as np
 import pulp
 
+import multiprocessing
+
 from Pyfrontier.domain import DMU, DMUSet, EnvelopResult
 from Pyfrontier.solver._base import BaseSolver
 
@@ -23,15 +25,34 @@ class EnvelopeSolver(BaseSolver):
         DMUs: DMUSet,
         uncontrollable_index: List[int] = [],
         is_super_efficiency: bool = False,
+        n_jobs: int = 1,
     ):
         self.orient = orient
         self.DMUs = DMUs
         self.frontier = frontier
         self._uncontrollable_index = uncontrollable_index
         self._is_super_efficiency = is_super_efficiency
+        self.n_jobs = n_jobs
 
     def apply(self) -> List[EnvelopResult]:
-        return [self._solve_problem(j) for j in range(self.DMUs.N)]
+        if self.n_jobs <= 1:
+            return [self._solve_problem(j) for j in range(self.DMUs.N)]
+        else:
+            # faster than problem.solve(pulp.PULP_CBC_CMD(threads=self.n_jobs))
+            pool = multiprocessing.Pool(self.n_jobs)
+
+            problem_processes = []
+            for j in range(self.DMUs.N):
+                problem_processes.append(pool.apply_async(self._solve_problem, args=(j,)))
+
+            pool.close()
+            pool.join()
+
+            results = []
+            for j in range(self.DMUs.N):
+                results.append(problem_processes[j].get())
+
+            return results
 
     def _redefine_theta_i(
         self, i: int, theta: pulp.LpVariable
@@ -50,7 +71,7 @@ class EnvelopeSolver(BaseSolver):
     def _define_input_orient_problem(
         self, o: int, lambda_N: list, theta: pulp.LpVariable
     ) -> pulp.LpProblem:
-        problem = pulp.LpProblem(self.orient, pulp.LpMinimize)
+        problem = pulp.LpProblem(self.orient + str(o), pulp.LpMinimize)  # avoid repeated name
         problem += theta
 
         # X
@@ -72,7 +93,7 @@ class EnvelopeSolver(BaseSolver):
     def _define_output_orient_problem(
         self, o: int, lambda_N: list, theta: pulp.LpVariable
     ) -> pulp.LpProblem:
-        problem = pulp.LpProblem(self.orient, pulp.LpMaximize)
+        problem = pulp.LpProblem(self.orient + str(o), pulp.LpMaximize)  # avoid repeated name
         problem += theta
 
         # X
