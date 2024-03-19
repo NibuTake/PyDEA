@@ -32,7 +32,6 @@ def test_parallel_can_work(sample_data):
     print("parallel mode time consumed: {}s".format(parallel_time))
 
     assert bool(np.all(np.equal(default_result, parallel_result)))
-    assert True
 
 
 def test_can_calculate_envelope_houses(house_data):
