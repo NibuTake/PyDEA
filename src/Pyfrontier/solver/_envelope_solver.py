@@ -48,11 +48,7 @@ class EnvelopeSolver(BaseSolver):
             pool.close()
             pool.join()
 
-            results = []
-            for j in range(self.DMUs.N):
-                results.append(problem_processes[j].get())
-
-            return results
+            return [problem.get() for problem in problem_processes]
 
     def _redefine_theta_i(
         self, i: int, theta: pulp.LpVariable
