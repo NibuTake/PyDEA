@@ -28,7 +28,8 @@ class DMUSet:
         self._s = self.outputs.shape[1]
 
     def get_id(self, o: int):
-        if self.index is np.nan:
+        # 'self.index is np.nan' sometimes cause bug: 'TypeError: 'float' object is not subscriptable'
+        if np.isnan(self.index):
             return o
         else:
             return self.index[o]
