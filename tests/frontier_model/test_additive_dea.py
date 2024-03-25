@@ -28,3 +28,18 @@ def test_additive_solve():
         (r.x_slack, r.y_slack) for r in dea.result if r.is_efficient is False
     ]
     assert slack_result == [([0.0, 2.0], [0.0])]
+
+
+def test_parallel_can_work_on_additive_model(sample_data):
+    default_dea = AdditiveDEA("CRS")
+    default_dea.fit(sample_data[["Day", "Cost"]].values, sample_data[["Ben"]].values)
+    default_x_slack = np.asarray([r.x_slack for r in default_dea.result])
+    default_y_slack = np.asarray([r.y_slack for r in default_dea.result])
+
+    parallel_dea = AdditiveDEA("CRS", n_jobs=2)
+    parallel_dea.fit(sample_data[["Day", "Cost"]].values, sample_data[["Ben"]].values)
+    parallel_x_slack = np.asarray([r.x_slack for r in parallel_dea.result])
+    parallel_y_slack = np.asarray([r.y_slack for r in parallel_dea.result])
+
+    assert bool(np.all(np.equal(default_x_slack, parallel_x_slack)))
+    assert bool(np.all(np.equal(default_y_slack, parallel_y_slack)))

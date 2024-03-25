@@ -5,6 +5,7 @@ import numpy as np
 import multiprocessing
 
 from Pyfrontier.domain import AssuranceRegion, DMUSet, EnvelopResult, MultipleResult
+from Pyfrontier.domain.parallel import NumberOfJobs
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import EnvelopeSolver, MultipleSolver
 
@@ -31,10 +32,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         self.super_efficiency = super_efficiency
         self.DMUs = None
         self.result: List[EnvelopResult] = []
-
-        if n_jobs < 1:
-            raise ValueError("The number of parallel jobs must >= 1.")
-        self.n_jobs = min(n_jobs, multiprocessing.cpu_count())
+        self.n_jobs = NumberOfJobs(n_jobs).value
 
     def fit(
         self,
@@ -62,7 +60,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
             self.DMUs,
             uncontrollable_index,
             is_super_efficiency=self.super_efficiency,
-            n_jobs=self.n_jobs
+            n_jobs=self.n_jobs,
         )
         self.result = solver.apply()
 
@@ -82,14 +80,21 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
     Args:
         frontier (Literal["CRS", "VRS"]): CRS means constant returns to scale. VRS means variable returns to scale.
         orient (Literal["in", "out"]): Input or output oriented model.
+        n_jobs (int, optional): The number of parallel jobs to solve DMU programming.
     """
 
-    def __init__(self, frontier: Literal["CRS", "VRS"], orient: Literal["in", "out"]):
+    def __init__(
+        self,
+        frontier: Literal["CRS", "VRS"],
+        orient: Literal["in", "out"],
+        n_jobs: int = 1,
+    ):
         self.frontier = frontier
         self.orient = orient
         self.DMUs = None
         self.result: List[MultipleResult] = []
         self._assurance_region: List[AssuranceRegion] = []
+        self.n_jobs = NumberOfJobs(n_jobs).value
 
     def fit(self, inputs: np.ndarray, outputs: np.ndarray, index: np.ndarray = np.nan):
         """Fit multiplier model.
@@ -104,7 +109,11 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
 
         # call solver.
         solver = MultipleSolver(
-            self.orient, self.frontier, self.DMUs, self._assurance_region
+            self.orient,
+            self.frontier,
+            self.DMUs,
+            self._assurance_region,
+            n_jobs=self.n_jobs,
         )
         self.result = solver.apply()
 

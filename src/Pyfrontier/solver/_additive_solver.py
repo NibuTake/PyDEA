@@ -4,6 +4,7 @@ import numpy as np
 import pulp
 
 from Pyfrontier.domain import DMU, AdditiveResult, DMUSet, SlackWeight
+from Pyfrontier.domain import MultiProcessor
 from Pyfrontier.solver._base import BaseSolver
 
 
@@ -14,14 +15,17 @@ class AdditiveSolver(BaseSolver):
         DMUs: DMUSet,
         x_weight: np.ndarray,
         y_weight: np.ndarray,
+        n_jobs: int = 1,
     ) -> None:
         self.x_weight = x_weight
         self.y_weight = y_weight
         self.frontier = frontier
         self.DMUs = DMUs
+        self.n_jobs = n_jobs
 
     def apply(self) -> List[AdditiveResult]:
-        return [self._solve_problem(j) for j in range(self.DMUs.N)]
+        processor = MultiProcessor(self._solve_problem, self.DMUs.N)
+        return processor.solve(self.n_jobs)
 
     def _define_problem(
         self, o: int, lambda_N: list, sx: list, sy: list
@@ -29,7 +33,7 @@ class AdditiveSolver(BaseSolver):
         x_weight = SlackWeight(self.x_weight, self.DMUs.m)
         y_weight = SlackWeight(self.y_weight, self.DMUs.s)
 
-        problem = pulp.LpProblem("additive", pulp.LpMaximize)
+        problem = pulp.LpProblem("additive" + str(o), pulp.LpMaximize)
         problem += np.sum(np.array(sx) * x_weight.value) + np.sum(
             np.array(sy) * y_weight.value
         )

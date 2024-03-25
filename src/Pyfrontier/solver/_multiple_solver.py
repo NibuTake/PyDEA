@@ -4,6 +4,7 @@ import pulp
 
 from Pyfrontier.domain import AssuranceRegion, DMUSet, MultipleResult
 from Pyfrontier.domain.dmu import DMU
+from Pyfrontier.domain import MultiProcessor
 from Pyfrontier.solver._base import BaseSolver
 
 
@@ -23,15 +24,18 @@ class MultipleSolver(BaseSolver):
         DMUs: DMUSet,
         assurance_region: List[AssuranceRegion],
         bound: float = 0.0,
+        n_jobs: int = 1,
     ):
         self.orient = orient
         self.DMUs = DMUs
         self.frontier = frontier
         self.assurance_region = assurance_region
         self.bound = bound
+        self.n_jobs = n_jobs
 
     def apply(self) -> List[MultipleResult]:
-        return [self._solve_problem(j) for j in range(self.DMUs.N)]
+        processor = MultiProcessor(self._solve_problem, self.DMUs.N)
+        return processor.solve(self.n_jobs)
 
     def _define_bias(self) -> Union[pulp.LpVariable, int]:
         if self.frontier == "VRS":
@@ -42,7 +46,9 @@ class MultipleSolver(BaseSolver):
     def _define_input_oriented_problem(
         self, bias: Union[pulp.LpVariable, int], mu: list, nu: list, o: int
     ) -> pulp.LpProblem:
-        problem = pulp.LpProblem(self.orient, pulp.LpMaximize)
+        problem = pulp.LpProblem(
+            self.orient + str(o), pulp.LpMaximize
+        )  # avoid repeated name
         problem += pulp.lpDot(mu, self.DMUs.outputs[o, :]) + bias
 
         for j in range(self.DMUs.N):

@@ -6,6 +6,7 @@ import pulp
 import multiprocessing
 
 from Pyfrontier.domain import DMU, DMUSet, EnvelopResult
+from Pyfrontier.domain import MultiProcessor
 from Pyfrontier.solver._base import BaseSolver
 
 
@@ -35,6 +36,9 @@ class EnvelopeSolver(BaseSolver):
         self.n_jobs = n_jobs
 
     def apply(self) -> List[EnvelopResult]:
+        processor = MultiProcessor(self._solve_problem, self.DMUs.N)
+        return processor.solve(self.n_jobs)
+
         if self.n_jobs <= 1:
             return [self._solve_problem(j) for j in range(self.DMUs.N)]
         else:
@@ -43,7 +47,9 @@ class EnvelopeSolver(BaseSolver):
 
             problem_processes = []
             for j in range(self.DMUs.N):
-                problem_processes.append(pool.apply_async(self._solve_problem, args=(j,)))
+                problem_processes.append(
+                    pool.apply_async(self._solve_problem, args=(j,))
+                )
 
             pool.close()
             pool.join()
@@ -67,7 +73,9 @@ class EnvelopeSolver(BaseSolver):
     def _define_input_orient_problem(
         self, o: int, lambda_N: list, theta: pulp.LpVariable
     ) -> pulp.LpProblem:
-        problem = pulp.LpProblem(self.orient + str(o), pulp.LpMinimize)  # avoid repeated name
+        problem = pulp.LpProblem(
+            self.orient + str(o), pulp.LpMinimize
+        )  # avoid repeated name
         problem += theta
 
         # X
@@ -89,7 +97,9 @@ class EnvelopeSolver(BaseSolver):
     def _define_output_orient_problem(
         self, o: int, lambda_N: list, theta: pulp.LpVariable
     ) -> pulp.LpProblem:
-        problem = pulp.LpProblem(self.orient + str(o), pulp.LpMaximize)  # avoid repeated name
+        problem = pulp.LpProblem(
+            self.orient + str(o), pulp.LpMaximize
+        )  # avoid repeated name
         problem += theta
 
         # X
