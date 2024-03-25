@@ -1,4 +1,7 @@
 import math
+import time
+
+import numpy as np
 
 from Pyfrontier.frontier_model import EnvelopDEA, MultipleDEA
 
@@ -14,6 +17,18 @@ def test_can_calculate_envelope_houses(house_data):
 
     for r_envelope, r_multiple in zip(envelope_dea.result, multiple_dea.result):
         assert math.isclose(r_envelope.score, r_multiple.score, rel_tol=1e-5)
+
+
+def test_parallel_can_work_on_multiple_model(sample_data):
+    default_dea = MultipleDEA("VRS", "in")
+    default_dea.fit(sample_data[["Day", "Cost"]].values, sample_data[["Ben"]].values)
+    default_result = np.asarray([r.score for r in default_dea.result])
+
+    parallel_dea = MultipleDEA("VRS", "in", n_jobs=2)
+    parallel_dea.fit(sample_data[["Day", "Cost"]].values, sample_data[["Ben"]].values)
+    parallel_result = np.asarray([r.score for r in parallel_dea.result])
+
+    assert bool(np.all(np.equal(default_result, parallel_result)))
 
 
 def test_can_assurance_region(house_data):
