@@ -29,7 +29,7 @@ class DMUSet:
 
     def get_id(self, o: int):
         # 'self.index is np.nan' sometimes cause bug: 'TypeError: 'float' object is not subscriptable'
-        if np.isnan(self.index):
+        if np.all(np.isnan(self.index)):
             return o
         else:
             return self.index[o]
