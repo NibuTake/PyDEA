@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_05_assurance_region.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_05_assurance_region.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -36,7 +36,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 17-26
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib.pyplot as plt
     import numpy as np
@@ -119,7 +119,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 33-38
 
-.. code-block:: default
+.. code-block:: Python
 
     dea = MultipleDEA("CRS", "in")
     dea.fit(df[["price", "rent"]].to_numpy(), df[["output"]].to_numpy())
@@ -141,7 +141,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 39-46
 
-.. code-block:: default
+.. code-block:: Python
 
     dea_ar = MultipleDEA("CRS", "in")
     dea_ar.add_assurance_region("in", index_a=0, index_b=1, coefficient=2, operator="<=")
@@ -165,7 +165,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 47-75
 
-.. code-block:: default
+.. code-block:: Python
 
     def restrict_f_1(x: np.ndarray):
         return -x + 4
@@ -218,17 +218,17 @@ References
 .. seealso::
 
    Author
-      Russell G. Thompson and Larry N. Langemeier and Chih-Tah Lee and Euntaik Lee and Robert M. Thrall.
+      Russell G. Thompson and Larry N. Langemeier and Chih-Tah Lee and Euntaik Lee and Robert M. Thrall. 
    Title
-      *The role of multiplier bounds in efficiency analysis with application to Kansas farming*,
-    Journal of Econometrics,
-    1990.
-    :numref:`https://doi.org/10.1016/0304-4076(90)90049-Y`.
+      *The role of multiplier bounds in efficiency analysis with application to Kansas farming*, 
+    Journal of Econometrics, 
+    1990. 
+    :numref:`https://www.sciencedirect.com/science/article/pii/030440769090049Y`. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.298 seconds)
+   **Total running time of the script:** (0 minutes 0.329 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_05_assurance_region.py:
@@ -237,14 +237,13 @@ References
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 05_assurance_region.ipynb <05_assurance_region.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 05_assurance_region.py <05_assurance_region.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 05_assurance_region.ipynb <05_assurance_region.ipynb>`
 
 
 .. only:: html

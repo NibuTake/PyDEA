@@ -28,6 +28,14 @@ Pyfrontier.domain.metrics module
    :undoc-members:
    :show-inheritance:
 
+Pyfrontier.domain.parallel module
+---------------------------------
+
+.. automodule:: Pyfrontier.domain.parallel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Pyfrontier.domain.result module
 -------------------------------
 

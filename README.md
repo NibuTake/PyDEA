@@ -2,7 +2,7 @@
 
 <div align="center"><img src="./images/logo.png" height="200"/></div>
 
-[![Python](https://img.shields.io/badge/Python-3.8%20%7C%203.9%20%7C%203.10%20-blue)](https://codecov.io/gh/NibuTake/PyDEA)
+[![Python](https://img.shields.io/badge/Python-3.8%20%7C%203.9%20%7C%203.10%20%20%7C3.11%20-blue)](https://codecov.io/gh/NibuTake/PyDEA)
 [![License](https://img.shields.io/github/license/NibuTake/PyDEA?color=blue)](LICENSE)
 [![codecov](https://codecov.io/gh/NibuTake/PyDEA/branch/main/graph/badge.svg?token=EL44JBAYOT)](https://codecov.io/gh/NibuTake/PyDEA)
 

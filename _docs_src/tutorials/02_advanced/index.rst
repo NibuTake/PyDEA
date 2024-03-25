@@ -18,7 +18,7 @@ Advanced usage
 .. only:: html
 
   .. image:: /tutorials/02_advanced/images/thumb/sphx_glr__sample_thumb.png
-    :alt: Ex. sample
+    :alt:
 
   :ref:`sphx_glr_tutorials_02_advanced__sample.py`
 
@@ -37,3 +37,4 @@ Advanced usage
    :hidden:
 
    /tutorials/02_advanced/_sample
+

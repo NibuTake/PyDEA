@@ -101,4 +101,4 @@ plt.ylabel("input_2")
 #       *A multiplicative model for efficiency analysis*,
 #     Socio-Economic Planning Sciences,
 #     1982.
-#     :numref:`https://doi.org/10.1016/0038-0121(82)90029-5`.
+#     :numref:`https://www.sciencedirect.com/science/article/pii/0038012182900295`.

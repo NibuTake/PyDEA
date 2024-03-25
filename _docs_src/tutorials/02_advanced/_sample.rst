@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_02_advanced__sample.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_02_advanced__sample.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -31,7 +31,7 @@ Sample supply chain data is generated.
 
 .. GENERATED FROM PYTHON SOURCE LINES 12-22
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -121,7 +121,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 27-34
 
-.. code-block:: default
+.. code-block:: Python
 
     dea = EnvelopDEA("CRS", "in")
     dea.fit(
@@ -152,7 +152,7 @@ In the built documentation.
 
 .. GENERATED FROM PYTHON SOURCE LINES 39-40
 
-.. code-block:: default
+.. code-block:: Python
 
     plt
 
@@ -164,14 +164,14 @@ In the built documentation.
  .. code-block:: none
 
 
-    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-FQJTlSJV/lib/python3.9/site-packages/matplotlib/pyplot.py'>
+    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-FQJTlSJV/lib/python3.10/site-packages/matplotlib/pyplot.py'>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.145 seconds)
+   **Total running time of the script:** (0 minutes 0.169 seconds)
 
 
 .. _sphx_glr_download_tutorials_02_advanced__sample.py:
@@ -180,14 +180,13 @@ In the built documentation.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: _sample.ipynb <_sample.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: _sample.py <_sample.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: _sample.ipynb <_sample.ipynb>`
 
 
 .. only:: html

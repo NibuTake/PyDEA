@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_08_hierarchical.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_08_hierarchical.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -31,7 +31,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 13-19
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -48,7 +48,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 20-33
 
-.. code-block:: default
+.. code-block:: Python
 
     df = pd.DataFrame(
         {
@@ -78,7 +78,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 34-42
 
-.. code-block:: default
+.. code-block:: Python
 
     plt.figure()
     for res in h_dea.result:
@@ -107,17 +107,17 @@ References
 .. seealso::
 
    Author
-      Lawrence M. Seiford and Joe Zhu.
+      Lawrence M. Seiford and Joe Zhu. 
    Title
-      *Context-dependent data envelopment analysis—Measuring attractiveness and progress*,
-    Omega-international Journal of Management Science,
-    2003.
-    :numref:`https://EconPapers.repec.org/RePEc:eee:jomega:v:31:y:2003:i:5:p:397-408`.
+      *Context-dependent data envelopment analysis—Measuring attractiveness and progress*, 
+    Omega-international Journal of Management Science, 
+    2003. 
+    :numref:`https://EconPapers.repec.org/RePEc:eee:jomega:v:31:y:2003:i:5:p:397-408`. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.605 seconds)
+   **Total running time of the script:** (0 minutes 0.863 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_08_hierarchical.py:
@@ -126,14 +126,13 @@ References
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 08_hierarchical.ipynb <08_hierarchical.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 08_hierarchical.py <08_hierarchical.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 08_hierarchical.ipynb <08_hierarchical.ipynb>`
 
 
 .. only:: html

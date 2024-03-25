@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_07_uncontrollable_factor.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_07_uncontrollable_factor.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -31,7 +31,7 @@ Preparing...
 
 .. GENERATED FROM PYTHON SOURCE LINES 12-25
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -55,14 +55,14 @@ Preparing...
  .. code-block:: none
 
 
-    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-FQJTlSJV/lib/python3.9/site-packages/matplotlib/pyplot.py'>
+    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-FQJTlSJV/lib/python3.10/site-packages/matplotlib/pyplot.py'>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.001 seconds)
+   **Total running time of the script:** (0 minutes 0.002 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_07_uncontrollable_factor.py:
@@ -71,14 +71,13 @@ Preparing...
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 07_uncontrollable_factor.ipynb <07_uncontrollable_factor.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 07_uncontrollable_factor.py <07_uncontrollable_factor.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 07_uncontrollable_factor.ipynb <07_uncontrollable_factor.ipynb>`
 
 
 .. only:: html

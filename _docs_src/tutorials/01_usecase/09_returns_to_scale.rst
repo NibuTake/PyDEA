@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_09_returns_to_scale.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_09_returns_to_scale.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -31,7 +31,7 @@ Average of rental properties in a given district.
 
 .. GENERATED FROM PYTHON SOURCE LINES 12-35
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -123,7 +123,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 40-47
 
-.. code-block:: default
+.. code-block:: Python
 
     dea = MultipleDEA("VRS", "in")
     dea.fit(
@@ -147,7 +147,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 48-50
 
-.. code-block:: default
+.. code-block:: Python
 
     plt.figure()
     plt.plot(sample_df["input"], sample_df["output"])
@@ -165,7 +165,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x1169d7070>]
+    [<matplotlib.lines.Line2D object at 0x11a04fb20>]
 
 
 
@@ -176,7 +176,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.176 seconds)
+   **Total running time of the script:** (0 minutes 0.334 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_09_returns_to_scale.py:
@@ -185,14 +185,13 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 09_returns_to_scale.ipynb <09_returns_to_scale.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 09_returns_to_scale.py <09_returns_to_scale.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 09_returns_to_scale.ipynb <09_returns_to_scale.ipynb>`
 
 
 .. only:: html

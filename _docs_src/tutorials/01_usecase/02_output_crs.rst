@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_02_output_crs.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_02_output_crs.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -42,7 +42,7 @@ Average of rental properties in a given district.
 
 .. GENERATED FROM PYTHON SOURCE LINES 23-33
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -126,7 +126,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 38-45
 
-.. code-block:: default
+.. code-block:: Python
 
     dea = EnvelopDEA("CRS", "out")
     dea.fit(
@@ -157,7 +157,7 @@ In the built documentation.
 
 .. GENERATED FROM PYTHON SOURCE LINES 50-74
 
-.. code-block:: default
+.. code-block:: Python
 
     eff_dmu = [r.dmu for r in dea.result if r.is_efficient]
     ineff_dmu = [r.dmu for r in dea.result if r.is_efficient != 1]
@@ -204,7 +204,7 @@ In the built documentation.
 
 .. GENERATED FROM PYTHON SOURCE LINES 79-85
 
-.. code-block:: default
+.. code-block:: Python
 
 
     print([r.score for r in dea.result])
@@ -231,7 +231,7 @@ In the built documentation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.241 seconds)
+   **Total running time of the script:** (0 minutes 0.382 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_02_output_crs.py:
@@ -240,14 +240,13 @@ In the built documentation.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 02_output_crs.ipynb <02_output_crs.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 02_output_crs.py <02_output_crs.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 02_output_crs.ipynb <02_output_crs.ipynb>`
 
 
 .. only:: html

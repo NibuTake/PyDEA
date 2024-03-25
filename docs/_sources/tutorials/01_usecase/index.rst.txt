@@ -18,7 +18,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_01_input_crs_thumb.png
-    :alt: Input oriented model
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_01_input_crs.py`
 
@@ -35,7 +35,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_02_output_crs_thumb.png
-    :alt: Output oriented model
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_02_output_crs.py`
 
@@ -52,7 +52,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_03_super_efficiency_thumb.png
-    :alt: Super efficiency
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_03_super_efficiency.py`
 
@@ -69,7 +69,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_04_cross_efficiency_thumb.png
-    :alt: Cross efficiency
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_04_cross_efficiency.py`
 
@@ -86,7 +86,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_05_assurance_region_thumb.png
-    :alt: Assurance region
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_05_assurance_region.py`
 
@@ -103,7 +103,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_06_additive_model_thumb.png
-    :alt: Additive model
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_06_additive_model.py`
 
@@ -120,7 +120,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_07_uncontrollable_factor_thumb.png
-    :alt: Uncontrollable factor
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_07_uncontrollable_factor.py`
 
@@ -137,7 +137,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_08_hierarchical_thumb.png
-    :alt: Context-dependent DEA
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_08_hierarchical.py`
 
@@ -154,7 +154,7 @@ Basic usage
 .. only:: html
 
   .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_09_returns_to_scale_thumb.png
-    :alt: Returns to scale
+    :alt:
 
   :ref:`sphx_glr_tutorials_01_usecase_09_returns_to_scale.py`
 
@@ -181,3 +181,4 @@ Basic usage
    /tutorials/01_usecase/07_uncontrollable_factor
    /tutorials/01_usecase/08_hierarchical
    /tutorials/01_usecase/09_returns_to_scale
+
