@@ -1,9 +1,9 @@
 from typing import List, Literal, Optional
 
 import numpy as np
-import multiprocessing
 
 from Pyfrontier.domain import AdditiveResult, DMUSet
+from Pyfrontier.domain.parallel import NumberOfJobs
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import AdditiveSolver
 
@@ -21,10 +21,7 @@ class AdditiveDEA(BaseDataEnvelopmentAnalysis):
         self.frontier = frontier
         self.DMUs: Optional[DMUSet] = None
         self._result: List[AdditiveResult] = []
-
-        if n_jobs < 1:
-            raise ValueError("The number of parallel jobs must >= 1.")
-        self.n_jobs = min(n_jobs, multiprocessing.cpu_count())
+        self.n_jobs = NumberOfJobs(n_jobs).value
 
     def fit(
         self,

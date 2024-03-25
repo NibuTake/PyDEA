@@ -5,6 +5,7 @@ import numpy as np
 import multiprocessing
 
 from Pyfrontier.domain import AssuranceRegion, DMUSet, EnvelopResult, MultipleResult
+from Pyfrontier.domain.parallel import NumberOfJobs
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import EnvelopeSolver, MultipleSolver
 
@@ -31,10 +32,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         self.super_efficiency = super_efficiency
         self.DMUs = None
         self.result: List[EnvelopResult] = []
-
-        if n_jobs < 1:
-            raise ValueError("The number of parallel jobs must >= 1.")
-        self.n_jobs = min(n_jobs, multiprocessing.cpu_count())
+        self.n_jobs = NumberOfJobs(n_jobs).value
 
     def fit(
         self,
@@ -96,10 +94,7 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
         self.DMUs = None
         self.result: List[MultipleResult] = []
         self._assurance_region: List[AssuranceRegion] = []
-
-        if n_jobs < 1:
-            raise ValueError("The number of parallel jobs must >= 1.")
-        self.n_jobs = min(n_jobs, multiprocessing.cpu_count())
+        self.n_jobs = NumberOfJobs(n_jobs).value
 
     def fit(self, inputs: np.ndarray, outputs: np.ndarray, index: np.ndarray = np.nan):
         """Fit multiplier model.

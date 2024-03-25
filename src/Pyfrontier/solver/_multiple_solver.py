@@ -2,10 +2,9 @@ from typing import List, Union
 
 import pulp
 
-import multiprocessing
-
 from Pyfrontier.domain import AssuranceRegion, DMUSet, MultipleResult
 from Pyfrontier.domain.dmu import DMU
+from Pyfrontier.domain import MultiProcessor
 from Pyfrontier.solver._base import BaseSolver
 
 
@@ -35,21 +34,8 @@ class MultipleSolver(BaseSolver):
         self.n_jobs = n_jobs
 
     def apply(self) -> List[MultipleResult]:
-        if self.n_jobs <= 1:
-            return [self._solve_problem(j) for j in range(self.DMUs.N)]
-        else:
-            pool = multiprocessing.Pool(self.n_jobs)
-
-            problem_processes = []
-            for j in range(self.DMUs.N):
-                problem_processes.append(
-                    pool.apply_async(self._solve_problem, args=(j,))
-                )
-
-            pool.close()
-            pool.join()
-
-            return [problem.get() for problem in problem_processes]
+        processor = MultiProcessor(self._solve_problem, self.DMUs.N)
+        return processor.solve(self.n_jobs)
 
     def _define_bias(self) -> Union[pulp.LpVariable, int]:
         if self.frontier == "VRS":
