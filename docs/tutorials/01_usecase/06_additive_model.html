@@ -1,43 +1,52 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Additive model &mdash; Pyfrontier 0.1.1 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/sg_gallery-rendered-html.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=a58bc63e"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"bm": ["{\\boldsymbol{#1}}", 1]}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Uncontrollable factor" href="07_uncontrollable_factor.html" />
-    <link rel="prev" title="Assurance region" href="05_assurance_region.html" />
+    <link rel="prev" title="Assurance region" href="05_assurance_region.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Pyfrontier
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Pyfrontier
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -53,10 +62,10 @@
 <li class="toctree-l2"><a class="reference internal" href="04_cross_efficiency.html">Cross efficiency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05_assurance_region.html">Assurance region</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Additive model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#import-modules-and-prepare-data">Import modules and prepare data.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#no-weight">No weight.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#with-weight">With weight.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Import-modules-and-prepare-data.">Import modules and prepare data.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#No-weight.">No weight.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#With-weight.">With weight.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#References">References</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="07_uncontrollable_factor.html">Uncontrollable factor</a></li>
@@ -80,10 +89,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Tutorial</a> &raquo;</li>
-          <li><a href="index.html">&lt;no title&gt;</a> &raquo;</li>
-      <li>Additive model</li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorial</a></li>
+          <li class="breadcrumb-item"><a href="index.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">Additive model</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -91,43 +100,18 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-
-
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-tutorials-01-usecase-06-additive-model-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
-</div>
-<section class="sphx-glr-example-title" id="additive-model">
-<span id="sphx-glr-tutorials-01-usecase-06-additive-model-py"></span><h1>Additive model<a class="headerlink" href="#additive-model" title="Permalink to this heading"></a></h1>
+             
+  <section id="Additive-model">
+<h1>Additive model<a class="headerlink" href="#Additive-model" title="Link to this heading"></a></h1>
 <p>Preparing…</p>
-<section id="import-modules-and-prepare-data">
-<h2>Import modules and prepare data.<a class="headerlink" href="#import-modules-and-prepare-data" title="Permalink to this heading"></a></h2>
+<section id="Import-modules-and-prepare-data.">
+<h2>Import modules and prepare data.<a class="headerlink" href="#Import-modules-and-prepare-data." title="Link to this heading"></a></h2>
 <p>Average of rental properties in a given district.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -139,65 +123,16 @@ to download the full example code</p>
 <span class="n">df</span>
 </pre></div>
 </div>
-<div class="output_subarea output_html rendered_html output_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>input_1</th>
-      <th>input_2</th>
-      <th>output</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.0</td>
-      <td>3.0</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1.5</td>
-      <td>1.5</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3.0</td>
-      <td>1.0</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3.0</td>
-      <td>3.0</td>
-      <td>16</td>
-    </tr>
-  </tbody>
-</table>
 </div>
-</div>
-<br />
-<br /></section>
-<section id="no-weight">
-<h2>No weight.<a class="headerlink" href="#no-weight" title="Permalink to this heading"></a></h2>
+</section>
+<section id="No-weight.">
+<h2>No weight.<a class="headerlink" href="#No-weight." title="Link to this heading"></a></h2>
 <p>The necessity inputs are inputs and outputs. The result has below belongings.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dea</span> <span class="o">=</span> <span class="n">AdditiveDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">)</span>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dea</span> <span class="o">=</span> <span class="n">AdditiveDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">)</span>
 <span class="n">dea</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
     <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;input_1&quot;</span><span class="p">,</span> <span class="s2">&quot;input_2&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
     <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;output&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
@@ -206,11 +141,13 @@ to download the full example code</p>
 <span class="n">dea</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>AdditiveResult(score=nan, id=0, dmu=DMU(input=array([1., 3.]), output=array([16]), id=0), x_slack=[0.0, 0.0], y_slack=[0.0])
-</pre></div>
 </div>
 <p>In the built documentation.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eff_dmu</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">dmu</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">is_efficient</span><span class="p">]</span>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eff_dmu</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">dmu</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">is_efficient</span><span class="p">]</span>
 <span class="n">ineff_dmu</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">dmu</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">is_efficient</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">]</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -233,14 +170,16 @@ to download the full example code</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;input_2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_06_additive_model_001.png" srcset="../../_images/sphx_glr_06_additive_model_001.png" alt="06 additive model" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(33.972222222222214, 0.5, &#39;input_2&#39;)
-</pre></div>
 </div>
 </section>
-<section id="with-weight">
-<h2>With weight.<a class="headerlink" href="#with-weight" title="Permalink to this heading"></a></h2>
+<section id="With-weight.">
+<h2>With weight.<a class="headerlink" href="#With-weight." title="Link to this heading"></a></h2>
 <p>The necessity inputs are inputs and outputs. The result has below belongings.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dea_with_weight</span> <span class="o">=</span> <span class="n">AdditiveDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">)</span>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dea_with_weight</span> <span class="o">=</span> <span class="n">AdditiveDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">)</span>
 <span class="n">dea_with_weight</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
     <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;input_1&quot;</span><span class="p">,</span> <span class="s2">&quot;input_2&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
     <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;output&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
@@ -251,10 +190,12 @@ to download the full example code</p>
 <span class="n">dea_with_weight</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>AdditiveResult(score=nan, id=3, dmu=DMU(input=array([3., 3.]), output=array([16]), id=3), x_slack=[2.0, 0.0], y_slack=[0.0])
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
     <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">eff_dmu</span><span class="p">],</span>
     <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">eff_dmu</span><span class="p">],</span>
@@ -274,38 +215,11 @@ to download the full example code</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;input_2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_06_additive_model_002.png" srcset="../../_images/sphx_glr_06_additive_model_002.png" alt="06 additive model" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(33.972222222222214, 0.5, &#39;input_2&#39;)
-</pre></div>
 </div>
 </section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl>
-<dt>Author</dt><dd><ol class="upperalpha simple">
-<li><p>Charnes and W.W. Cooper and L. Seiford and J. Stutz.</p></li>
-</ol>
-</dd>
-<dt>Title</dt><dd><blockquote>
-<div><p><em>A multiplicative model for efficiency analysis</em>,</p>
-</div></blockquote>
-<p>Socio-Economic Planning Sciences,
-1982.
-<code class="xref std std-numref docutils literal notranslate"><span class="pre">https://doi.org/10.1016/0038-0121(82)90029-5</span></code>.</p>
-</dd>
-</dl>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.429 seconds)</p>
-<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-01-usecase-06-additive-model-py">
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/025ce909e4340b35594cae81bac86066/06_additive_model.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">06_additive_model.py</span></code></a></p>
-</div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/08535fc76e53dd1bbf28b8b0e5f84133/06_additive_model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">06_additive_model.ipynb</span></code></a></p>
-</div>
-</div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+<section id="References">
+<h2>References<a class="headerlink" href="#References" title="Link to this heading"></a></h2>
+<p>Author A. Charnes and W.W. Cooper and L. Seiford and J. Stutz. Title <em>A multiplicative model for efficiency analysis</em>, Socio-Economic Planning Sciences, 1982. :numref:<code class="docutils literal notranslate"><span class="pre">https://www.sciencedirect.com/science/article/pii/0038012182900295</span></code>.</p>
 </section>
 </section>
 
@@ -326,7 +240,7 @@ to download the full example code</p>
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-
+   
 
 </footer>
         </div>
@@ -337,7 +251,7 @@ to download the full example code</p>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
+  </script> 
 
 </body>
 </html>

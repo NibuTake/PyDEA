@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_01_input_crs.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_01_input_crs.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -42,7 +42,7 @@ Sample supply chain data is generated.
 
 .. GENERATED FROM PYTHON SOURCE LINES 23-33
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -132,7 +132,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 38-45
 
-.. code-block:: default
+.. code-block:: Python
 
     dea = EnvelopDEA("CRS", "in")
     dea.fit(
@@ -163,7 +163,7 @@ Visualize the result.
 
 .. GENERATED FROM PYTHON SOURCE LINES 50-78
 
-.. code-block:: default
+.. code-block:: Python
 
     eff_dmu = [r.dmu for r in dea.result if r.is_efficient]
     ineff_dmu = [r.dmu for r in dea.result if r.is_efficient != 1]
@@ -214,7 +214,7 @@ About slack
 
 .. GENERATED FROM PYTHON SOURCE LINES 83-90
 
-.. code-block:: default
+.. code-block:: Python
 
 
     print([r.score for r in dea.result])
@@ -242,7 +242,7 @@ About slack
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.759 seconds)
+   **Total running time of the script:** (0 minutes 0.613 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_01_input_crs.py:
@@ -251,14 +251,13 @@ About slack
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 01_input_crs.ipynb <01_input_crs.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 01_input_crs.py <01_input_crs.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 01_input_crs.ipynb <01_input_crs.ipynb>`
 
 
 .. only:: html

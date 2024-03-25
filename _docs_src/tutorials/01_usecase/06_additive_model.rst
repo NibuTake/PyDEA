@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_06_additive_model.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_06_additive_model.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -31,7 +31,7 @@ Average of rental properties in a given district.
 
 .. GENERATED FROM PYTHON SOURCE LINES 12-23
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -116,7 +116,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 28-35
 
-.. code-block:: default
+.. code-block:: Python
 
     dea = AdditiveDEA("CRS")
     dea.fit(
@@ -144,7 +144,7 @@ In the built documentation.
 
 .. GENERATED FROM PYTHON SOURCE LINES 37-59
 
-.. code-block:: default
+.. code-block:: Python
 
     eff_dmu = [r.dmu for r in dea.result if r.is_efficient]
     ineff_dmu = [r.dmu for r in dea.result if r.is_efficient != 1]
@@ -195,7 +195,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 64-74
 
-.. code-block:: default
+.. code-block:: Python
 
 
     dea_with_weight = AdditiveDEA("CRS")
@@ -222,7 +222,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 75-93
 
-.. code-block:: default
+.. code-block:: Python
 
     plt.figure()
     plt.plot(
@@ -267,17 +267,17 @@ References
 .. seealso::
 
    Author
-      A. Charnes and W.W. Cooper and L. Seiford and J. Stutz.
+      A. Charnes and W.W. Cooper and L. Seiford and J. Stutz. 
    Title
-      *A multiplicative model for efficiency analysis*,
-    Socio-Economic Planning Sciences,
-    1982.
-    :numref:`https://doi.org/10.1016/0038-0121(82)90029-5`.
+      *A multiplicative model for efficiency analysis*, 
+    Socio-Economic Planning Sciences, 
+    1982. 
+    :numref:`https://www.sciencedirect.com/science/article/pii/0038012182900295`. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.429 seconds)
+   **Total running time of the script:** (0 minutes 0.577 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_06_additive_model.py:
@@ -286,14 +286,13 @@ References
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 06_additive_model.ipynb <06_additive_model.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 06_additive_model.py <06_additive_model.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 06_additive_model.ipynb <06_additive_model.ipynb>`
 
 
 .. only:: html

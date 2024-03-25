@@ -1,43 +1,49 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutorial &mdash; Pyfrontier 0.1.1 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+      <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a58bc63e"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="&lt;no title&gt;" href="01_usecase/index.html" />
-    <link rel="prev" title="Pyfrontier.frontier_model package" href="../Pyfrontier.frontier_model.html" />
+    <link rel="prev" title="Pyfrontier.frontier_model package" href="../Pyfrontier.frontier_model.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Pyfrontier
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Pyfrontier
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,8 +80,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Tutorial</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tutorial</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -83,64 +89,40 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-
-
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<section id="tutorial">
-<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading"></a></h1>
+             
+  <section id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading"></a></h1>
 <div class="sphx-glr-thumbnails"></div><p>Basic usage</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="The following DEA model is an input-oriented model where the inputs are minimized and the outpu..."><img alt="Input oriented model" src="../_images/sphx_glr_01_input_crs_thumb.png" />
-<p><a class="reference internal" href="01_usecase/01_input_crs.html#sphx-glr-tutorials-01-usecase-01-input-crs-py"><span class="std std-ref">Input oriented model</span></a></p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="The following DEA model is an input-oriented model where the inputs are minimized and the outpu..."><img alt="" src="../_images/sphx_glr_01_input_crs_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_01_input_crs.py</span></p>
   <div class="sphx-glr-thumbnail-title">Input oriented model</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="The following DEA model is an output-oriented model where the outputs are maximizing and the in..."><img alt="Output oriented model" src="../_images/sphx_glr_02_output_crs_thumb.png" />
-<p><a class="reference internal" href="01_usecase/02_output_crs.html#sphx-glr-tutorials-01-usecase-02-output-crs-py"><span class="std std-ref">Output oriented model</span></a></p>
+</div><div class="sphx-glr-thumbcontainer" tooltip="The following DEA model is an output-oriented model where the outputs are maximizing and the in..."><img alt="" src="../_images/sphx_glr_02_output_crs_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_02_output_crs.py</span></p>
   <div class="sphx-glr-thumbnail-title">Output oriented model</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="Super efficiency" src="../_images/sphx_glr_03_super_efficiency_thumb.png" />
-<p><a class="reference internal" href="01_usecase/03_super_efficiency.html#sphx-glr-tutorials-01-usecase-03-super-efficiency-py"><span class="std std-ref">Super efficiency</span></a></p>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="" src="../_images/sphx_glr_03_super_efficiency_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_03_super_efficiency.py</span></p>
   <div class="sphx-glr-thumbnail-title">Super efficiency</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="Cross efficiency" src="../_images/sphx_glr_04_cross_efficiency_thumb.png" />
-<p><a class="reference internal" href="01_usecase/04_cross_efficiency.html#sphx-glr-tutorials-01-usecase-04-cross-efficiency-py"><span class="std std-ref">Cross efficiency</span></a></p>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="" src="../_images/sphx_glr_04_cross_efficiency_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_04_cross_efficiency.py</span></p>
   <div class="sphx-glr-thumbnail-title">Cross efficiency</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="Assurance region" src="../_images/sphx_glr_05_assurance_region_thumb.png" />
-<p><a class="reference internal" href="01_usecase/05_assurance_region.html#sphx-glr-tutorials-01-usecase-05-assurance-region-py"><span class="std std-ref">Assurance region</span></a></p>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="" src="../_images/sphx_glr_05_assurance_region_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_05_assurance_region.py</span></p>
   <div class="sphx-glr-thumbnail-title">Assurance region</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="Additive model" src="../_images/sphx_glr_06_additive_model_thumb.png" />
-<p><a class="reference internal" href="01_usecase/06_additive_model.html#sphx-glr-tutorials-01-usecase-06-additive-model-py"><span class="std std-ref">Additive model</span></a></p>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="" src="../_images/sphx_glr_06_additive_model_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_06_additive_model.py</span></p>
   <div class="sphx-glr-thumbnail-title">Additive model</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="Uncontrollable factor" src="../_images/sphx_glr_07_uncontrollable_factor_thumb.png" />
-<p><a class="reference internal" href="01_usecase/07_uncontrollable_factor.html#sphx-glr-tutorials-01-usecase-07-uncontrollable-factor-py"><span class="std std-ref">Uncontrollable factor</span></a></p>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="" src="../_images/sphx_glr_07_uncontrollable_factor_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_07_uncontrollable_factor.py</span></p>
   <div class="sphx-glr-thumbnail-title">Uncontrollable factor</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="Context-dependent DEA" src="../_images/sphx_glr_08_hierarchical_thumb.png" />
-<p><a class="reference internal" href="01_usecase/08_hierarchical.html#sphx-glr-tutorials-01-usecase-08-hierarchical-py"><span class="std std-ref">Context-dependent DEA</span></a></p>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="" src="../_images/sphx_glr_08_hierarchical_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_08_hierarchical.py</span></p>
   <div class="sphx-glr-thumbnail-title">Context-dependent DEA</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="Returns to scale" src="../_images/sphx_glr_09_returns_to_scale_thumb.png" />
-<p><a class="reference internal" href="01_usecase/09_returns_to_scale.html#sphx-glr-tutorials-01-usecase-09-returns-to-scale-py"><span class="std std-ref">Returns to scale</span></a></p>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Preparing..."><img alt="" src="../_images/sphx_glr_09_returns_to_scale_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_01_usecase_09_returns_to_scale.py</span></p>
   <div class="sphx-glr-thumbnail-title">Returns to scale</div>
 </div></div><p>Advanced usage</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example doesn&#x27;t do much, it just makes a simple plot"><img alt="Ex. sample" src="../_images/sphx_glr__sample_thumb.png" />
-<p><a class="reference internal" href="02_advanced/_sample.html#sphx-glr-tutorials-02-advanced-sample-py"><span class="std std-ref">Ex. sample</span></a></p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example doesn&#x27;t do much, it just makes a simple plot"><img alt="" src="../_images/sphx_glr__sample_thumb.png" />
+<p><span class="xref std std-ref">sphx_glr_tutorials_02_advanced__sample.py</span></p>
   <div class="sphx-glr-thumbnail-title">Ex. sample</div>
 </div></div><div class="toctree-wrapper compound">
 </div>
@@ -172,7 +154,7 @@
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-
+   
 
 </footer>
         </div>
@@ -183,7 +165,7 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
+  </script> 
 
 </body>
 </html>

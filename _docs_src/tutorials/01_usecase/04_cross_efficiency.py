@@ -47,7 +47,7 @@ plt.show()
 #       *Efficiency and Cross-efficiency in DEA: Derivations, Meanings and Uses*,
 #     Journal of the Operational Research Society,
 #     1994.
-#     :numref:`10.1057/jors.1994.84`.
+#     :numref:`https://doi.org/10.1057/jors.1994.84`.
 
 
 # %%
@@ -59,4 +59,4 @@ plt.show()
 #       *Data envelopment analysis: Critique and extensions*,
 #     New Directions for Program Evaluation,
 #     1986.
-#     :numref:`https://doi.org/10.1002/ev.1441`.
+#     :numref:`https://onlinelibrary.wiley.com/doi/abs/10.1002/ev.1441`.

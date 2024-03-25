@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_04_cross_efficiency.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_04_cross_efficiency.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -31,7 +31,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 13-22
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib.pyplot as plt
     import pandas as pd
@@ -51,7 +51,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 23-26
 
-.. code-block:: default
+.. code-block:: Python
 
 
     dea = MultipleDEA("CRS", "in")
@@ -65,7 +65,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 27-28
 
-.. code-block:: default
+.. code-block:: Python
 
     dea.result[0]
 
@@ -83,7 +83,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 29-30
 
-.. code-block:: default
+.. code-block:: Python
 
     [r.score for r in dea.result]
 
@@ -101,7 +101,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 31-32
 
-.. code-block:: default
+.. code-block:: Python
 
     dea.cross_efficiency
 
@@ -119,7 +119,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 33-39
 
-.. code-block:: default
+.. code-block:: Python
 
     efficiency_matrix = dea._cross_efficiency_matrix()
 
@@ -146,29 +146,29 @@ References
 .. seealso::
 
    Author
-      John Doyle and Rodney Green.
+      John Doyle and Rodney Green. 
    Title
-      *Efficiency and Cross-efficiency in DEA: Derivations, Meanings and Uses*,
-    Journal of the Operational Research Society,
-    1994.
-    :numref:`10.1057/jors.1994.84`.
+      *Efficiency and Cross-efficiency in DEA: Derivations, Meanings and Uses*, 
+    Journal of the Operational Research Society, 
+    1994. 
+    :numref:`https://doi.org/10.1057/jors.1994.84`. 
 
 .. GENERATED FROM PYTHON SOURCE LINES 54-63
 
 .. seealso::
 
    Author
-      Sexton, Thomas R. and Silkman, Richard H. and Hogan, Andrew J..
+      Sexton, Thomas R. and Silkman, Richard H. and Hogan, Andrew J.. 
    Title
-      *Data envelopment analysis: Critique and extensions*,
-    New Directions for Program Evaluation,
-    1986.
-    :numref:`https://doi.org/10.1002/ev.1441`.
+      *Data envelopment analysis: Critique and extensions*, 
+    New Directions for Program Evaluation, 
+    1986. 
+    :numref:`https://onlinelibrary.wiley.com/doi/abs/10.1002/ev.1441`. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.233 seconds)
+   **Total running time of the script:** (0 minutes 0.292 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_04_cross_efficiency.py:
@@ -177,14 +177,13 @@ References
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 04_cross_efficiency.ipynb <04_cross_efficiency.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 04_cross_efficiency.py <04_cross_efficiency.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 04_cross_efficiency.ipynb <04_cross_efficiency.ipynb>`
 
 
 .. only:: html

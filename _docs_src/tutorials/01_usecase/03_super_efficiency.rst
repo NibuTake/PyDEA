@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorials_01_usecase_03_super_efficiency.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_03_super_efficiency.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -31,7 +31,7 @@ Import modules and prepare data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 12-22
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -121,7 +121,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 27-36
 
-.. code-block:: default
+.. code-block:: Python
 
     dea = EnvelopDEA("CRS", "in", super_efficiency=True)
     dea.fit(
@@ -147,7 +147,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 37-47
 
-.. code-block:: default
+.. code-block:: Python
 
     plt.figure()
     plt.plot(
@@ -180,7 +180,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.178 seconds)
+   **Total running time of the script:** (0 minutes 0.256 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_03_super_efficiency.py:
@@ -189,14 +189,13 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: 03_super_efficiency.ipynb <03_super_efficiency.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 03_super_efficiency.py <03_super_efficiency.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: 03_super_efficiency.ipynb <03_super_efficiency.ipynb>`
 
 
 .. only:: html

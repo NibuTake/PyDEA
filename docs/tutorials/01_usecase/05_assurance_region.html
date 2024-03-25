@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Assurance region &mdash; Pyfrontier 0.1.1 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/sg_gallery-rendered-html.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=a58bc63e"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"bm": ["{\\boldsymbol{#1}}", 1]}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -27,19 +30,23 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Additive model" href="06_additive_model.html" />
-    <link rel="prev" title="Cross efficiency" href="04_cross_efficiency.html" />
+    <link rel="prev" title="Cross efficiency" href="04_cross_efficiency.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Pyfrontier
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Pyfrontier
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -54,8 +61,8 @@
 <li class="toctree-l2"><a class="reference internal" href="03_super_efficiency.html">Super efficiency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_cross_efficiency.html">Cross efficiency</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Assurance region</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#import-modules-and-prepare-data">Import modules and prepare data.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Import-modules-and-prepare-data.">Import modules and prepare data.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#References">References</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="06_additive_model.html">Additive model</a></li>
@@ -80,10 +87,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Tutorial</a> &raquo;</li>
-          <li><a href="index.html">&lt;no title&gt;</a> &raquo;</li>
-      <li>Assurance region</li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorial</a></li>
+          <li class="breadcrumb-item"><a href="index.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">Assurance region</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -91,44 +98,18 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-
-
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="sphx-glr-download-link-note admonition note">
-<p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-tutorials-01-usecase-05-assurance-region-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
-</div>
-<section class="sphx-glr-example-title" id="assurance-region">
-<span id="sphx-glr-tutorials-01-usecase-05-assurance-region-py"></span><h1>Assurance region<a class="headerlink" href="#assurance-region" title="Permalink to this heading"></a></h1>
+             
+  <section id="Assurance-region">
+<h1>Assurance region<a class="headerlink" href="#Assurance-region" title="Link to this heading"></a></h1>
 <p>Preparing…</p>
-<div class="math notranslate nohighlight">
-\[\alpha_i \leq \frac{\nu_i}{\nu_{i_o}} \beta_i, i= 1, \dots, m\]</div>
-<section id="import-modules-and-prepare-data">
-<h2>Import modules and prepare data.<a class="headerlink" href="#import-modules-and-prepare-data" title="Permalink to this heading"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<p><span class="math">\begin{align}\alpha_i \leq \frac{\nu_i}{\nu_{i_o}} \beta_i, i= 1, \dots, m\end{align}</span></p>
+<section id="Import-modules-and-prepare-data.">
+<h2>Import modules and prepare data.<a class="headerlink" href="#Import-modules-and-prepare-data." title="Link to this heading"></a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -139,73 +120,25 @@ to download the full example code</p>
 <span class="n">df</span>
 </pre></div>
 </div>
-<div class="output_subarea output_html rendered_html output_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>price</th>
-      <th>rent</th>
-      <th>output</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>5</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>4</td>
-      <td>1</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>6</td>
-      <td>1</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
 </div>
+<p>これによって乗数同士の重要性などを加味することができる。</p>
+<p><span class="math">\begin{align}1 \leq \frac{x_{price}}{x_{rent}} \leq 2\end{align}</span></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
 </div>
-<br />
-<br /><p>これによって乗数同士の重要性などを加味することができる。</p>
-<div class="math notranslate nohighlight">
-\[1 \leq \frac{x_{price}}{x_{rent}} \leq 2\]</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dea</span> <span class="o">=</span> <span class="n">MultipleDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dea</span> <span class="o">=</span> <span class="n">MultipleDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
 <span class="n">dea</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="s2">&quot;rent&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;output&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ordinary dea: &quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">score</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea</span><span class="o">.</span><span class="n">result</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>ordinary dea:  [1.0, 1.0, 1.0, 1.0]
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dea_ar</span> <span class="o">=</span> <span class="n">MultipleDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dea_ar</span> <span class="o">=</span> <span class="n">MultipleDEA</span><span class="p">(</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
 <span class="n">dea_ar</span><span class="o">.</span><span class="n">add_assurance_region</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">index_a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">index_b</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">coefficient</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;&lt;=&quot;</span><span class="p">)</span>
 <span class="n">dea_ar</span><span class="o">.</span><span class="n">add_assurance_region</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="n">index_a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">index_b</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">coefficient</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;&gt;=&quot;</span><span class="p">)</span>
 <span class="n">dea_ar</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="s2">&quot;rent&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;output&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
@@ -213,10 +146,12 @@ to download the full example code</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;assurance region: &quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">score</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">dea_ar</span><span class="o">.</span><span class="n">result</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>assurance region:  [0.857143, 1.0, 0.8, 0.571429]
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">restrict_f_1</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">restrict_f_1</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
     <span class="k">return</span> <span class="o">-</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
 
 
@@ -245,34 +180,12 @@ to download the full example code</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_05_assurance_region_001.png" srcset="../../_images/sphx_glr_05_assurance_region_001.png" alt="05 assurance region" class = "sphx-glr-single-img"/><p>通常のDEAで効率的だったDMUは、フロンティアの傾きに制約が課されることで一つのみとなった。</p>
+</div>
+<p>通常のDEAで効率的だったDMUは、フロンティアの傾きに制約が課されることで一つのみとなった。</p>
 </section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl>
-<dt>Author</dt><dd><p>Russell G. Thompson and Larry N. Langemeier and Chih-Tah Lee and Euntaik Lee and Robert M. Thrall.</p>
-</dd>
-<dt>Title</dt><dd><blockquote>
-<div><p><em>The role of multiplier bounds in efficiency analysis with application to Kansas farming</em>,</p>
-</div></blockquote>
-<p>Journal of Econometrics,
-1990.
-<code class="xref std std-numref docutils literal notranslate"><span class="pre">https://doi.org/10.1016/0304-4076(90)90049-Y</span></code>.</p>
-</dd>
-</dl>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.298 seconds)</p>
-<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-01-usecase-05-assurance-region-py">
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/8d9a77e4973a6f13594736ddfecd3b14/05_assurance_region.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">05_assurance_region.py</span></code></a></p>
-</div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/42c6a2ac05a3de66ceab81dcc6a2bba0/05_assurance_region.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">05_assurance_region.ipynb</span></code></a></p>
-</div>
-</div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+<section id="References">
+<h2>References<a class="headerlink" href="#References" title="Link to this heading"></a></h2>
+<p>Author Russell G. Thompson and Larry N. Langemeier and Chih-Tah Lee and Euntaik Lee and Robert M. Thrall. Title <em>The role of multiplier bounds in efficiency analysis with application to Kansas farming</em>, Journal of Econometrics, 1990. :numref:<code class="docutils literal notranslate"><span class="pre">https://www.sciencedirect.com/science/article/pii/030440769090049Y</span></code>.</p>
 </section>
 </section>
 
@@ -293,7 +206,7 @@ to download the full example code</p>
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-
+   
 
 </footer>
         </div>
@@ -304,7 +217,7 @@ to download the full example code</p>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
+  </script> 
 
 </body>
 </html>
