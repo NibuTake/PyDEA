@@ -25,6 +25,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3 :: Only",
     "Topic :: Scientific/Engineering",
     "Topic :: Scientific/Engineering :: Mathematics",
@@ -36,7 +37,7 @@ CLASSIFIERS = [
 setup(
     name="Pyfrontier",
     # version=Pyfrontier.__version__,
-    version="1.0.0",
+    version="1.0.1",
     license="MIT",
     description=DESCRIPTION,
     long_description=long_description,

@@ -84,6 +84,7 @@
 <span class="kn">import</span> <span class="nn">multiprocessing</span>
 
 <span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">AssuranceRegion</span><span class="p">,</span> <span class="n">DMUSet</span><span class="p">,</span> <span class="n">EnvelopResult</span><span class="p">,</span> <span class="n">MultipleResult</span>
+<span class="kn">from</span> <span class="nn">Pyfrontier.domain.dmu</span> <span class="kn">import</span> <span class="n">BooleanInput</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.domain.parallel</span> <span class="kn">import</span> <span class="n">NumberOfJobs</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.frontier_model._base</span> <span class="kn">import</span> <span class="n">BaseDataEnvelopmentAnalysis</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.solver</span> <span class="kn">import</span> <span class="n">EnvelopeSolver</span><span class="p">,</span> <span class="n">MultipleSolver</span>
@@ -110,7 +111,7 @@
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span> <span class="o">=</span> <span class="n">frontier</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">orient</span> <span class="o">=</span> <span class="n">orient</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">super_efficiency</span> <span class="o">=</span> <span class="n">super_efficiency</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">super_efficiency</span> <span class="o">=</span> <span class="n">BooleanInput</span><span class="p">(</span><span class="n">super_efficiency</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">EnvelopResult</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">NumberOfJobs</span><span class="p">(</span><span class="n">n_jobs</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>

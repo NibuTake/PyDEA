@@ -242,7 +242,7 @@ About slack
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.613 seconds)
+   **Total running time of the script:** (0 minutes 0.850 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_01_input_crs.py:

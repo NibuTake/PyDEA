@@ -14,6 +14,7 @@ src/Pyfrontier/domain/__init__.py
 src/Pyfrontier/domain/assurance_region.py
 src/Pyfrontier/domain/dmu.py
 src/Pyfrontier/domain/metrics.py
+src/Pyfrontier/domain/parallel.py
 src/Pyfrontier/domain/result.py
 src/Pyfrontier/domain/slack_weight.py
 src/Pyfrontier/frontier_model/__init__.py
