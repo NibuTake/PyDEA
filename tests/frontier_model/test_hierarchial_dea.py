@@ -14,6 +14,6 @@ def test_can_work_hierarchal_model():
         }
     )
 
-    h_dea = HierarchalDEA(EnvelopDEA("CRS", "in"))
+    h_dea = HierarchalDEA(EnvelopDEA("CRS", "in", n_jobs=2))
 
     h_dea.fit(df[["input_1", "input_2"]].to_numpy(), df[["output"]].to_numpy())

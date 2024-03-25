@@ -5,6 +5,7 @@ import numpy as np
 import multiprocessing
 
 from Pyfrontier.domain import AssuranceRegion, DMUSet, EnvelopResult, MultipleResult
+from Pyfrontier.domain.dmu import BooleanInput
 from Pyfrontier.domain.parallel import NumberOfJobs
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import EnvelopeSolver, MultipleSolver
@@ -29,7 +30,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
     ):
         self.frontier = frontier
         self.orient = orient
-        self.super_efficiency = super_efficiency
+        self.super_efficiency = BooleanInput(super_efficiency).value
         self.DMUs = None
         self.result: List[EnvelopResult] = []
         self.n_jobs = NumberOfJobs(n_jobs).value

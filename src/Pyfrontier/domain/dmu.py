@@ -45,3 +45,12 @@ class DMUSet:
     @property
     def s(self):
         return self._s
+
+
+@dataclass
+class BooleanInput:
+    _value: bool
+
+    @property
+    def value(self):
+        return bool(self._value)
