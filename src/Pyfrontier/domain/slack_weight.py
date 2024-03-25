@@ -5,7 +5,7 @@ import numpy as np
 
 @dataclass
 class SlackWeight:
-    _weights: np.ndarray = field(default_factory=[])
+    _weights: np.ndarray = field(default_factory=np.array([]))
     _n_dim: int = 0
 
     def __post_init__(self):
