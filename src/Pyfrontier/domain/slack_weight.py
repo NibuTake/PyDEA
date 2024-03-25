@@ -1,11 +1,11 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import numpy as np
 
 
 @dataclass
 class SlackWeight:
-    _weights: np.ndarray = np.array([])
+    _weights: np.ndarray = field(default_factory=[])
     _n_dim: int = 0
 
     def __post_init__(self):
