@@ -45,11 +45,11 @@ class TestAdditiveResult:
     def test_no_slack_is_efficient(self):
         x_slack = [0, 0]
         y_slack = [0]
-        result = AdditiveResult(0.0, 1, dmu, x_slack, y_slack)
+        result = AdditiveResult(0.0, 1, dmu, x_slack, y_slack, [])
         assert result.is_efficient
 
     def test_positive_slack_is_inefficient(self):
         x_slack = [0, 0]
         y_slack = [0.1]
-        result = AdditiveResult(0.0, 1, dmu, x_slack, y_slack)
+        result = AdditiveResult(0.0, 1, dmu, x_slack, y_slack, [])
         assert not result.is_efficient

@@ -43,3 +43,21 @@ def test_parallel_can_work_on_additive_model(sample_data):
 
     assert bool(np.all(np.equal(default_x_slack, parallel_x_slack)))
     assert bool(np.all(np.equal(default_y_slack, parallel_y_slack)))
+
+
+class TestAdditiveFrontierLambda:
+    def test_DRS(self, house_data):
+        multiple_dea = AdditiveDEA("DRS")
+        multiple_dea.fit(
+            house_data[["Fee", "House"]].values, house_data[["Income"]].values
+        )
+        for r in multiple_dea.result:
+            assert sum(r.weights) <= 1
+
+    def test_IRS(self, house_data):
+        multiple_dea = AdditiveDEA("IRS")
+        multiple_dea.fit(
+            house_data[["Fee", "House"]].values, house_data[["Income"]].values
+        )
+        for r in multiple_dea.result:
+            assert sum(r.weights) >= 1

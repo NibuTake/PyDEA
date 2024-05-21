@@ -1,4 +1,4 @@
-from typing import List, Union
+from typing import List, Literal, Union
 
 import pulp
 
@@ -6,6 +6,7 @@ from Pyfrontier.domain import AssuranceRegion, DMUSet, MultipleResult
 from Pyfrontier.domain.dmu import DMU
 from Pyfrontier.domain import MultiProcessor
 from Pyfrontier.solver._base import BaseSolver
+from Pyfrontier.solver._models import Bias
 
 
 class MultipleSolver(BaseSolver):
@@ -19,8 +20,8 @@ class MultipleSolver(BaseSolver):
 
     def __init__(
         self,
-        orient: str,
-        frontier: str,
+        orient: Literal["in", "out"],
+        frontier: Literal["CRS", "VRS", "IRS", "DRS"],
         DMUs: DMUSet,
         assurance_region: List[AssuranceRegion],
         bound: float = 0.0,
@@ -36,12 +37,6 @@ class MultipleSolver(BaseSolver):
     def apply(self) -> List[MultipleResult]:
         processor = MultiProcessor(self._solve_problem, self.DMUs.N)
         return processor.solve(self.n_jobs)
-
-    def _define_bias(self) -> Union[pulp.LpVariable, int]:
-        if self.frontier == "VRS":
-            return pulp.LpVariable("bias")
-        else:
-            return 0
 
     def _define_input_oriented_problem(
         self, bias: Union[pulp.LpVariable, int], mu: list, nu: list, o: int
@@ -86,7 +81,7 @@ class MultipleSolver(BaseSolver):
         nu = self._dict_to_list(
             pulp.LpVariable.dicts("Nu", range(self.DMUs.m), lowBound=self.bound)
         )
-        bias = self._define_bias()
+        bias = Bias(self.frontier, self.orient).value
 
         # Problem.
         if self.orient == "in":

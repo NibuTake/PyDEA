@@ -28,7 +28,7 @@ class EnvelopResult(BaseResult):
     score: float
     id: int
     dmu: DMU
-    weight: List[float]
+    weights: List[float]
     x_slack: List[float]
     y_slack: List[float]
 
@@ -87,6 +87,7 @@ class AdditiveResult(BaseResult):
     - dmu:
     - x_slack:
     - y_slack:
+    - weights: lambda
     """
 
     score: float
@@ -94,6 +95,7 @@ class AdditiveResult(BaseResult):
     dmu: DMU
     x_slack: List[float]
     y_slack: List[float]
+    weights: List[float]
 
     @property
     def is_efficient(self) -> bool:

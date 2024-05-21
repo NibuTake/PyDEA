@@ -21,7 +21,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
 
     def __init__(
         self,
-        frontier: Literal["CRS", "VRS"],
+        frontier: Literal["CRS", "VRS", "IRS", "DRS"],
         orient: Literal["in", "out"],
         super_efficiency: bool = False,
         n_jobs: int = 1,
@@ -84,7 +84,7 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
 
     def __init__(
         self,
-        frontier: Literal["CRS", "VRS"],
+        frontier: Literal["CRS", "VRS", "IRS", "DRS"],
         orient: Literal["in", "out"],
         n_jobs: int = 1,
     ):

@@ -59,3 +59,21 @@ def test_super_efficiency(house_data):
         print(r.score)
 
     assert True
+
+
+class TestEnvelopeFrontierLambda:
+    def test_DRS(self, house_data):
+        multiple_dea = EnvelopDEA("DRS", "in")
+        multiple_dea.fit(
+            house_data[["Fee", "House"]].values, house_data[["Income"]].values
+        )
+        for r in multiple_dea.result:
+            assert sum(r.weights) <= 1
+
+    def test_IRS(self, house_data):
+        multiple_dea = EnvelopDEA("IRS", "in")
+        multiple_dea.fit(
+            house_data[["Fee", "House"]].values, house_data[["Income"]].values
+        )
+        for r in multiple_dea.result:
+            assert sum(r.weights) >= 1

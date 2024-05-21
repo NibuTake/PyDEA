@@ -17,7 +17,7 @@ class AdditiveDEA(BaseDataEnvelopmentAnalysis):
         n_jobs (int, optional): The number of parallel jobs to solve DMU programming.
     """
 
-    def __init__(self, frontier: Literal["CRS", "VRS"], n_jobs: int = 1):
+    def __init__(self, frontier: Literal["CRS", "VRS", "IRS", "DRS"], n_jobs: int = 1):
         self.frontier = frontier
         self.DMUs: Optional[DMUSet] = None
         self._result: List[AdditiveResult] = []

@@ -44,3 +44,33 @@ def test_can_assurance_region(house_data):
 
     [r for r in multiple_dea.result]
     assert True
+
+
+class TestFrontierBias:
+    def test_input_oriented_DRS(self, house_data):
+        multiple_dea = MultipleDEA("DRS", "in")
+        multiple_dea.fit(
+            house_data[["Fee", "House"]].values, house_data[["Income"]].values
+        )
+        assert all([r.bias <= 0 for r in multiple_dea.result])
+
+    def test_output_oriented_DRS(self, house_data):
+        multiple_dea = MultipleDEA("DRS", "out")
+        multiple_dea.fit(
+            house_data[["Fee", "House"]].values, house_data[["Income"]].values
+        )
+        assert all([r.bias >= 0 for r in multiple_dea.result])
+
+    def test_input_oriented_IRS(self, house_data):
+        multiple_dea = MultipleDEA("IRS", "in")
+        multiple_dea.fit(
+            house_data[["Fee", "House"]].values, house_data[["Income"]].values
+        )
+        assert all([r.bias >= 0 for r in multiple_dea.result])
+
+    def test_output_oriented_IRS(self, house_data):
+        multiple_dea = MultipleDEA("IRS", "out")
+        multiple_dea.fit(
+            house_data[["Fee", "House"]].values, house_data[["Income"]].values
+        )
+        assert all([r.bias <= 0 for r in multiple_dea.result])

@@ -11,7 +11,7 @@ from Pyfrontier.solver._base import BaseSolver
 class AdditiveSolver(BaseSolver):
     def __init__(
         self,
-        frontier: Optional[Literal["CRS", "VRS"]],
+        frontier: Literal["CRS", "VRS", "IRS", "DRS"],
         DMUs: DMUSet,
         x_weight: np.ndarray,
         y_weight: np.ndarray,
@@ -54,6 +54,10 @@ class AdditiveSolver(BaseSolver):
 
         if self.frontier == "VRS":
             problem += np.sum(lambda_N) == 1
+        elif self.frontier == "IRS":
+            problem += np.sum(lambda_N) >= 1
+        elif self.frontier == "DRS":
+            problem += np.sum(lambda_N) <= 1
 
         return problem
 
@@ -83,4 +87,5 @@ class AdditiveSolver(BaseSolver):
             dmu=DMU(self.DMUs.inputs[o], self.DMUs.outputs[o], self.DMUs.get_id(o)),
             x_slack=[self._rounder(i.value()) for i in sx],
             y_slack=[self._rounder(r.value()) for r in sy],
+            weights=[self._rounder(n.value()) for n in lambda_N],
         )
