@@ -37,7 +37,7 @@ CLASSIFIERS = [
 setup(
     name="Pyfrontier",
     # version=Pyfrontier.__version__,
-    version="1.0.1",
+    version="1.0.2",
     license="MIT",
     description=DESCRIPTION,
     long_description=long_description,

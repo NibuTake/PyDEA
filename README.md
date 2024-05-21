@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/github/license/NibuTake/PyDEA?color=blue)](LICENSE)
 [![codecov](https://codecov.io/gh/NibuTake/PyDEA/branch/main/graph/badge.svg?token=EL44JBAYOT)](https://codecov.io/gh/NibuTake/PyDEA)
 
-[Install](#installation) | [Tutorial](https://nibutake.github.io/PyDEA/tutorials/index.html#) | [Docs](https://nibutake.github.io/PyDEA/index.html) | [Contribution](./CONTRIBUTING.md)
+[Install](#installation)| [Docs](https://nibutake.github.io/PyDEA/index.html) | [Contribution](./CONTRIBUTING.md)
 
 Pyfrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to use DEA effectively and contribute to the development of DEA field.
 
