@@ -2,8 +2,6 @@ from typing import List, Literal
 
 import numpy as np
 
-import multiprocessing
-
 from Pyfrontier.domain import AssuranceRegion, DMUSet, EnvelopResult, MultipleResult
 from Pyfrontier.domain.dmu import BooleanInput
 from Pyfrontier.domain.parallel import NumberOfJobs

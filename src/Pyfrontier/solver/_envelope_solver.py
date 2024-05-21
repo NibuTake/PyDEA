@@ -1,4 +1,4 @@
-from typing import List, Tuple, Union
+from typing import List, Literal, Tuple, Union
 
 import numpy as np
 import pulp
@@ -22,7 +22,7 @@ class EnvelopeSolver(BaseSolver):
     def __init__(
         self,
         orient: str,
-        frontier: str,
+        frontier: Literal["CRS", "VRS"],
         DMUs: DMUSet,
         uncontrollable_index: List[int] = [],
         is_super_efficiency: bool = False,
@@ -38,23 +38,6 @@ class EnvelopeSolver(BaseSolver):
     def apply(self) -> List[EnvelopResult]:
         processor = MultiProcessor(self._solve_problem, self.DMUs.N)
         return processor.solve(self.n_jobs)
-
-        if self.n_jobs <= 1:
-            return [self._solve_problem(j) for j in range(self.DMUs.N)]
-        else:
-            # faster than problem.solve(pulp.PULP_CBC_CMD(threads=self.n_jobs))
-            pool = multiprocessing.Pool(self.n_jobs)
-
-            problem_processes = []
-            for j in range(self.DMUs.N):
-                problem_processes.append(
-                    pool.apply_async(self._solve_problem, args=(j,))
-                )
-
-            pool.close()
-            pool.join()
-
-            return [problem.get() for problem in problem_processes]
 
     def _redefine_theta_i(
         self, i: int, theta: pulp.LpVariable
