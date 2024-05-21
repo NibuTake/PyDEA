@@ -1,0 +1,11 @@
+/sample/
+/_old/
+/.pytest_cache/
+/build/
+.eggs
+/dist/
+pipfile.lock
+
+__pycache__/
+*.py[cod]
+*$py.class

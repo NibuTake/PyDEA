@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: Pyfrontier
+Version: 1.0.1
+Summary: Pyfrontier is a data envelopment analysis for Python user.
+Home-page: https://nibutake.github.io/PyDEA/index.html?
+Download-URL: https://github.com/NibuTake/PyDEA
+Author: Takeshi Morinibu
+Author-email: takeshi715tech@gmail.com
+License: MIT
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.21
+Requires-Dist: pulp>=2.6.0
+
+# Pyfrontier: A data envelopment analysis module
+
+<div align="center"><img src="./images/logo.png" height="200"/></div>
+
+[![Python](https://img.shields.io/badge/Python-3.8%20%7C%203.9%20%7C%203.10%20%20%7C3.11%20-blue)](https://codecov.io/gh/NibuTake/PyDEA)
+[![License](https://img.shields.io/github/license/NibuTake/PyDEA?color=blue)](LICENSE)
+[![codecov](https://codecov.io/gh/NibuTake/PyDEA/branch/main/graph/badge.svg?token=EL44JBAYOT)](https://codecov.io/gh/NibuTake/PyDEA)
+
+[Install](#installation) | [Tutorial](https://nibutake.github.io/PyDEA/tutorials/index.html#) | [Docs](https://nibutake.github.io/PyDEA/index.html) | [Contribution](./CONTRIBUTING.md)
+
+Pyfrontier is a data envelopment analysis for Python user. Our main motivation is to encourage more people to use DEA effectively and contribute to the development of DEA field.
+
+## Installation
+
+This module is provided by [PyPI](https://pypi.org/project/Pyfrontier/).
+
+```
+pip install Pyfrontier
+```
+
+## Tutorial
+
+A brief example is provided below. For more information, please click [here](https://nibutake.github.io/PyDEA/tutorials/index.html#).
+
+```python
+import numpy as np
+from Pyfrontier.frontier_model import EnvelopeDEA
+
+dea = EnvelopeDEA(frontier="CRS", orient="in")
+
+dea.fit(inputs, outputs)
+dea.result
+```
+
+## Communication
+
+- [Issues](https://github.com/NibuTake/PyDEA/issues) for bug reports and feature requests.
+- [Discussion](https://github.com/NibuTake/PyDEA/discussions) for any questions.
+
+## References
+
+We use [ref.bib](./tutorials/ref.bib) for tutorial.
+These are read by [bibtexparser](https://bibtexparser.readthedocs.io/en/master/) and automatically quoted and displayed at the specified location.
