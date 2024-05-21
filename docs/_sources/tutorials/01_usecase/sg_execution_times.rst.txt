@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:04.210** total execution time for 9 files **from tutorials/01_usecase**:
+**00:03.704** total execution time for 9 files **from tutorials/01_usecase**:
 
 .. container::
 
@@ -32,29 +32,29 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_tutorials_01_usecase_08_hierarchical.py` (``08_hierarchical.py``)
-     - 00:01.044
-     - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_01_input_crs.py` (``01_input_crs.py``)
-     - 00:00.921
+     - 00:00.837
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_01_usecase_08_hierarchical.py` (``08_hierarchical.py``)
+     - 00:00.795
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_06_additive_model.py` (``06_additive_model.py``)
-     - 00:00.621
+     - 00:00.521
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_02_output_crs.py` (``02_output_crs.py``)
-     - 00:00.389
+     - 00:00.396
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_05_assurance_region.py` (``05_assurance_region.py``)
-     - 00:00.359
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_03_super_efficiency.py` (``03_super_efficiency.py``)
-     - 00:00.326
+     - 00:00.379
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_04_cross_efficiency.py` (``04_cross_efficiency.py``)
-     - 00:00.313
+     - 00:00.290
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_01_usecase_03_super_efficiency.py` (``03_super_efficiency.py``)
+     - 00:00.257
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_09_returns_to_scale.py` (``09_returns_to_scale.py``)
-     - 00:00.237
+     - 00:00.228
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_07_uncontrollable_factor.py` (``07_uncontrollable_factor.py``)
      - 00:00.001
