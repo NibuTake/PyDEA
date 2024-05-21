@@ -181,7 +181,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.282 seconds)
+   **Total running time of the script:** (0 minutes 0.326 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_03_super_efficiency.py:

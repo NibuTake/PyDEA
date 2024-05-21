@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:03.980** total execution time for 10 files **from all galleries**:
+**00:04.395** total execution time for 10 files **from all galleries**:
 
 .. container::
 
@@ -33,31 +33,31 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorials_01_usecase_08_hierarchical.py` (``../tutorials/build/01_usecase/08_hierarchical.py``)
-     - 00:00.911
+     - 00:01.044
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_01_input_crs.py` (``../tutorials/build/01_usecase/01_input_crs.py``)
-     - 00:00.683
+     - 00:00.921
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_06_additive_model.py` (``../tutorials/build/01_usecase/06_additive_model.py``)
-     - 00:00.534
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_09_returns_to_scale.py` (``../tutorials/build/01_usecase/09_returns_to_scale.py``)
-     - 00:00.381
+     - 00:00.621
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_02_output_crs.py` (``../tutorials/build/01_usecase/02_output_crs.py``)
-     - 00:00.344
+     - 00:00.389
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_05_assurance_region.py` (``../tutorials/build/01_usecase/05_assurance_region.py``)
-     - 00:00.341
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_04_cross_efficiency.py` (``../tutorials/build/01_usecase/04_cross_efficiency.py``)
-     - 00:00.310
+     - 00:00.359
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_03_super_efficiency.py` (``../tutorials/build/01_usecase/03_super_efficiency.py``)
-     - 00:00.282
+     - 00:00.326
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_01_usecase_04_cross_efficiency.py` (``../tutorials/build/01_usecase/04_cross_efficiency.py``)
+     - 00:00.313
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_01_usecase_09_returns_to_scale.py` (``../tutorials/build/01_usecase/09_returns_to_scale.py``)
+     - 00:00.237
      - 0.0
    * - :ref:`sphx_glr_tutorials_02_advanced__sample.py` (``../tutorials/build/02_advanced/_sample.py``)
-     - 00:00.192
+     - 00:00.185
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_07_uncontrollable_factor.py` (``../tutorials/build/01_usecase/07_uncontrollable_factor.py``)
      - 00:00.001

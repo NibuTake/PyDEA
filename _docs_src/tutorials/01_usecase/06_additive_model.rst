@@ -272,12 +272,12 @@ References
       *A multiplicative model for efficiency analysis*, 
     Socio-Economic Planning Sciences, 
     1982. 
-    :numref:`https://www.sciencedirect.com/science/article/pii/0038012182900295`. 
+    :numref:`https://doi.org/10.1016/0038-0121(82)90029-5`. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.534 seconds)
+   **Total running time of the script:** (0 minutes 0.621 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_06_additive_model.py:
