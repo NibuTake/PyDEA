@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_09_returns_to_scale.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -165,7 +165,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x11a04fb20>]
+    [<matplotlib.lines.Line2D object at 0x11d390fa0>]
 
 
 
@@ -176,7 +176,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.334 seconds)
+   **Total running time of the script:** (0 minutes 0.228 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_09_returns_to_scale.py:

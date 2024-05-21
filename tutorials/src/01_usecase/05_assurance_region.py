@@ -43,6 +43,7 @@ dea_ar.fit(df[["price", "rent"]].to_numpy(), df[["output"]].to_numpy())
 
 print("assurance region: ", [r.score for r in dea_ar.result])
 
+
 # %%
 def restrict_f_1(x: np.ndarray):
     return -x + 4

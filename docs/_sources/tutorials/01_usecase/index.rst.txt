@@ -10,6 +10,7 @@ Basic usage
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -163,6 +164,8 @@ Basic usage
       <div class="sphx-glr-thumbnail-title">Returns to scale</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

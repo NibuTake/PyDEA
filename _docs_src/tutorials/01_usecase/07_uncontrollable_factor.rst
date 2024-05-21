@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_07_uncontrollable_factor.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -55,14 +55,14 @@ Preparing...
  .. code-block:: none
 
 
-    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-FQJTlSJV/lib/python3.10/site-packages/matplotlib/pyplot.py'>
+    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-w6IJUwEo/lib/python3.10/site-packages/matplotlib/pyplot.py'>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.002 seconds)
+   **Total running time of the script:** (0 minutes 0.001 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_07_uncontrollable_factor.py:

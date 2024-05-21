@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_02_output_crs.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -144,7 +144,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([5]), output=array([6., 2.]), id=0), weight=[1.0, 0.0, 0.0, 0.0], x_slack=[0.0], y_slack=[0.0, 0.0])
+    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([5]), output=array([6., 2.]), id=0), weights=[1.0, 0.0, 0.0, 0.0], x_slack=[0.0], y_slack=[0.0, 0.0])
 
 
 
@@ -231,7 +231,7 @@ In the built documentation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.382 seconds)
+   **Total running time of the script:** (0 minutes 0.396 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_02_output_crs.py:

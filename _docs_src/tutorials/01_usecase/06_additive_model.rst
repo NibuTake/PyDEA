@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_06_additive_model.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -134,7 +134,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    AdditiveResult(score=nan, id=0, dmu=DMU(input=array([1., 3.]), output=array([16]), id=0), x_slack=[0.0, 0.0], y_slack=[0.0])
+    AdditiveResult(score=nan, id=0, dmu=DMU(input=array([1., 3.]), output=array([16]), id=0), x_slack=[0.0, 0.0], y_slack=[0.0], weights=[1.0, 0.0, 0.0, 0.0])
 
 
 
@@ -216,7 +216,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    AdditiveResult(score=nan, id=3, dmu=DMU(input=array([3., 3.]), output=array([16]), id=3), x_slack=[2.0, 0.0], y_slack=[0.0])
+    AdditiveResult(score=nan, id=3, dmu=DMU(input=array([3., 3.]), output=array([16]), id=3), x_slack=[2.0, 0.0], y_slack=[0.0], weights=[1.0, 0.0, 0.0, 0.0])
 
 
 
@@ -272,12 +272,12 @@ References
       *A multiplicative model for efficiency analysis*, 
     Socio-Economic Planning Sciences, 
     1982. 
-    :numref:`https://www.sciencedirect.com/science/article/pii/0038012182900295`. 
+    :numref:`https://doi.org/10.1016/0038-0121(82)90029-5`. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.658 seconds)
+   **Total running time of the script:** (0 minutes 0.521 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_06_additive_model.py:

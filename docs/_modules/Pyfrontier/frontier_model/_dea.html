@@ -19,7 +19,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=a58bc63e"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -49,7 +49,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Pyfrontier.frontier_model.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Tutorial (Sorry, now maintaining…)</a></li>
 </ul>
 
         </div>
@@ -81,8 +81,6 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">import</span> <span class="nn">multiprocessing</span>
-
 <span class="kn">from</span> <span class="nn">Pyfrontier.domain</span> <span class="kn">import</span> <span class="n">AssuranceRegion</span><span class="p">,</span> <span class="n">DMUSet</span><span class="p">,</span> <span class="n">EnvelopResult</span><span class="p">,</span> <span class="n">MultipleResult</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.domain.dmu</span> <span class="kn">import</span> <span class="n">BooleanInput</span>
 <span class="kn">from</span> <span class="nn">Pyfrontier.domain.parallel</span> <span class="kn">import</span> <span class="n">NumberOfJobs</span>
@@ -96,7 +94,7 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This is a envelop dea model.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;]): CRS means constant returns to scale. VRS means variable returns to scale.</span>
+<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;, &quot;IRS&quot;, &quot;DRS&quot;]): CRS means constant returns to scale. VRS means variable returns to scale. IRS means increasing returns to scale. DRS means decreasing returns to scale.</span>
 <span class="sd">        orient (Literal[&quot;in&quot;, &quot;out&quot;]): Input or output oriented model.</span>
 <span class="sd">        super_efficiency (bool, optional): Whether to use super-efficiency. Defaults to False.</span>
 <span class="sd">        n_jobs (int, optional): The number of parallel jobs to solve DMU programming.</span>
@@ -104,7 +102,7 @@
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">],</span>
+        <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">,</span> <span class="s2">&quot;IRS&quot;</span><span class="p">,</span> <span class="s2">&quot;DRS&quot;</span><span class="p">],</span>
         <span class="n">orient</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">],</span>
         <span class="n">super_efficiency</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="n">n_jobs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
@@ -166,14 +164,14 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This is a multiplier dea model.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;]): CRS means constant returns to scale. VRS means variable returns to scale.</span>
+<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;, &quot;IRS&quot;, &quot;DRS&quot;]): CRS means constant returns to scale. VRS means variable returns to scale. IRS means increasing returns to scale. DRS means decreasing returns to scale.</span>
 <span class="sd">        orient (Literal[&quot;in&quot;, &quot;out&quot;]): Input or output oriented model.</span>
 <span class="sd">        n_jobs (int, optional): The number of parallel jobs to solve DMU programming.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">],</span>
+        <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">,</span> <span class="s2">&quot;IRS&quot;</span><span class="p">,</span> <span class="s2">&quot;DRS&quot;</span><span class="p">],</span>
         <span class="n">orient</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">],</span>
         <span class="n">n_jobs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="p">):</span>

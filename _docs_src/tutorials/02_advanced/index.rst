@@ -10,6 +10,7 @@ Advanced usage
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -27,6 +28,8 @@ Advanced usage
       <div class="sphx-glr-thumbnail-title">Ex. sample</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_03_super_efficiency.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -141,7 +141,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    EnvelopResult(score=1.25, id=1, dmu=DMU(input=array([2, 2]), output=array([2]), id=1), weight=[0.5, 0.5, 0.0, 0.0], x_slack=[], y_slack=[])
+    EnvelopResult(score=1.25, id=1, dmu=DMU(input=array([2, 2]), output=array([2]), id=1), weights=[0.5, 0.5, 0.0, 0.0], x_slack=[], y_slack=[])
 
 
 
@@ -172,7 +172,8 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
  .. code-block:: none
 
-    No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+    /Users/morinibu/GitHub/PyDEA/tutorials/build/01_usecase/03_super_efficiency.py:45: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+      plt.legend()
 
 
 
@@ -180,7 +181,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.317 seconds)
+   **Total running time of the script:** (0 minutes 0.257 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_03_super_efficiency.py:

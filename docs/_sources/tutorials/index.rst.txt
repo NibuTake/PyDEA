@@ -1,6 +1,6 @@
 :orphan:
 
-Tutorial
+Tutorial (Sorry, now maintaining...)
 ==================
 
 
@@ -9,6 +9,9 @@ Tutorial
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -22,6 +25,7 @@ Basic usage
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -176,6 +180,8 @@ Basic usage
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -188,6 +194,7 @@ Advanced usage
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -205,6 +212,8 @@ Advanced usage
       <div class="sphx-glr-thumbnail-title">Ex. sample</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

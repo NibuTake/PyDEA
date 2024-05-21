@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_01_input_crs.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -23,24 +23,36 @@ Input oriented model
 
 The following DEA model is an input-oriented model where the inputs are minimized and the outputs are kept at their current levels.
 
-.. math::
-    & \theta^* = \min \theta, subject \ to \\
-    & \sum_{j=1}^{n} \lambda_j x_{i, j} \leq \theta x_{i, o}, i=1,2, \dots, m; \\
-    & \sum_{j=1}^{n} \lambda_j y_{r, j} \geq y_{r, o}, r=1,2, \dots, s; \\
-    & \sum_{j=1}^{n} \lambda_j = 1 \\
-    & \lambda_j \geq 0, j=1,2, \dots, n.
+.. GENERATED FROM PYTHON SOURCE LINES 8-20
 
-where :math:`DMU_o` represents one of the :math:`n` DMUs under evaluation,
-and :math:`x_{i, o}` and :math:`y_{i, o}` are the :math:`i` th input and :math:`r` th output
-for :math:`DMU_o`, respectively.
+.. code-block:: Python
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-23
+
+    #  .. math::
+    #     & \theta^* = \min \theta, \text{subject to} \\
+    #     & \sum_{j=1}^{n} \lambda_j x_{i, j} \leq \theta x_{i, o}, \quad i=1,2, \dots, m; \\
+    #     & \sum_{j=1}^{n} \lambda_j y_{r, j} \geq y_{r, o}, \quad r=1,2, \dots, s; \\
+    #     & \sum_{j=1}^{n} \lambda_j = 1 \\
+    #     & \lambda_j \geq 0, \quad j=1,2, \dots, n.
+
+    # where :math:`DMU_o` represents one of the :math:`n` DMUs under evaluation,
+    # and :math:`x_{i, o}` and :math:`y_{r, o}` are the :math:`i` th input and :math:`r` th output
+    # for :math:`DMU_o`, respectively.
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 21-24
 
 Import modules and prepare data.
 ------------------------
 Sample supply chain data is generated.
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-33
+.. GENERATED FROM PYTHON SOURCE LINES 24-34
 
 .. code-block:: Python
 
@@ -123,14 +135,14 @@ Sample supply chain data is generated.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-38
+.. GENERATED FROM PYTHON SOURCE LINES 35-39
 
 Fit dea model.
 ------------------------------
 
 The necessity inputs are inputs and outputs. The result has below belongings.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-45
+.. GENERATED FROM PYTHON SOURCE LINES 39-46
 
 .. code-block:: Python
 
@@ -150,18 +162,18 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([1, 5]), output=array([15]), id=0), weight=[1.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0])
+    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([1, 5]), output=array([15]), id=0), weights=[1.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 46-50
+.. GENERATED FROM PYTHON SOURCE LINES 47-51
 
 Visualize the result.
 ------------------------------
 
 .
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-78
+.. GENERATED FROM PYTHON SOURCE LINES 51-79
 
 .. code-block:: Python
 
@@ -205,14 +217,14 @@ Visualize the result.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-83
+.. GENERATED FROM PYTHON SOURCE LINES 80-84
 
 About slack
 ------------------------------
 
 .
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-90
+.. GENERATED FROM PYTHON SOURCE LINES 84-91
 
 .. code-block:: Python
 
@@ -242,7 +254,7 @@ About slack
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.850 seconds)
+   **Total running time of the script:** (0 minutes 0.837 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_01_input_crs.py:

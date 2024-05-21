@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_04_cross_efficiency.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -151,7 +151,7 @@ References
       *Efficiency and Cross-efficiency in DEA: Derivations, Meanings and Uses*, 
     Journal of the Operational Research Society, 
     1994. 
-    :numref:`https://doi.org/10.1057/jors.1994.84`. 
+    :numref:`10.1057/jors.1994.84`. 
 
 .. GENERATED FROM PYTHON SOURCE LINES 54-63
 
@@ -163,12 +163,12 @@ References
       *Data envelopment analysis: Critique and extensions*, 
     New Directions for Program Evaluation, 
     1986. 
-    :numref:`https://onlinelibrary.wiley.com/doi/abs/10.1002/ev.1441`. 
+    :numref:`https://doi.org/10.1002/ev.1441`. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.281 seconds)
+   **Total running time of the script:** (0 minutes 0.290 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_04_cross_efficiency.py:

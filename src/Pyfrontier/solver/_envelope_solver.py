@@ -1,9 +1,8 @@
-from typing import List, Tuple, Union
+from typing import List, Literal, Tuple, Union
 
 import numpy as np
 import pulp
 
-import multiprocessing
 
 from Pyfrontier.domain import DMU, DMUSet, EnvelopResult
 from Pyfrontier.domain import MultiProcessor
@@ -21,8 +20,8 @@ class EnvelopeSolver(BaseSolver):
 
     def __init__(
         self,
-        orient: str,
-        frontier: str,
+        orient: Literal["in", "out"],
+        frontier: Literal["CRS", "VRS", "IRS", "DRS"],
         DMUs: DMUSet,
         uncontrollable_index: List[int] = [],
         is_super_efficiency: bool = False,
@@ -38,23 +37,6 @@ class EnvelopeSolver(BaseSolver):
     def apply(self) -> List[EnvelopResult]:
         processor = MultiProcessor(self._solve_problem, self.DMUs.N)
         return processor.solve(self.n_jobs)
-
-        if self.n_jobs <= 1:
-            return [self._solve_problem(j) for j in range(self.DMUs.N)]
-        else:
-            # faster than problem.solve(pulp.PULP_CBC_CMD(threads=self.n_jobs))
-            pool = multiprocessing.Pool(self.n_jobs)
-
-            problem_processes = []
-            for j in range(self.DMUs.N):
-                problem_processes.append(
-                    pool.apply_async(self._solve_problem, args=(j,))
-                )
-
-            pool.close()
-            pool.join()
-
-            return [problem.get() for problem in problem_processes]
 
     def _redefine_theta_i(
         self, i: int, theta: pulp.LpVariable
@@ -136,6 +118,10 @@ class EnvelopeSolver(BaseSolver):
 
         if self.frontier == "VRS":
             problem += np.sum(lambda_N) == 1
+        elif self.frontier == "IRS":
+            problem += np.sum(lambda_N) >= 1
+        elif self.frontier == "DRS":
+            problem += np.sum(lambda_N) <= 1
 
         problem.solve()
 
@@ -144,7 +130,7 @@ class EnvelopeSolver(BaseSolver):
 
         return EnvelopResult(
             score=self._rounder(problem.objective.value()),
-            weight=[self._rounder(n.value()) for n in lambda_N],
+            weights=[self._rounder(n.value()) for n in lambda_N],
             id=o,
             x_slack=sx,
             y_slack=sy,

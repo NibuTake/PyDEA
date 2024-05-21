@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_08_hierarchical.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -72,7 +72,7 @@ Import modules and prepare data.
  .. code-block:: none
 
 
-    [EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([4., 1.]), output=array([3]), id=0), weight=[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0]), EnvelopResult(score=1.0, id=1, dmu=DMU(input=array([2. , 1.5]), output=array([3]), id=1), weight=[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0]), EnvelopResult(score=1.0, id=2, dmu=DMU(input=array([1., 3.]), output=array([3]), id=2), weight=[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0]), EnvelopResult(score=1.0, id=3, dmu=DMU(input=array([1., 4.]), output=array([3]), id=3), weight=[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 1.0], y_slack=[0.0])]
+    [EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([4., 1.]), output=array([3]), id=0), weights=[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0]), EnvelopResult(score=1.0, id=1, dmu=DMU(input=array([2. , 1.5]), output=array([3]), id=1), weights=[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0]), EnvelopResult(score=1.0, id=2, dmu=DMU(input=array([1., 3.]), output=array([3]), id=2), weights=[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0]), EnvelopResult(score=1.0, id=3, dmu=DMU(input=array([1., 4.]), output=array([3]), id=3), weights=[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 1.0], y_slack=[0.0])]
 
 
 
@@ -117,7 +117,7 @@ References
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.863 seconds)
+   **Total running time of the script:** (0 minutes 0.795 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_08_hierarchical.py:

@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_02_advanced__sample.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -139,7 +139,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([1, 5]), output=array([15]), id=0), weight=[1.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0])
+    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([1, 5]), output=array([15]), id=0), weights=[1.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0])
 
 
 
@@ -164,14 +164,14 @@ In the built documentation.
  .. code-block:: none
 
 
-    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-FQJTlSJV/lib/python3.10/site-packages/matplotlib/pyplot.py'>
+    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-w6IJUwEo/lib/python3.10/site-packages/matplotlib/pyplot.py'>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.169 seconds)
+   **Total running time of the script:** (0 minutes 0.354 seconds)
 
 
 .. _sphx_glr_download_tutorials_02_advanced__sample.py:

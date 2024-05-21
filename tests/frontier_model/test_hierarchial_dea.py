@@ -1,5 +1,3 @@
-import pytest
-
 import pandas as pd
 
 from Pyfrontier.frontier_model import EnvelopDEA, HierarchalDEA

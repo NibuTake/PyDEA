@@ -19,7 +19,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=a58bc63e"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../../_static/js/theme.js"></script>
@@ -49,7 +49,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Pyfrontier.frontier_model.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Tutorial (Sorry, now maintaining…)</a></li>
 </ul>
 
         </div>
@@ -93,12 +93,11 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;This is a envelop dea model.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;]): CRS means constant returns to scale.</span>
-<span class="sd">        VRS means variable returns to scale.</span>
+<span class="sd">        frontier (Literal[&quot;CRS&quot;, &quot;VRS&quot;, &quot;IRS&quot;, &quot;DRS&quot;]): CRS means constant returns to scale. VRS means variable returns to scale. IRS means increasing returns to scale. DRS means decreasing returns to scale.</span>
 <span class="sd">        n_jobs (int, optional): The number of parallel jobs to solve DMU programming.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">],</span> <span class="n">n_jobs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frontier</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;CRS&quot;</span><span class="p">,</span> <span class="s2">&quot;VRS&quot;</span><span class="p">,</span> <span class="s2">&quot;IRS&quot;</span><span class="p">,</span> <span class="s2">&quot;DRS&quot;</span><span class="p">],</span> <span class="n">n_jobs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">frontier</span> <span class="o">=</span> <span class="n">frontier</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DMUs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DMUSet</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_result</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AdditiveResult</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>

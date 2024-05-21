@@ -60,8 +60,9 @@ source_parsers = {
     ".md": CommonMarkParser,
 }
 
+
 # setting of mathjax
-mathjax_config = {
+mathjax3_config = {
     "TeX": {
         "Macros": {
             "bm": ["{\\boldsymbol{#1}}", 1],

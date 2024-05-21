@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_01_usecase_05_assurance_region.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -139,7 +139,7 @@ Import modules and prepare data.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-46
+.. GENERATED FROM PYTHON SOURCE LINES 39-47
 
 .. code-block:: Python
 
@@ -154,6 +154,7 @@ Import modules and prepare data.
 
 
 
+
 .. rst-class:: sphx-glr-script-out
 
  .. code-block:: none
@@ -163,7 +164,7 @@ Import modules and prepare data.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-75
+.. GENERATED FROM PYTHON SOURCE LINES 48-76
 
 .. code-block:: Python
 
@@ -207,11 +208,11 @@ Import modules and prepare data.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-77
+.. GENERATED FROM PYTHON SOURCE LINES 77-78
 
 通常のDEAで効率的だったDMUは、フロンティアの傾きに制約が課されることで一つのみとなった。
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-91
+.. GENERATED FROM PYTHON SOURCE LINES 81-92
 
 References
 ------------------------
@@ -223,12 +224,12 @@ References
       *The role of multiplier bounds in efficiency analysis with application to Kansas farming*, 
     Journal of Econometrics, 
     1990. 
-    :numref:`https://www.sciencedirect.com/science/article/pii/030440769090049Y`. 
+    :numref:`https://doi.org/10.1016/0304-4076(90)90049-Y`. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.329 seconds)
+   **Total running time of the script:** (0 minutes 0.379 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_05_assurance_region.py:
