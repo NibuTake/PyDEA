@@ -13,7 +13,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
     """This is a envelop dea model.
 
     Args:
-        frontier (Literal["CRS", "VRS"]): CRS means constant returns to scale. VRS means variable returns to scale.
+        frontier (Literal["CRS", "VRS", "IRS", "DRS"]): CRS means constant returns to scale. VRS means variable returns to scale. IRS means increasing returns to scale. DRS means decreasing returns to scale.
         orient (Literal["in", "out"]): Input or output oriented model.
         super_efficiency (bool, optional): Whether to use super-efficiency. Defaults to False.
         n_jobs (int, optional): The number of parallel jobs to solve DMU programming.
@@ -77,7 +77,7 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
     """This is a multiplier dea model.
 
     Args:
-        frontier (Literal["CRS", "VRS"]): CRS means constant returns to scale. VRS means variable returns to scale.
+        frontier (Literal["CRS", "VRS", "IRS", "DRS"]): CRS means constant returns to scale. VRS means variable returns to scale. IRS means increasing returns to scale. DRS means decreasing returns to scale.
         orient (Literal["in", "out"]): Input or output oriented model.
         n_jobs (int, optional): The number of parallel jobs to solve DMU programming.
     """

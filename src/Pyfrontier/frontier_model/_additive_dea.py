@@ -12,8 +12,7 @@ class AdditiveDEA(BaseDataEnvelopmentAnalysis):
     """This is a envelop dea model.
 
     Args:
-        frontier (Literal["CRS", "VRS"]): CRS means constant returns to scale.
-        VRS means variable returns to scale.
+        frontier (Literal["CRS", "VRS", "IRS", "DRS"]): CRS means constant returns to scale. VRS means variable returns to scale. IRS means increasing returns to scale. DRS means decreasing returns to scale.
         n_jobs (int, optional): The number of parallel jobs to solve DMU programming.
     """
 
