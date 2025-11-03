@@ -28,35 +28,78 @@ If you make a pull request, please follow the guidelines below:
 - [Creating a Pull Request](#pull-request)
 
 ### Setup
-- fork repository
-- activate virtual environment
-    - [pipenv](./python_version/dev/Pipfile)
+
+#### Prerequisites
+
+- Python 3.8 or higher
+- [uv](https://github.com/astral-sh/uv) (recommended package manager)
+
+#### Setup Development Environment
+
+1. Fork the repository
+2. Clone your fork and navigate to the directory
+3. Install dependencies:
 
 ```bash
-cd python_version/dev
-pipenv shell
-install pre-commit
+# Install dependencies
+uv sync --all-groups
 ```
 
 ### Code style
-We use black and flake 8. These are executed when committing by pre-commit.
+We use black and flake8. These are executed when committing by pre-commit.
+
+```bash
+# Install pre-commit hooks
+uv run pre-commit install
+```
 
 ### Unit tests
-This will be done in github actions in the future, but here is how to do it when developing locally.
+
+#### Run tests with current Python version
 
 ```bash
-pytest tests
+uv run pytest tests/ --cov=src/Pyfrontier
 ```
+
+#### Test across all Python versions (3.8-3.13)
+
+```bash
+bash test_all_versions.sh
+```
+
+#### Test specific Python version only
+
+```bash
+bash test_all_versions.sh 3.13
+```
+
+**Note**: The `test_all_versions.sh` script automatically downloads and tests against all supported Python versions (3.8-3.13) using uv. No manual Python installation required!
 
 ### Documentation
-We use [shpinx](https://www.sphinx-doc.org/en/master/index.html) to generate document.
-Basically, it is generated from a docstring, and the tutorials are generated from a python file found [here](./tutorials/).
 
-This command makes a docs folder. Run this command if you have updated the docstring or if you have updated or added a tutorial. In the future, we would like it to be executed automatically on commit.
+We use [Sphinx](https://www.sphinx-doc.org/en/master/index.html) to generate documentation.
+Basically, it is generated from docstrings, and the tutorials are generated from Python files found in [tutorials/](./tutorials/).
+
+#### Build documentation locally
 
 ```bash
-. build_docs.sh
+bash build_docs.sh
 ```
+
+This command generates the docs folder. Run this command if you have updated docstrings or if you have updated or added tutorials.
+
+#### Documentation Deployment
+
+Documentation is automatically deployed to GitHub Pages via GitHub Actions when:
+- A new release is published
+- Changes are pushed to `main` branch (docs-related files)
+- Manually triggered via workflow dispatch
+
+**First-time GitHub Pages Setup:**
+1. Go to repository Settings → Pages
+2. Under "Build and deployment":
+   - Source: Select "GitHub Actions"
+3. The workflow will automatically deploy on the next trigger
 
 ### Pull request
 No policy has been set at this time.

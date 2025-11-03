@@ -1,0 +1,81 @@
+name: Deploy Sphinx Docs to GitHub Pages
+
+on:
+  # 手動実行を許可
+  workflow_dispatch:
+
+  # releaseがpublishedされた時に実行
+  release:
+    types: [published]
+
+  # チュートリアルやドキュメント関連ファイルが更新された時に実行
+  push:
+    branches: [main]
+    paths:
+      - "tutorials/**"
+      - "_docs_src/**"
+      - "build_docs.sh"
+      - "fix_gallery_links.py"
+      - ".github/workflows/deploy-docs.yml"
+
+concurrency: deploy-${{ github.ref }}
+
+jobs:
+  build:
+    name: Build Sphinx Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install Python dependencies
+        run: uv sync --all-groups
+
+      - name: Build Sphinx documentation
+        run: bash build_docs.sh
+
+      - name: Add .nojekyll file
+        run: touch docs/.nojekyll
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+
+    permissions:
+      pages: write      # Pagesのデプロイに必要
+      id-token: write   # デプロイが適切なソースから行われていることの確認に必要
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

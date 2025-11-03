@@ -2,7 +2,7 @@
 
 <div align="center"><img src="./images/logo.png" height="200"/></div>
 
-[![Python](https://img.shields.io/badge/Python-3.8%20%7C%203.9%20%7C%203.10%20%20%7C3.11%20-blue)](https://codecov.io/gh/NibuTake/PyDEA)
+[![Python](https://img.shields.io/badge/Python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://codecov.io/gh/NibuTake/PyDEA)
 [![License](https://img.shields.io/github/license/NibuTake/PyDEA?color=blue)](LICENSE)
 [![codecov](https://codecov.io/gh/NibuTake/PyDEA/branch/main/graph/badge.svg?token=EL44JBAYOT)](https://codecov.io/gh/NibuTake/PyDEA)
 
@@ -36,6 +36,10 @@ dea.result
 
 - [Issues](https://github.com/NibuTake/PyDEA/issues) for bug reports and feature requests.
 - [Discussion](https://github.com/NibuTake/PyDEA/discussions) for any questions.
+
+## Contributing
+
+Interested in contributing? See [CONTRIBUTING.md](./CONTRIBUTING.md) for development setup, testing, and documentation guidelines.
 
 ## References
 
