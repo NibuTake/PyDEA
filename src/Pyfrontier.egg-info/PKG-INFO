@@ -3,7 +3,7 @@ Name: Pyfrontier
 Version: 1.0.3
 Summary: Pyfrontier is a data envelopment analysis for Python user.
 Author-email: Takeshi Morinibu <takeshi715tech@gmail.com>
-License-Expression: MIT
+License: MIT
 Project-URL: Homepage, https://nibutake.github.io/PyDEA/index.html
 Project-URL: Repository, https://github.com/NibuTake/PyDEA
 Classifier: Intended Audience :: Science/Research

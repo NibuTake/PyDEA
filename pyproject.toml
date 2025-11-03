@@ -8,7 +8,7 @@ version = "1.0.3"
 description = "Pyfrontier is a data envelopment analysis for Python user."
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
+license = {text = "MIT"}
 authors = [
     {name = "Takeshi Morinibu", email = "takeshi715tech@gmail.com"}
 ]
