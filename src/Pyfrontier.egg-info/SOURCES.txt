@@ -1,8 +1,6 @@
 LICENSE
 README.md
 pyproject.toml
-setup.cfg
-setup.py
 src/Pyfrontier/__init__.py
 src/Pyfrontier.egg-info/PKG-INFO
 src/Pyfrontier.egg-info/SOURCES.txt
@@ -26,4 +24,5 @@ src/Pyfrontier/solver/__init__.py
 src/Pyfrontier/solver/_additive_solver.py
 src/Pyfrontier/solver/_base.py
 src/Pyfrontier/solver/_envelope_solver.py
+src/Pyfrontier/solver/_models.py
 src/Pyfrontier/solver/_multiple_solver.py

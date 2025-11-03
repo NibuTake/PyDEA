@@ -103,3 +103,11 @@ Documentation is automatically deployed to GitHub Pages via GitHub Actions when:
 
 ### Pull request
 No policy has been set at this time.
+
+### Deploy
+
+```bash
+rm -rf dist build src/Pyfrontier.egg-info
+uv build
+uv run twine upload --repository testpypi dist/*
+```
