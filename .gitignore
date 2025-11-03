@@ -4,10 +4,15 @@
 /build/
 .eggs
 /dist/
-pipfile.lock
+*.egg-info
 
 __pycache__/
 *.py[cod]
 *$py.class
 
 .venv
+/docs/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -277,7 +277,7 @@ References
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.521 seconds)
+   **Total running time of the script:** (0 minutes 0.164 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_06_additive_model.py:
@@ -293,6 +293,10 @@ References
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 06_additive_model.py <06_additive_model.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 06_additive_model.zip <06_additive_model.zip>`
 
 
 .. only:: html

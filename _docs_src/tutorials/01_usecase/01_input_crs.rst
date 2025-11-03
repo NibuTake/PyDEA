@@ -23,36 +23,24 @@ Input oriented model
 
 The following DEA model is an input-oriented model where the inputs are minimized and the outputs are kept at their current levels.
 
-.. GENERATED FROM PYTHON SOURCE LINES 8-20
+.. math::
+    & \theta^* = \min \theta, \text{subject to} \\
+    & \sum_{j=1}^{n} \lambda_j x_{i, j} \leq \theta x_{i, o}, \quad i=1,2, \dots, m; \\
+    & \sum_{j=1}^{n} \lambda_j y_{r, j} \geq y_{r, o}, \quad r=1,2, \dots, s; \\
+    & \sum_{j=1}^{n} \lambda_j = 1 \\
+    & \lambda_j \geq 0, \quad j=1,2, \dots, n.
 
-.. code-block:: Python
+where :math:`DMU_o` represents one of the :math:`n` DMUs under evaluation,
+and :math:`x_{i, o}` and :math:`y_{r, o}` are the :math:`i` th input and :math:`r` th output
+for :math:`DMU_o`, respectively.
 
-
-    #  .. math::
-    #     & \theta^* = \min \theta, \text{subject to} \\
-    #     & \sum_{j=1}^{n} \lambda_j x_{i, j} \leq \theta x_{i, o}, \quad i=1,2, \dots, m; \\
-    #     & \sum_{j=1}^{n} \lambda_j y_{r, j} \geq y_{r, o}, \quad r=1,2, \dots, s; \\
-    #     & \sum_{j=1}^{n} \lambda_j = 1 \\
-    #     & \lambda_j \geq 0, \quad j=1,2, \dots, n.
-
-    # where :math:`DMU_o` represents one of the :math:`n` DMUs under evaluation,
-    # and :math:`x_{i, o}` and :math:`y_{r, o}` are the :math:`i` th input and :math:`r` th output
-    # for :math:`DMU_o`, respectively.
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 21-24
+.. GENERATED FROM PYTHON SOURCE LINES 20-23
 
 Import modules and prepare data.
 ------------------------
 Sample supply chain data is generated.
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-34
+.. GENERATED FROM PYTHON SOURCE LINES 23-33
 
 .. code-block:: Python
 
@@ -135,14 +123,14 @@ Sample supply chain data is generated.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-39
+.. GENERATED FROM PYTHON SOURCE LINES 34-38
 
 Fit dea model.
 ------------------------------
 
 The necessity inputs are inputs and outputs. The result has below belongings.
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-46
+.. GENERATED FROM PYTHON SOURCE LINES 38-45
 
 .. code-block:: Python
 
@@ -166,14 +154,14 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-51
+.. GENERATED FROM PYTHON SOURCE LINES 46-50
 
 Visualize the result.
 ------------------------------
 
 .
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-79
+.. GENERATED FROM PYTHON SOURCE LINES 50-78
 
 .. code-block:: Python
 
@@ -217,14 +205,14 @@ Visualize the result.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-84
+.. GENERATED FROM PYTHON SOURCE LINES 79-83
 
 About slack
 ------------------------------
 
 .
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-91
+.. GENERATED FROM PYTHON SOURCE LINES 83-90
 
 .. code-block:: Python
 
@@ -254,7 +242,7 @@ About slack
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.837 seconds)
+   **Total running time of the script:** (0 minutes 0.454 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_01_input_crs.py:
@@ -270,6 +258,10 @@ About slack
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 01_input_crs.py <01_input_crs.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 01_input_crs.zip <01_input_crs.zip>`
 
 
 .. only:: html

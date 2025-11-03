@@ -45,9 +45,10 @@ for res in h_dea.result:
 # .. seealso::
 #
 #    Author
-#       Lawrence M. Seiford and Joe Zhu.
+#       Lawrence M. Seiford and Joe Zhu. 
 #    Title
-#       *Context-dependent data envelopment analysis—Measuring attractiveness and progress*,
-#     Omega-international Journal of Management Science,
-#     2003.
-#     :numref:`https://EconPapers.repec.org/RePEc:eee:jomega:v:31:y:2003:i:5:p:397-408`.
+#       *Context-dependent data envelopment analysis—Measuring attractiveness and progress*, 
+#     Omega-international Journal of Management Science, 
+#     2003. 
+#     :numref:`https://EconPapers.repec.org/RePEc:eee:jomega:v:31:y:2003:i:5:p:397-408`. 
+

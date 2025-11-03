@@ -164,14 +164,14 @@ In the built documentation.
  .. code-block:: none
 
 
-    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-w6IJUwEo/lib/python3.10/site-packages/matplotlib/pyplot.py'>
+    <module 'matplotlib.pyplot' from '/Users/moriniotakeshi/github/oss/PyDEA/.venv/lib/python3.11/site-packages/matplotlib/pyplot.py'>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.354 seconds)
+   **Total running time of the script:** (0 minutes 0.156 seconds)
 
 
 .. _sphx_glr_download_tutorials_02_advanced__sample.py:
@@ -187,6 +187,10 @@ In the built documentation.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: _sample.py <_sample.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: _sample.zip <_sample.zip>`
 
 
 .. only:: html

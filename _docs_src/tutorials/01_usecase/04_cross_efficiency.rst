@@ -77,7 +77,7 @@ Import modules and prepare data.
  .. code-block:: none
 
 
-    MultipleResult(score=0.888889, id=0, dmu=DMU(input=array([3, 5]), output=array([2.]), id=0), x_weight=[0.333333, 0.0], y_weight=[0.444444], bias=0.0)
+    MultipleResult(score=np.float64(0.888889), id=0, dmu=DMU(input=array([3, 5]), output=array([2.]), id=0), x_weight=[0.333333, 0.0], y_weight=[0.444444], bias=0.0)
 
 
 
@@ -95,7 +95,7 @@ Import modules and prepare data.
  .. code-block:: none
 
 
-    [0.888889, 1.0, 1.0, 1.0, 0.666667]
+    [np.float64(0.888889), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(0.666667)]
 
 
 
@@ -113,7 +113,7 @@ Import modules and prepare data.
  .. code-block:: none
 
 
-    [0.7166663333333333, 0.8437494999999999, 0.937499875, 0.4444442777777778, 0.5416665833333334]
+    [np.float64(0.7166663333333333), np.float64(0.8437494999999999), np.float64(0.937499875), np.float64(0.4444442777777778), np.float64(0.5416665833333334)]
 
 
 
@@ -168,7 +168,7 @@ References
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.290 seconds)
+   **Total running time of the script:** (0 minutes 0.104 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_04_cross_efficiency.py:
@@ -184,6 +184,10 @@ References
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 04_cross_efficiency.py <04_cross_efficiency.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 04_cross_efficiency.zip <04_cross_efficiency.zip>`
 
 
 .. only:: html

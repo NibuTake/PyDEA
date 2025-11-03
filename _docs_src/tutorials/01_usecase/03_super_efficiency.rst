@@ -172,7 +172,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
  .. code-block:: none
 
-    /Users/morinibu/GitHub/PyDEA/tutorials/build/01_usecase/03_super_efficiency.py:45: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+    /Users/moriniotakeshi/github/oss/PyDEA/tutorials/build/01_usecase/03_super_efficiency.py:45: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
       plt.legend()
 
 
@@ -181,7 +181,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.257 seconds)
+   **Total running time of the script:** (0 minutes 0.091 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_03_super_efficiency.py:
@@ -197,6 +197,10 @@ The necessity inputs are inputs and outputs. The result has below belongings.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 03_super_efficiency.py <03_super_efficiency.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 03_super_efficiency.zip <03_super_efficiency.zip>`
 
 
 .. only:: html

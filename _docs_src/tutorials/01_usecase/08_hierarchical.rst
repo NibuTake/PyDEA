@@ -117,7 +117,7 @@ References
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.795 seconds)
+   **Total running time of the script:** (0 minutes 0.620 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_08_hierarchical.py:
@@ -133,6 +133,10 @@ References
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 08_hierarchical.py <08_hierarchical.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 08_hierarchical.zip <08_hierarchical.zip>`
 
 
 .. only:: html

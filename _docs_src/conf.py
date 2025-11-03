@@ -10,7 +10,6 @@ import os
 import sys
 
 from recommonmark.parser import CommonMarkParser
-from sphinx_gallery.sorting import FileNameSortKey
 
 import Pyfrontier
 
@@ -41,16 +40,26 @@ extensions = [
     "nbsphinx",
 ]
 templates_path = ["_templates"]
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "tutorials/**/*.ipynb"]
 # exclude_patterns.append('**.ipynb_checkpoints')
 source_suffix = [".rst"]
 
 sphinx_gallery_conf = {
-    "examples_dirs": "../tutorials/build",  # path to your example scripts
-    "gallery_dirs": "tutorials",  # path to where to save gallery generated output
-    "within_subsection_order": FileNameSortKey,
+    "examples_dirs": [
+        "../tutorials/build/01_usecase",
+        "../tutorials/build/02_advanced",
+    ],
+    "gallery_dirs": [
+        "tutorials/01_usecase",
+        "tutorials/02_advanced",
+    ],
+    "within_subsection_order": "sphinx_gallery.sorting.FileNameSortKey",
     "filename_pattern": r"/*\.py",
     "first_notebook_cell": None,
+    "remove_config_comments": True,
+    "reference_url": {
+        "Pyfrontier": None,
+    },
 }
 
 nbsphinx_execute = "never"

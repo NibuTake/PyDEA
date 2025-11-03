@@ -231,7 +231,7 @@ In the built documentation.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.396 seconds)
+   **Total running time of the script:** (0 minutes 0.144 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_02_output_crs.py:
@@ -247,6 +247,10 @@ In the built documentation.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 02_output_crs.py <02_output_crs.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 02_output_crs.zip <02_output_crs.zip>`
 
 
 .. only:: html
