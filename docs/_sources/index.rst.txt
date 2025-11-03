@@ -6,14 +6,15 @@
 |logo|
 
 Pyfrontier: A data envelopment analysis module
-=================================
+===============================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
 
    Modules <Pyfrontier.frontier_model>
-   tutorials/index
+   tutorials/01_usecase/index
+   tutorials/02_advanced/index
 
 Indices and tables
 ==================

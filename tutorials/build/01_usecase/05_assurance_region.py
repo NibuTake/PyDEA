@@ -83,9 +83,10 @@ plt.show()
 # .. seealso::
 #
 #    Author
-#       Russell G. Thompson and Larry N. Langemeier and Chih-Tah Lee and Euntaik Lee and Robert M. Thrall.
+#       Russell G. Thompson and Larry N. Langemeier and Chih-Tah Lee and Euntaik Lee and Robert M. Thrall. 
 #    Title
-#       *The role of multiplier bounds in efficiency analysis with application to Kansas farming*,
-#     Journal of Econometrics,
-#     1990.
-#     :numref:`https://doi.org/10.1016/0304-4076(90)90049-Y`.
+#       *The role of multiplier bounds in efficiency analysis with application to Kansas farming*, 
+#     Journal of Econometrics, 
+#     1990. 
+#     :numref:`https://doi.org/10.1016/0304-4076(90)90049-Y`. 
+

@@ -134,7 +134,7 @@ Import modules and prepare data.
 
  .. code-block:: none
 
-    ordinary dea:  [1.0, 1.0, 1.0, 1.0]
+    ordinary dea:  [np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0)]
 
 
 
@@ -159,7 +159,7 @@ Import modules and prepare data.
 
  .. code-block:: none
 
-    assurance region:  [0.857143, 1.0, 0.8, 0.571429]
+    assurance region:  [np.float64(0.857143), np.float64(1.0), np.float64(0.8), np.float64(0.571429)]
 
 
 
@@ -229,7 +229,7 @@ References
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.379 seconds)
+   **Total running time of the script:** (0 minutes 0.145 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_05_assurance_region.py:
@@ -245,6 +245,10 @@ References
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 05_assurance_region.py <05_assurance_region.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 05_assurance_region.zip <05_assurance_region.zip>`
 
 
 .. only:: html

@@ -55,14 +55,14 @@ Preparing...
  .. code-block:: none
 
 
-    <module 'matplotlib.pyplot' from '/Users/morinibu/.local/share/virtualenvs/PyDEA-w6IJUwEo/lib/python3.10/site-packages/matplotlib/pyplot.py'>
+    <module 'matplotlib.pyplot' from '/Users/moriniotakeshi/github/oss/PyDEA/.venv/lib/python3.11/site-packages/matplotlib/pyplot.py'>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.001 seconds)
+   **Total running time of the script:** (0 minutes 0.000 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_07_uncontrollable_factor.py:
@@ -78,6 +78,10 @@ Preparing...
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 07_uncontrollable_factor.py <07_uncontrollable_factor.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 07_uncontrollable_factor.zip <07_uncontrollable_factor.zip>`
 
 
 .. only:: html

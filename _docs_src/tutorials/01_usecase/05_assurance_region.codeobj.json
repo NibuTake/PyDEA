@@ -1,0 +1,640 @@
+{
+ "MultipleDEA": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "MultipleDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._base",
+   "module_short": "Pyfrontier.frontier_model._base",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA"
+  }
+ ],
+ "dea": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "MultipleDEA"
+  }
+ ],
+ "dea.fit": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "MultipleDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._base",
+   "module_short": "Pyfrontier.frontier_model._base",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC.fit"
+  }
+ ],
+ "dea.result": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "list"
+  }
+ ],
+ "dea_ar": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "MultipleDEA"
+  }
+ ],
+ "dea_ar.add_assurance_region": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA.add_assurance_region"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA.add_assurance_region"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "MultipleDEA.add_assurance_region"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._base",
+   "module_short": "Pyfrontier.frontier_model._base",
+   "name": "BaseDataEnvelopmentAnalysis.add_assurance_region"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "BaseDataEnvelopmentAnalysis.add_assurance_region"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseDataEnvelopmentAnalysis.add_assurance_region"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC.add_assurance_region"
+  }
+ ],
+ "dea_ar.fit": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "MultipleDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "MultipleDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._base",
+   "module_short": "Pyfrontier.frontier_model._base",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC.fit"
+  }
+ ],
+ "dea_ar.result": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "list"
+  }
+ ],
+ "df": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.frame",
+   "module_short": "pandas.core.frame",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  }
+ ],
+ "np.array": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "builtin_function_or_method"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "array"
+  }
+ ],
+ "np.ndarray": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "pd.DataFrame": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.frame",
+   "module_short": "pandas.core.frame",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.generic",
+   "module_short": "pandas.core.generic",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.arraylike",
+   "module_short": "pandas.core.arraylike",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.base",
+   "module_short": "pandas.core.base",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.indexing",
+   "module_short": "pandas.core.indexing",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.accessor",
+   "module_short": "pandas.core.accessor",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  }
+ ],
+ "plt.figure": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "figure"
+  }
+ ],
+ "plt.fill_between": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "fill_between"
+  }
+ ],
+ "plt.legend": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "legend"
+  }
+ ],
+ "plt.plot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "plot"
+  }
+ ],
+ "plt.show": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "show"
+  }
+ ],
+ "plt.xlabel": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "xlabel"
+  }
+ ],
+ "plt.ylabel": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "ylabel"
+  }
+ ],
+ "plt.ylim": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "ylim"
+  }
+ ],
+ "restrict_f_1": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "restrict_f_2": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "x": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "x1": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "x2": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ]
+}

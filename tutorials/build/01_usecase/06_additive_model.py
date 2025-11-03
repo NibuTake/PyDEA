@@ -96,9 +96,10 @@ plt.ylabel("input_2")
 # .. seealso::
 #
 #    Author
-#       A. Charnes and W.W. Cooper and L. Seiford and J. Stutz.
+#       A. Charnes and W.W. Cooper and L. Seiford and J. Stutz. 
 #    Title
-#       *A multiplicative model for efficiency analysis*,
-#     Socio-Economic Planning Sciences,
-#     1982.
-#     :numref:`https://doi.org/10.1016/0038-0121(82)90029-5`.
+#       *A multiplicative model for efficiency analysis*, 
+#     Socio-Economic Planning Sciences, 
+#     1982. 
+#     :numref:`https://doi.org/10.1016/0038-0121(82)90029-5`. 
+

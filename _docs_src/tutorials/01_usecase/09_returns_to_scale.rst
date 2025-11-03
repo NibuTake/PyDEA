@@ -141,7 +141,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    [MultipleResult(score=1.0, id=0, dmu=DMU(input=array([1]), output=array([0.5]), id=0), x_weight=[1.0], y_weight=[0.0], bias=1.0), MultipleResult(score=1.0, id=1, dmu=DMU(input=array([2]), output=array([2.]), id=1), x_weight=[0.5], y_weight=[0.333333], bias=0.333333), MultipleResult(score=1.0, id=2, dmu=DMU(input=array([4]), output=array([4.]), id=2), x_weight=[0.25], y_weight=[0.25], bias=0.0), MultipleResult(score=1.0, id=3, dmu=DMU(input=array([6]), output=array([5.]), id=3), x_weight=[0.166667], y_weight=[0.333333], bias=-0.666667)]
+    [MultipleResult(score=np.float64(1.0), id=0, dmu=DMU(input=array([1]), output=array([0.5]), id=0), x_weight=[1.0], y_weight=[0.0], bias=1.0), MultipleResult(score=np.float64(1.0), id=1, dmu=DMU(input=array([2]), output=array([2.]), id=1), x_weight=[0.5], y_weight=[0.333333], bias=0.333333), MultipleResult(score=np.float64(1.0), id=2, dmu=DMU(input=array([4]), output=array([4.]), id=2), x_weight=[0.25], y_weight=[0.25], bias=0.0), MultipleResult(score=np.float64(1.0), id=3, dmu=DMU(input=array([6]), output=array([5.]), id=3), x_weight=[0.166667], y_weight=[0.333333], bias=-0.666667)]
 
 
 
@@ -165,7 +165,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    [<matplotlib.lines.Line2D object at 0x11d390fa0>]
+    [<matplotlib.lines.Line2D object at 0x11390a2d0>]
 
 
 
@@ -176,7 +176,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.228 seconds)
+   **Total running time of the script:** (0 minutes 0.080 seconds)
 
 
 .. _sphx_glr_download_tutorials_01_usecase_09_returns_to_scale.py:
@@ -192,6 +192,10 @@ The necessity inputs are inputs and outputs. The result has below belongings.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 09_returns_to_scale.py <09_returns_to_scale.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 09_returns_to_scale.zip <09_returns_to_scale.zip>`
 
 
 .. only:: html

@@ -1,0 +1,344 @@
+{
+ "EnvelopDEA": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._base",
+   "module_short": "Pyfrontier.frontier_model._base",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA"
+  }
+ ],
+ "HierarchalDEA": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._hierarchical_dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "HierarchalDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "HierarchalDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "HierarchalDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "HierarchalDEA"
+  }
+ ],
+ "df": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.frame",
+   "module_short": "pandas.core.frame",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  }
+ ],
+ "h_dea": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._hierarchical_dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "HierarchalDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "HierarchalDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "HierarchalDEA"
+  }
+ ],
+ "h_dea.fit": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._hierarchical_dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "HierarchalDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "HierarchalDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "HierarchalDEA.fit"
+  }
+ ],
+ "h_dea.result": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "list"
+  }
+ ],
+ "pd.DataFrame": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.frame",
+   "module_short": "pandas.core.frame",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.generic",
+   "module_short": "pandas.core.generic",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.arraylike",
+   "module_short": "pandas.core.arraylike",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.base",
+   "module_short": "pandas.core.base",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.indexing",
+   "module_short": "pandas.core.indexing",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.accessor",
+   "module_short": "pandas.core.accessor",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  }
+ ],
+ "plt.figure": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "figure"
+  }
+ ],
+ "plt.plot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "plot"
+  }
+ ],
+ "res": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "list"
+  }
+ ]
+}

@@ -1,31 +1,26 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uncontrollable factor &mdash; Pyfrontier 0.1.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+  <title>Uncontrollable factor &mdash; Pyfrontier 1.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
       <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
       <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
       <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-      <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=a58bc63e"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"TeX": {"Macros": {"bm": ["{\\boldsymbol{#1}}", 1]}}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=baaebd52"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -55,7 +50,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../Pyfrontier.frontier_model.html">Modules</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorial (Sorry, now maintaining…)</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Basic usage</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_input_crs.html">Input oriented model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02_output_crs.html">Output oriented model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03_super_efficiency.html">Super efficiency</a></li>
@@ -63,14 +58,14 @@
 <li class="toctree-l2"><a class="reference internal" href="05_assurance_region.html">Assurance region</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06_additive_model.html">Additive model</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Uncontrollable factor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Import-modules-and-prepare-data.">Import modules and prepare data.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-modules-and-prepare-data">Import modules and prepare data.</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="08_hierarchical.html">Context-dependent DEA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="09_returns_to_scale.html">Returns to scale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../02_advanced/_sample.html">Ex. sample</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../02_advanced/index.html">Advanced usage</a></li>
 </ul>
 
         </div>
@@ -87,8 +82,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Tutorial (Sorry, now maintaining…)</a></li>
-          <li class="breadcrumb-item"><a href="index.html">&lt;no title&gt;</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Basic usage</a></li>
       <li class="breadcrumb-item active">Uncontrollable factor</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -98,31 +92,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="Uncontrollable-factor">
-<h1>Uncontrollable factor<a class="headerlink" href="#Uncontrollable-factor" title="Link to this heading"></a></h1>
-<p>Preparing…</p>
-<section id="Import-modules-and-prepare-data.">
-<h2>Import modules and prepare data.<a class="headerlink" href="#Import-modules-and-prepare-data." title="Link to this heading"></a></h2>
-<p>Preparing…</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-tutorials-01-usecase-07-uncontrollable-factor-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<section class="sphx-glr-example-title" id="uncontrollable-factor">
+<span id="sphx-glr-tutorials-01-usecase-07-uncontrollable-factor-py"></span><h1>Uncontrollable factor<a class="headerlink" href="#uncontrollable-factor" title="Link to this heading"></a></h1>
+<p>Preparing…</p>
+<section id="import-modules-and-prepare-data">
+<h2>Import modules and prepare data.<a class="headerlink" href="#import-modules-and-prepare-data" title="Link to this heading"></a></h2>
+<p>Preparing…</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="kn">from</span> <span class="nn">Pyfrontier.frontier_model</span> <span class="kn">import</span> <span class="n">EnvelopDEA</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Pyfrontier.frontier_model</span><span class="w"> </span><span class="kn">import</span> <a href="../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.EnvelopDEA" title="Pyfrontier.frontier_model.EnvelopDEA" class="sphx-glr-backref-module-Pyfrontier-frontier_model sphx-glr-backref-type-py-class"><span class="n">EnvelopDEA</span></a>
 
 <span class="n">supply_chain_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
     <span class="p">{</span><span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;day&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;profit&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
 <span class="p">)</span>
 <span class="n">supply_chain_df</span>
 
-<span class="n">EnvelopDEA</span>
+<a href="../../Pyfrontier.frontier_model.html#Pyfrontier.frontier_model.EnvelopDEA" title="Pyfrontier.frontier_model.EnvelopDEA" class="sphx-glr-backref-module-Pyfrontier-frontier_model sphx-glr-backref-type-py-class"><span class="n">EnvelopDEA</span></a>
 <span class="n">plt</span>
 </pre></div>
 </div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;matplotlib.pyplot&#39; from &#39;/Users/moriniotakeshi/github/oss/PyDEA/.venv/lib/python3.11/site-packages/matplotlib/pyplot.py&#39;&gt;
+</pre></div>
 </div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.000 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-01-usecase-07-uncontrollable-factor-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/d1f436990c3da1206f7236f62dc49f45/07_uncontrollable_factor.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">07_uncontrollable_factor.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/3168fb8d650408a8b9aa252cc44b2e84/07_uncontrollable_factor.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">07_uncontrollable_factor.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/c765a9aadd2581c5684f11d3f3bb9921/07_uncontrollable_factor.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">07_uncontrollable_factor.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </section>
 </section>
 

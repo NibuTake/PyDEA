@@ -11,3 +11,4 @@ __pycache__/
 *$py.class
 
 .venv
+/docs/
