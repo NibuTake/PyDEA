@@ -3,23 +3,23 @@ from Pyfrontier.solver._models import Bias
 
 
 class TestMultipleBias:
-    def test_input_oriented_IRS_bias(self):
-        bias = Bias("IRS", "in").value
+    def test_input_oriented_NDRS_bias(self):
+        bias = Bias("NDRS", "in").value
         assert bias.lowBound == 0
         assert bias.upBound is None
 
-    def test_output_oriented_IRS_bias(self):
-        bias = Bias("IRS", "out").value
+    def test_output_oriented_NDRS_bias(self):
+        bias = Bias("NDRS", "out").value
         assert bias.lowBound is None
         assert bias.upBound == 0
 
-    def test_input_oriented_DRS_bias(self):
-        bias = Bias("DRS", "in").value
+    def test_input_oriented_NIRS_bias(self):
+        bias = Bias("NIRS", "in").value
         assert bias.lowBound is None
         assert bias.upBound == 0
 
-    def test_output_oriented_DRS_bias(self):
-        bias = Bias("DRS", "out").value
+    def test_output_oriented_NIRS_bias(self):
+        bias = Bias("NIRS", "out").value
         assert bias.lowBound == 0
         assert bias.upBound is None
 

@@ -1,6 +1,6 @@
 import abc
 from dataclasses import dataclass
-from typing import List
+from typing import List, Literal
 
 import numpy as np
 
@@ -23,6 +23,7 @@ class EnvelopResult(BaseResult):
     - weight:
     - x_slack:
     - y_slack:
+    - orientation: "in" for input-oriented, "out" for output-oriented
     """
 
     score: float
@@ -31,6 +32,7 @@ class EnvelopResult(BaseResult):
     weights: List[float]
     x_slack: List[float]
     y_slack: List[float]
+    orientation: Literal["in", "out"]
 
     def __post_init__(self):
         pass
@@ -48,6 +50,38 @@ class EnvelopResult(BaseResult):
             return True
         else:
             return False
+
+    @property
+    def virtual_dmu(self) -> DMU:
+        """
+        Returns the virtual DMU (projection onto the efficient frontier).
+
+        The virtual DMU represents the target values that an inefficient DMU
+        should achieve to become efficient, based on DEA theory.
+
+        For input-oriented models:
+            - projected_input = score * original_input - input_slack
+            - projected_output = original_output + output_slack
+
+        For output-oriented models:
+            - projected_input = original_input - input_slack
+            - projected_output = score * original_output + output_slack
+
+        Returns:
+            DMU: A new DMU object with projected input and output values
+        """
+        if self.orientation == "in":
+            projected_input = self.score * self.dmu.input - np.array(self.x_slack)
+            projected_output = self.dmu.output + np.array(self.y_slack)
+        else:  # "out"
+            projected_input = self.dmu.input - np.array(self.x_slack)
+            projected_output = self.score * self.dmu.output + np.array(self.y_slack)
+
+        return DMU(
+            input=projected_input,
+            output=projected_output,
+            id=self.dmu.id,
+        )
 
 
 @dataclass(frozen=True)

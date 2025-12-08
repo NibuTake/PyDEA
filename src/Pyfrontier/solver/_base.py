@@ -27,5 +27,7 @@ class BaseSolver(object, metaclass=abc.ABCMeta):
         return [_dict[k] for k in _dict]
 
     def _rounder(self, v: float) -> float:
+        # 6 decimal places provides good balance between precision and numerical stability
+        # Higher precision (e.g., 10) can preserve numerical noise from solver
         self._sign_figs = 6
         return round(v, self._sign_figs)

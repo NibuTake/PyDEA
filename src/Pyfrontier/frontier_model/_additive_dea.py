@@ -1,8 +1,8 @@
-from typing import List, Literal, Optional
+from typing import List, Optional
 
 import numpy as np
 
-from Pyfrontier.domain import AdditiveResult, DMUSet
+from Pyfrontier.domain import AdditiveResult, DMUSet, Frontier, FrontierType
 from Pyfrontier.domain.parallel import NumberOfJobs
 from Pyfrontier.frontier_model._base import BaseDataEnvelopmentAnalysis
 from Pyfrontier.solver import AdditiveSolver
@@ -12,12 +12,16 @@ class AdditiveDEA(BaseDataEnvelopmentAnalysis):
     """This is a envelop dea model.
 
     Args:
-        frontier (Literal["CRS", "VRS", "IRS", "DRS"]): CRS means constant returns to scale. VRS means variable returns to scale. IRS means increasing returns to scale. DRS means decreasing returns to scale.
+        frontier (FrontierType):
+            - CRS: Constant Returns to Scale
+            - VRS: Variable Returns to Scale
+            - NDRS: Non-Decreasing Returns to Scale
+            - NIRS: Non-Increasing Returns to Scale
         n_jobs (int, optional): The number of parallel jobs to solve DMU programming.
     """
 
-    def __init__(self, frontier: Literal["CRS", "VRS", "IRS", "DRS"], n_jobs: int = 1):
-        self.frontier = frontier
+    def __init__(self, frontier: FrontierType, n_jobs: int = 1):
+        self.frontier = Frontier(frontier).value
         self.DMUs: Optional[DMUSet] = None
         self._result: List[AdditiveResult] = []
         self.n_jobs = NumberOfJobs(n_jobs).value

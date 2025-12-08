@@ -2,7 +2,7 @@ from typing import List, Literal, Union
 
 import pulp
 
-from Pyfrontier.domain import AssuranceRegion, DMUSet, MultipleResult
+from Pyfrontier.domain import AssuranceRegion, DMUSet, MultipleResult, FrontierType
 from Pyfrontier.domain.dmu import DMU
 from Pyfrontier.domain import MultiProcessor
 from Pyfrontier.solver._base import BaseSolver
@@ -21,7 +21,7 @@ class MultipleSolver(BaseSolver):
     def __init__(
         self,
         orient: Literal["in", "out"],
-        frontier: Literal["CRS", "VRS", "IRS", "DRS"],
+        frontier: FrontierType,
         DMUs: DMUSet,
         assurance_region: List[AssuranceRegion],
         bound: float = 0.0,

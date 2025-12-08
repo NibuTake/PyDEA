@@ -4,7 +4,7 @@ import numpy as np
 import pulp
 
 
-from Pyfrontier.domain import DMU, DMUSet, EnvelopResult
+from Pyfrontier.domain import DMU, DMUSet, EnvelopResult, FrontierType
 from Pyfrontier.domain import MultiProcessor
 from Pyfrontier.solver._base import BaseSolver
 
@@ -21,7 +21,7 @@ class EnvelopeSolver(BaseSolver):
     def __init__(
         self,
         orient: Literal["in", "out"],
-        frontier: Literal["CRS", "VRS", "IRS", "DRS"],
+        frontier: FrontierType,
         DMUs: DMUSet,
         uncontrollable_index: List[int] = [],
         is_super_efficiency: bool = False,
@@ -118,12 +118,17 @@ class EnvelopeSolver(BaseSolver):
 
         if self.frontier == "VRS":
             problem += np.sum(lambda_N) == 1
-        elif self.frontier == "IRS":
+        elif self.frontier == "NDRS":
             problem += np.sum(lambda_N) >= 1
-        elif self.frontier == "DRS":
+        elif self.frontier == "NIRS":
             problem += np.sum(lambda_N) <= 1
 
-        problem.solve()
+        # Use high-precision solver parameters for better numerical accuracy
+        # gapRel: relative gap tolerance for optimality
+        # ratioGap: primal-dual gap ratio (1e-12 for very high precision)
+        problem.solve(
+            pulp.PULP_CBC_CMD(msg=0, gapRel=1e-12, options=["ratio 1e-12"])
+        )
 
         score = self._rounder(problem.objective.value())
         sx, sy = self._optimize_slack(score, o)
@@ -135,6 +140,7 @@ class EnvelopeSolver(BaseSolver):
             x_slack=sx,
             y_slack=sy,
             dmu=DMU(self.DMUs.inputs[o], self.DMUs.outputs[o], self.DMUs.get_id(o)),
+            orientation=self.orient,
         )
 
     def _optimize_slack(self, theta: float, o: int) -> Tuple[list, list]:
@@ -142,14 +148,21 @@ class EnvelopeSolver(BaseSolver):
             return ([], [])
         else:
             slack_solver = SlackSolver(
-                self.orient, self.DMUs, self._uncontrollable_index
+                self.orient, self.frontier, self.DMUs, self._uncontrollable_index
             )
         return slack_solver.apply(o, theta)
 
 
 class SlackSolver(BaseSolver):
-    def __init__(self, orient: str, DMUs: DMUSet, uncontrollable_index: list):
+    def __init__(
+        self,
+        orient: str,
+        frontier: FrontierType,
+        DMUs: DMUSet,
+        uncontrollable_index: list,
+    ):
         self.orient = orient
+        self.frontier = frontier
         self.DMUs = DMUs
         self._uncontrollable_index = uncontrollable_index
 
@@ -220,8 +233,22 @@ class SlackSolver(BaseSolver):
             problem = self._define_input_orient_problem(o, sx, sy, lambda_N, theta)
         else:
             problem = self._define_output_orient_problem(o, sx, sy, lambda_N, theta)
-        problem += np.sum(lambda_N) == 1
 
-        problem.solve(pulp.PULP_CBC_CMD(msg=1, gapRel=1e-10, options=["revised"]))
+        # Apply frontier constraint (same as EnvelopeSolver)
+        if self.frontier == "VRS":
+            problem += np.sum(lambda_N) == 1
+        elif self.frontier == "NDRS":
+            problem += np.sum(lambda_N) >= 1
+        elif self.frontier == "NIRS":
+            problem += np.sum(lambda_N) <= 1
+        # CRS: No constraint on sum(lambda)
+
+        # Use high-precision solver parameters for better numerical accuracy
+        # gapRel: relative gap tolerance for optimality
+        # ratio: primal-dual gap ratio (1e-12 for very high precision)
+        # revised: use revised simplex method for better numerical stability
+        problem.solve(
+            pulp.PULP_CBC_CMD(msg=0, gapRel=1e-12, options=["revised", "ratio 1e-12"])
+        )
 
         return {"sx": [i.value() for i in sx], "sy": [r.value() for r in sy]}

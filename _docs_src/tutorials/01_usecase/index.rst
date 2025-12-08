@@ -47,14 +47,31 @@ Basic usage
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This tutorial demonstrates how to compute and visualize virtual DMUs (projections). A virtual DMU represents the target values on the efficient frontier for an inefficient unit.">
+
+.. only:: html
+
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_03_virtual_dmu_projection_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_01_usecase_03_virtual_dmu_projection.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Virtual DMU (Projection onto Efficient Frontier)</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Preparing...">
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_03_super_efficiency_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_04_super_efficiency_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_01_usecase_03_super_efficiency.py`
+  :ref:`sphx_glr_tutorials_01_usecase_04_super_efficiency.py`
 
 .. raw:: html
 
@@ -68,10 +85,10 @@ Basic usage
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_04_cross_efficiency_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_05_cross_efficiency_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_01_usecase_04_cross_efficiency.py`
+  :ref:`sphx_glr_tutorials_01_usecase_05_cross_efficiency.py`
 
 .. raw:: html
 
@@ -85,10 +102,10 @@ Basic usage
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_05_assurance_region_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_06_assurance_region_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_01_usecase_05_assurance_region.py`
+  :ref:`sphx_glr_tutorials_01_usecase_06_assurance_region.py`
 
 .. raw:: html
 
@@ -102,10 +119,10 @@ Basic usage
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_06_additive_model_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_07_additive_model_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_01_usecase_06_additive_model.py`
+  :ref:`sphx_glr_tutorials_01_usecase_07_additive_model.py`
 
 .. raw:: html
 
@@ -119,10 +136,10 @@ Basic usage
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_07_uncontrollable_factor_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_08_uncontrollable_factor_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_01_usecase_07_uncontrollable_factor.py`
+  :ref:`sphx_glr_tutorials_01_usecase_08_uncontrollable_factor.py`
 
 .. raw:: html
 
@@ -136,10 +153,10 @@ Basic usage
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_08_hierarchical_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_09_hierarchical_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_01_usecase_08_hierarchical.py`
+  :ref:`sphx_glr_tutorials_01_usecase_09_hierarchical.py`
 
 .. raw:: html
 
@@ -153,10 +170,10 @@ Basic usage
 
 .. only:: html
 
-  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_09_returns_to_scale_thumb.png
+  .. image:: /tutorials/01_usecase/images/thumb/sphx_glr_10_returns_to_scale_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_01_usecase_09_returns_to_scale.py`
+  :ref:`sphx_glr_tutorials_01_usecase_10_returns_to_scale.py`
 
 .. raw:: html
 
@@ -176,13 +193,14 @@ Basic usage
 
    /tutorials/01_usecase/01_input_crs
    /tutorials/01_usecase/02_output_crs
-   /tutorials/01_usecase/03_super_efficiency
-   /tutorials/01_usecase/04_cross_efficiency
-   /tutorials/01_usecase/05_assurance_region
-   /tutorials/01_usecase/06_additive_model
-   /tutorials/01_usecase/07_uncontrollable_factor
-   /tutorials/01_usecase/08_hierarchical
-   /tutorials/01_usecase/09_returns_to_scale
+   /tutorials/01_usecase/03_virtual_dmu_projection
+   /tutorials/01_usecase/04_super_efficiency
+   /tutorials/01_usecase/05_cross_efficiency
+   /tutorials/01_usecase/06_assurance_region
+   /tutorials/01_usecase/07_additive_model
+   /tutorials/01_usecase/08_uncontrollable_factor
+   /tutorials/01_usecase/09_hierarchical
+   /tutorials/01_usecase/10_returns_to_scale
 
 
 .. only:: html
