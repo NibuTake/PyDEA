@@ -3,7 +3,7 @@ from typing import List, Literal, Optional
 import numpy as np
 import pulp
 
-from Pyfrontier.domain import DMU, AdditiveResult, DMUSet, SlackWeight
+from Pyfrontier.domain import DMU, AdditiveResult, DMUSet, SlackWeight, FrontierType
 from Pyfrontier.domain import MultiProcessor
 from Pyfrontier.solver._base import BaseSolver
 
@@ -11,7 +11,7 @@ from Pyfrontier.solver._base import BaseSolver
 class AdditiveSolver(BaseSolver):
     def __init__(
         self,
-        frontier: Literal["CRS", "VRS", "IRS", "DRS"],
+        frontier: FrontierType,
         DMUs: DMUSet,
         x_weight: np.ndarray,
         y_weight: np.ndarray,
@@ -54,9 +54,9 @@ class AdditiveSolver(BaseSolver):
 
         if self.frontier == "VRS":
             problem += np.sum(lambda_N) == 1
-        elif self.frontier == "IRS":
+        elif self.frontier == "NDRS":
             problem += np.sum(lambda_N) >= 1
-        elif self.frontier == "DRS":
+        elif self.frontier == "NIRS":
             problem += np.sum(lambda_N) <= 1
 
         return problem

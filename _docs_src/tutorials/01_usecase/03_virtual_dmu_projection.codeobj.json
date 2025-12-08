@@ -1,0 +1,1049 @@
+{
+ "EnvelopDEA": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopDEA"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._base",
+   "module_short": "Pyfrontier.frontier_model._base",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseDataEnvelopmentAnalysis"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA"
+  }
+ ],
+ "company_name": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "str"
+  }
+ ],
+ "data": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.frame",
+   "module_short": "pandas.core.frame",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  }
+ ],
+ "data.loc": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.frame",
+   "module_short": "pandas.core.frame",
+   "name": "DataFrame.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DataFrame.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.generic",
+   "module_short": "pandas.core.generic",
+   "name": "NDFrame.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "NDFrame.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "NDFrame.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.arraylike",
+   "module_short": "pandas.core.arraylike",
+   "name": "OpsMixin.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "OpsMixin.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "OpsMixin.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.base",
+   "module_short": "pandas.core.base",
+   "name": "PandasObject.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "PandasObject.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "PandasObject.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.indexing",
+   "module_short": "pandas.core.indexing",
+   "name": "IndexingMixin.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "IndexingMixin.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "IndexingMixin.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.accessor",
+   "module_short": "pandas.core.accessor",
+   "name": "DirNamesMixin.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DirNamesMixin.loc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DirNamesMixin.loc"
+  }
+ ],
+ "dea": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopDEA"
+  }
+ ],
+ "dea.fit": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._dea",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "EnvelopDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopDEA.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model._base",
+   "module_short": "Pyfrontier.frontier_model._base",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.frontier_model",
+   "module_short": "Pyfrontier.frontier_model",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseDataEnvelopmentAnalysis.fit"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC.fit"
+  }
+ ],
+ "dea.result": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "list"
+  }
+ ],
+ "eff_companies": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "list"
+  }
+ ],
+ "eff_sorted": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "list"
+  }
+ ],
+ "i": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "int"
+  }
+ ],
+ "ineff_companies": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "list"
+  }
+ ],
+ "original_input": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "int64"
+  }
+ ],
+ "original_output": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "float64"
+  }
+ ],
+ "pd.DataFrame": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.frame",
+   "module_short": "pandas.core.frame",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.generic",
+   "module_short": "pandas.core.generic",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "NDFrame"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.arraylike",
+   "module_short": "pandas.core.arraylike",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "OpsMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.base",
+   "module_short": "pandas.core.base",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "PandasObject"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.indexing",
+   "module_short": "pandas.core.indexing",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "IndexingMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core.accessor",
+   "module_short": "pandas.core.accessor",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DirNamesMixin"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  }
+ ],
+ "plt.annotate": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "annotate"
+  }
+ ],
+ "plt.figure": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "figure"
+  }
+ ],
+ "plt.grid": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "grid"
+  }
+ ],
+ "plt.legend": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "legend"
+  }
+ ],
+ "plt.plot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "plot"
+  }
+ ],
+ "plt.show": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "show"
+  }
+ ],
+ "plt.text": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "text"
+  }
+ ],
+ "plt.tight_layout": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "tight_layout"
+  }
+ ],
+ "plt.title": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "title"
+  }
+ ],
+ "plt.xlabel": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "xlabel"
+  }
+ ],
+ "plt.ylabel": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "ylabel"
+  }
+ ],
+ "r": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopResult"
+  }
+ ],
+ "r.dmu.input": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "r.dmu.output": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "r.is_efficient": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult.is_efficient"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult.is_efficient"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopResult.is_efficient"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain.result",
+   "name": "BaseResult.is_efficient"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "BaseResult.is_efficient"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseResult.is_efficient"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC.is_efficient"
+  }
+ ],
+ "r.score": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "float"
+  }
+ ],
+ "result_h": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopResult"
+  }
+ ],
+ "result_h.dmu.input": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "result_h.dmu.output": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "result_h.score": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "float"
+  }
+ ],
+ "result_h.virtual_dmu": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain.result",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC.virtual_dmu"
+  }
+ ],
+ "result_h.virtual_dmu.input": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain.result",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC.virtual_dmu"
+  }
+ ],
+ "result_h.virtual_dmu.output": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "EnvelopResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.result",
+   "module_short": "Pyfrontier.domain.result",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "BaseResult.virtual_dmu"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "abc",
+   "module_short": "abc",
+   "name": "ABC.virtual_dmu"
+  }
+ ],
+ "status": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "str"
+  }
+ ],
+ "target_idx": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "int"
+  }
+ ],
+ "virtual_h": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain.dmu",
+   "module_short": "Pyfrontier.domain",
+   "name": "DMU"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier.domain",
+   "module_short": "Pyfrontier.domain",
+   "name": "DMU"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "Pyfrontier",
+   "module_short": "Pyfrontier",
+   "name": "DMU"
+  }
+ ],
+ "virtual_h.input": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "virtual_h.output": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "virtual_input": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "float64"
+  }
+ ],
+ "virtual_output": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "float64"
+  }
+ ]
+}

@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:01.956** total execution time for 10 files **from all galleries**:
+**00:02.409** total execution time for 11 files **from all galleries**:
 
 .. container::
 
@@ -32,33 +32,36 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_tutorials_01_usecase_08_hierarchical.py` (``../tutorials/build/01_usecase/08_hierarchical.py``)
-     - 00:00.620
+   * - :ref:`sphx_glr_tutorials_01_usecase_09_hierarchical.py` (``../tutorials/build/01_usecase/09_hierarchical.py``)
+     - 00:00.707
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_01_usecase_03_virtual_dmu_projection.py` (``../tutorials/build/01_usecase/03_virtual_dmu_projection.py``)
+     - 00:00.355
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_01_input_crs.py` (``../tutorials/build/01_usecase/01_input_crs.py``)
-     - 00:00.454
+     - 00:00.334
      - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_06_additive_model.py` (``../tutorials/build/01_usecase/06_additive_model.py``)
-     - 00:00.164
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_02_advanced__sample.py` (``../tutorials/build/02_advanced/_sample.py``)
-     - 00:00.156
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_05_assurance_region.py` (``../tutorials/build/01_usecase/05_assurance_region.py``)
-     - 00:00.145
+   * - :ref:`sphx_glr_tutorials_01_usecase_07_additive_model.py` (``../tutorials/build/01_usecase/07_additive_model.py``)
+     - 00:00.203
      - 0.0
    * - :ref:`sphx_glr_tutorials_01_usecase_02_output_crs.py` (``../tutorials/build/01_usecase/02_output_crs.py``)
-     - 00:00.144
+     - 00:00.165
      - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_04_cross_efficiency.py` (``../tutorials/build/01_usecase/04_cross_efficiency.py``)
-     - 00:00.104
+   * - :ref:`sphx_glr_tutorials_02_advanced__sample.py` (``../tutorials/build/02_advanced/_sample.py``)
+     - 00:00.164
      - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_03_super_efficiency.py` (``../tutorials/build/01_usecase/03_super_efficiency.py``)
-     - 00:00.091
+   * - :ref:`sphx_glr_tutorials_01_usecase_06_assurance_region.py` (``../tutorials/build/01_usecase/06_assurance_region.py``)
+     - 00:00.159
      - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_09_returns_to_scale.py` (``../tutorials/build/01_usecase/09_returns_to_scale.py``)
-     - 00:00.080
+   * - :ref:`sphx_glr_tutorials_01_usecase_04_super_efficiency.py` (``../tutorials/build/01_usecase/04_super_efficiency.py``)
+     - 00:00.121
      - 0.0
-   * - :ref:`sphx_glr_tutorials_01_usecase_07_uncontrollable_factor.py` (``../tutorials/build/01_usecase/07_uncontrollable_factor.py``)
+   * - :ref:`sphx_glr_tutorials_01_usecase_05_cross_efficiency.py` (``../tutorials/build/01_usecase/05_cross_efficiency.py``)
+     - 00:00.117
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_01_usecase_10_returns_to_scale.py` (``../tutorials/build/01_usecase/10_returns_to_scale.py``)
+     - 00:00.083
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_01_usecase_08_uncontrollable_factor.py` (``../tutorials/build/01_usecase/08_uncontrollable_factor.py``)
      - 00:00.000
      - 0.0

@@ -46,16 +46,16 @@ def test_parallel_can_work_on_additive_model(sample_data):
 
 
 class TestAdditiveFrontierLambda:
-    def test_DRS(self, house_data):
-        multiple_dea = AdditiveDEA("DRS")
+    def test_NIRS(self, house_data):
+        multiple_dea = AdditiveDEA("NIRS")
         multiple_dea.fit(
             house_data[["Fee", "House"]].values, house_data[["Income"]].values
         )
         for r in multiple_dea.result:
             assert sum(r.weights) <= 1
 
-    def test_IRS(self, house_data):
-        multiple_dea = AdditiveDEA("IRS")
+    def test_NDRS(self, house_data):
+        multiple_dea = AdditiveDEA("NDRS")
         multiple_dea.fit(
             house_data[["Fee", "House"]].values, house_data[["Income"]].values
         )

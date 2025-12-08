@@ -139,7 +139,7 @@ The necessity inputs are inputs and outputs. The result has below belongings.
  .. code-block:: none
 
 
-    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([1, 5]), output=array([15]), id=0), weights=[1.0, 0.0, 0.0, 0.0, 0.0], x_slack=[0.0, 0.0], y_slack=[0.0])
+    EnvelopResult(score=1.0, id=0, dmu=DMU(input=array([1, 5]), output=array([15]), id=0), weights=[1.0, 0.0, 0.0, 0.0, 0.0], x_slack=[-2.5998335e-12, -5e-12], y_slack=[2.3999136e-11], orientation='in')
 
 
 
@@ -164,14 +164,14 @@ In the built documentation.
  .. code-block:: none
 
 
-    <module 'matplotlib.pyplot' from '/Users/moriniotakeshi/github/oss/PyDEA/.venv/lib/python3.11/site-packages/matplotlib/pyplot.py'>
+    <module 'matplotlib.pyplot' from '/Users/moriniotakeshi/github/oss/PyDEA/.venv/lib/python3.13/site-packages/matplotlib/pyplot.py'>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.156 seconds)
+   **Total running time of the script:** (0 minutes 0.164 seconds)
 
 
 .. _sphx_glr_download_tutorials_02_advanced__sample.py:
