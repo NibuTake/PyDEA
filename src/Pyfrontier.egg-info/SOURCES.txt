@@ -15,6 +15,7 @@ src/Pyfrontier/domain/metrics.py
 src/Pyfrontier/domain/parallel.py
 src/Pyfrontier/domain/result.py
 src/Pyfrontier/domain/slack_weight.py
+src/Pyfrontier/domain/type.py
 src/Pyfrontier/frontier_model/__init__.py
 src/Pyfrontier/frontier_model/_additive_dea.py
 src/Pyfrontier/frontier_model/_base.py

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Pyfrontier"
-version = "1.0.3"
+version = "1.1.0"
 description = "Pyfrontier is a data envelopment analysis for Python user."
 readme = "README.md"
 requires-python = ">=3.8"
