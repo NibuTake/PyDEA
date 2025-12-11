@@ -135,12 +135,18 @@ class EnvelopeSolver(BaseSolver):
 
         return EnvelopResult(
             score=self._rounder(problem.objective.value()),
-            weights=[self._rounder(n.value()) for n in lambda_N],
             id=o,
+            dmu=DMU(
+                self.DMUs.inputs[o],
+                self.DMUs.outputs[o],
+                self.DMUs.get_id(o),
+                self.DMUs.get_label(o),
+            ),
+            weights=[self._rounder(n.value()) for n in lambda_N],
             x_slack=sx,
             y_slack=sy,
-            dmu=DMU(self.DMUs.inputs[o], self.DMUs.outputs[o], self.DMUs.get_id(o)),
             orientation=self.orient,
+            label=self.DMUs.get_label(o),
         )
 
     def _optimize_slack(self, theta: float, o: int) -> Tuple[list, list]:

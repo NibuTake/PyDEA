@@ -33,6 +33,7 @@ class AdditiveDEA(BaseDataEnvelopmentAnalysis):
         x_weight: np.ndarray = np.array([]),
         y_weight: np.ndarray = np.array([]),
         index: np.ndarray = np.nan,
+        labels: Optional[np.ndarray] = None,
     ):
         """Fit additive model.
 
@@ -42,8 +43,9 @@ class AdditiveDEA(BaseDataEnvelopmentAnalysis):
             x_weight (np.ndarray, optional): [description]. Defaults to np.array([]).
             y_weight (np.ndarray, optional): [description]. Defaults to np.array([]).
             index (np.ndarray, optional): This is ID to identify the DMU. The default is generated as a sequential number.
+            labels (np.ndarray, optional): String labels for DMUs. Defaults to None.
         """
-        self.DMUs = DMUSet(inputs, outputs, index)
+        self.DMUs = DMUSet(inputs, outputs, index, labels=labels)
         solver = AdditiveSolver(
             self.frontier, self.DMUs, x_weight, y_weight, n_jobs=self.n_jobs
         )

@@ -96,10 +96,16 @@ class MultipleSolver(BaseSolver):
         return MultipleResult(
             score=self._rounder(problem.objective.value()),
             id=o,
-            dmu=DMU(self.DMUs.inputs[o], self.DMUs.outputs[o], self.DMUs.get_id(o)),
+            dmu=DMU(
+                self.DMUs.inputs[o],
+                self.DMUs.outputs[o],
+                self.DMUs.get_id(o),
+                self.DMUs.get_label(o),
+            ),
             x_weight=[self._rounder(i.value()) for i in nu],
             y_weight=[self._rounder(r.value()) for r in mu],
             bias=self._derive_value_from_bias(bias),
+            label=self.DMUs.get_label(o),
         )
 
     def _apply_assurance_region(
