@@ -12,6 +12,7 @@ __pycache__/
 
 .venv
 /docs/
+/dataset/
 
 # OS files
 .DS_Store

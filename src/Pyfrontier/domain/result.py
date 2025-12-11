@@ -1,6 +1,6 @@
 import abc
 from dataclasses import dataclass
-from typing import List, Literal
+from typing import List, Literal, Optional
 
 import numpy as np
 
@@ -24,6 +24,7 @@ class EnvelopResult(BaseResult):
     - x_slack:
     - y_slack:
     - orientation: "in" for input-oriented, "out" for output-oriented
+    - label: optional string identifier
     """
 
     score: float
@@ -33,6 +34,7 @@ class EnvelopResult(BaseResult):
     x_slack: List[float]
     y_slack: List[float]
     orientation: Literal["in", "out"]
+    label: Optional[str] = None
 
     def __post_init__(self):
         pass
@@ -93,6 +95,7 @@ class MultipleResult(BaseResult):
     - x_weight:
     - y_weight:
     - bias:
+    - label: optional string identifier
     """
 
     score: float
@@ -101,6 +104,7 @@ class MultipleResult(BaseResult):
     x_weight: List[float]
     y_weight: List[float]
     bias: float
+    label: Optional[str] = None
 
     def __post_init__(self):
         pass
@@ -122,6 +126,7 @@ class AdditiveResult(BaseResult):
     - x_slack:
     - y_slack:
     - weights: lambda
+    - label: optional string identifier
     """
 
     score: float
@@ -130,6 +135,7 @@ class AdditiveResult(BaseResult):
     x_slack: List[float]
     y_slack: List[float]
     weights: List[float]
+    label: Optional[str] = None
 
     @property
     def is_efficient(self) -> bool:

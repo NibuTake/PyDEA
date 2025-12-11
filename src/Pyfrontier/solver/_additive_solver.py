@@ -84,8 +84,14 @@ class AdditiveSolver(BaseSolver):
         return AdditiveResult(
             score=np.nan,
             id=o,
-            dmu=DMU(self.DMUs.inputs[o], self.DMUs.outputs[o], self.DMUs.get_id(o)),
+            dmu=DMU(
+                self.DMUs.inputs[o],
+                self.DMUs.outputs[o],
+                self.DMUs.get_id(o),
+                self.DMUs.get_label(o),
+            ),
             x_slack=[self._rounder(i.value()) for i in sx],
             y_slack=[self._rounder(r.value()) for r in sy],
             weights=[self._rounder(n.value()) for n in lambda_N],
+            label=self.DMUs.get_label(o),
         )

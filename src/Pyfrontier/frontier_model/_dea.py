@@ -1,4 +1,4 @@
-from typing import List, Literal
+from typing import List, Literal, Optional
 
 import numpy as np
 
@@ -50,6 +50,7 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
         outputs: np.ndarray,
         index: np.ndarray = np.nan,
         uncontrollable_index: List[int] = [],
+        labels: Optional[np.ndarray] = None,
     ):
         """Fit envelop model.
 
@@ -58,9 +59,10 @@ class EnvelopDEA(BaseDataEnvelopmentAnalysis):
             outputs (np.ndarray): Outputs of DMUs.
             index (np.ndarray, optional): This is ID to identify the DMU. The default is generated as a sequential number.
             uncontrollable_index (List[int], optional): Specifies the index of the variable that will not be improved in DEA. In the case of input-oriented, this means how many columns of input or output are used in the case of output-oriented.
+            labels (np.ndarray, optional): String labels for DMUs. Defaults to None.
         """
         # Define data.
-        self.DMUs = DMUSet(inputs, outputs, index)
+        self.DMUs = DMUSet(inputs, outputs, index, labels=labels)
         self._uncontrollable_index = uncontrollable_index
 
         # call solver.
@@ -110,16 +112,23 @@ class MultipleDEA(BaseDataEnvelopmentAnalysis):
         self._assurance_region: List[AssuranceRegion] = []
         self.n_jobs = NumberOfJobs(n_jobs).value
 
-    def fit(self, inputs: np.ndarray, outputs: np.ndarray, index: np.ndarray = np.nan):
+    def fit(
+        self,
+        inputs: np.ndarray,
+        outputs: np.ndarray,
+        index: np.ndarray = np.nan,
+        labels: Optional[np.ndarray] = None,
+    ):
         """Fit multiplier model.
 
         Args:
             inputs (np.ndarray): Input of DMUs.
             outputs (np.ndarray): Output of DMUs.
             index (np.ndarray, optional): This is ID to identify the DMU. The default is generated as a sequential number.
+            labels (np.ndarray, optional): String labels for DMUs. Defaults to None.
         """
         # Define data.
-        self.DMUs = DMUSet(inputs, outputs, index)
+        self.DMUs = DMUSet(inputs, outputs, index, labels=labels)
 
         # call solver.
         solver = MultipleSolver(

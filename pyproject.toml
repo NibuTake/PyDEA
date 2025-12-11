@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Pyfrontier"
-version = "1.1.0"
+version = "1.1.1"
 description = "Pyfrontier is a data envelopment analysis for Python user."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -62,6 +62,9 @@ zip-safe = false
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"Pyfrontier.datasets" = ["*.csv", "*.md"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
